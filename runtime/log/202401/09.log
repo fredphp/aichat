@@ -1,0 +1,65 @@
+---------------------------------------------------------------
+[ 2024-01-09T02:32:23+08:00 ] 199.45.154.50 GET 999.zhuanw.cn/
+[运行时间：0.048834s] [吞吐率：20.48req/s] [内存消耗：2,881.37kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002633s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000418s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-09T02:32:27+08:00 ] 199.45.154.50 GET 999.zhuanw.cn/index/index/welcome
+[运行时间：0.058840s] [吞吐率：17.00req/s] [内存消耗：3,896.14kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002363s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000505s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/pc.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003222s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.004835s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001718s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000756s ]

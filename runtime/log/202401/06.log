@@ -1,0 +1,363 @@
+---------------------------------------------------------------
+[ 2024-01-06T02:56:41+08:00 ] 198.235.24.118 GET 999.zhuanw.cn/
+[运行时间：0.037030s] [吞吐率：27.00req/s] [内存消耗：2,882.09kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002817s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39; presences on the Internet. If you would like to be excluded from our scans, please send IP addresses/domains to: scaninfo@paloaltonetworks.com',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000332s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-06T04:03:01+08:00 ] 199.45.154.18 GET 999.zhuanw.cn/
+[运行时间：0.040427s] [吞吐率：24.74req/s] [内存消耗：2,881.31kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002655s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000467s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-06T04:03:12+08:00 ] 199.45.154.18 GET 999.zhuanw.cn/index/index/welcome
+[运行时间：0.069479s] [吞吐率：14.39req/s] [内存消耗：3,896.08kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002244s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000316s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/pc.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002447s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.005267s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001772s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000883s ]
+---------------------------------------------------------------
+[ 2024-01-06T06:01:28+08:00 ] 199.45.155.19 GET 999.zhuanw.cn/
+[运行时间：0.038481s] [吞吐率：25.99req/s] [内存消耗：2,881.38kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002386s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000304s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-06T06:01:50+08:00 ] 199.45.155.19 GET 999.zhuanw.cn/index/index/welcome
+[运行时间：0.065229s] [吞吐率：15.33req/s] [内存消耗：3,896.14kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003234s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000373s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/pc.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004910s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.006568s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001998s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000809s ]
+---------------------------------------------------------------
+[ 2024-01-06T09:54:00+08:00 ] 205.210.31.131 GET 999.zhuanw.cn/
+[运行时间：0.039096s] [吞吐率：25.58req/s] [内存消耗：2,880.22kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002170s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000424s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-06T14:06:19+08:00 ] 199.45.154.51 GET kkk.wmkf.xyz/
+[运行时间：0.049023s] [吞吐率：20.40req/s] [内存消耗：2,881.38kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002551s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000562s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-06T14:06:46+08:00 ] 199.45.154.51 GET kkk.wmkf.xyz/index/index/welcome
+[运行时间：0.059776s] [吞吐率：16.73req/s] [内存消耗：3,896.14kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002383s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000555s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/pc.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003688s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.004884s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001600s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000897s ]
+---------------------------------------------------------------
+[ 2024-01-06T15:38:56+08:00 ] 199.45.155.17 GET kkk.wmkf.xyz/
+[运行时间：0.039646s] [吞吐率：25.22req/s] [内存消耗：2,881.31kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002530s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000478s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-06T15:39:08+08:00 ] 199.45.155.17 GET kkk.wmkf.xyz/index/index/welcome
+[运行时间：0.054950s] [吞吐率：18.20req/s] [内存消耗：3,896.08kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001662s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000286s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/pc.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004223s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.005061s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001276s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000597s ]
+---------------------------------------------------------------
+[ 2024-01-06T20:12:25+08:00 ] 34.242.73.178 GET 999.zhuanw.cn/
+[运行时间：0.040744s] [吞吐率：24.54req/s] [内存消耗：2,880.76kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002161s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000324s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-06T22:31:53+08:00 ] 3.255.114.107 GET kkk.wmkf.xyz/
+[运行时间：0.044891s] [吞吐率：22.28req/s] [内存消耗：2,880.76kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002086s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000627s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File

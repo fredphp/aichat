@@ -1,0 +1,211 @@
+---------------------------------------------------------------
+[ 2024-01-26T08:10:13+08:00 ] 35.171.144.152 GET kkk.wmkf.xyz/
+[运行时间：0.106851s] [吞吐率：9.36req/s] [内存消耗：2,880.22kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004846s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.001232s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-26T08:10:13+08:00 ] 35.171.144.152 GET kkk.wmkf.xyz/index/index/welcome
+[运行时间：0.074842s] [吞吐率：13.36req/s] [内存消耗：3,895.01kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001801s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000335s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/pc.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003039s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.008723s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001752s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000593s ]
+---------------------------------------------------------------
+[ 2024-01-26T08:10:15+08:00 ] 35.171.144.152 GET kkk.wmkf.xyz/
+[运行时间：0.036192s] [吞吐率：27.63req/s] [内存消耗：2,880.23kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002304s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000280s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-26T08:10:15+08:00 ] 35.171.144.152 GET kkk.wmkf.xyz/index/index/welcome
+[运行时间：0.098242s] [吞吐率：10.18req/s] [内存消耗：3,895.01kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003235s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 \\(Windows NT 10.0\\; Win64\\; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/100.0.4896.60 Safari/537.36',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000450s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/pc.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004304s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.005002s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001097s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000711s ]
+---------------------------------------------------------------
+[ 2024-01-26T13:12:10+08:00 ] 176.123.7.11 GET kkk.wmkf.xyz/
+[运行时间：0.052961s] [吞吐率：18.88req/s] [内存消耗：2,880.88kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003270s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'accept-charset' => 'utf-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000447s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-26T18:33:58+08:00 ] 222.161.72.80 GET kkk.wmkf.xyz/
+[运行时间：0.069781s] [吞吐率：14.33req/s] [内存消耗：2,880.15kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004421s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'host' => 'kkk.wmkf.xyz',
+  'user-agent' => 'Java/1.8.0_66',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000497s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-01-26T19:14:02+08:00 ] 117.61.29.148 GET 999.zhuanw.cn/
+[运行时间：0.055690s] [吞吐率：17.96req/s] [内存消耗：2,880.15kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003903s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'host' => '999.zhuanw.cn',
+  'user-agent' => 'Java/1.8.0_181',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000423s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File

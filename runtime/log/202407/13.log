@@ -1,0 +1,1339 @@
+---------------------------------------------------------------
+[ 2024-07-13T23:30:06+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：1.201917s] [吞吐率：0.83req/s] [内存消耗：4,510.09kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001302s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '236',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '787da11094b60df7b02db745458645a953491e2be1706306a3f260e3c7e76566',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720884604.8736',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131343137372f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se20',
+      'name' => 'channel_added',
+    ),
+    2 => 
+    array (
+      'channel' => 'cu3131343530312f31',
+      'name' => 'channel_added',
+    ),
+    3 => 
+    array (
+      'channel' => 'se30',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000134s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000671s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '114177'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001333s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131343137372f31' [ RunTime:0.000680s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '114501'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131343530312f31' [ RunTime:0.000432s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:36:20+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.102726s] [吞吐率：9.73req/s] [内存消耗：4,498.70kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001333s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '168',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '9b9a6be68b8172737204857e894969023ac372cd2d724b18c7c1ba71acff8f57',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720884980.0942',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'ud24',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'all1',
+      'name' => 'channel_added',
+    ),
+    2 => 
+    array (
+      'channel' => 'kefu24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000152s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000800s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] UPDATE `wolive_service`  SET `state`='online'  WHERE  `service_id` = 24 [ RunTime:0.000325s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:37:20+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.121339s] [吞吐率：8.24req/s] [内存消耗：4,498.70kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001225s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '174',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'd1bdc676fbe6fc7b72f8a754ea44b63d31a1db949dd8a249477dc14325090b52',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885040.1262',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'ud24',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'all1',
+      'name' => 'channel_removed',
+    ),
+    2 => 
+    array (
+      'channel' => 'kefu24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000154s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000749s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001203s ]
+[ sql ] [ SQL ] UPDATE `wolive_service`  SET `state`='offline'  WHERE  `service_id` = 24 [ RunTime:0.000409s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:40:04+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.121493s] [吞吐率：8.23req/s] [内存消耗：4,510.10kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001342s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '236',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '30c4a24b7ea9e7a907cd5ad91be65032a13626ff67380b67e20f765ddcc47237',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885204.6311',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131343137372f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se20',
+      'name' => 'channel_added',
+    ),
+    2 => 
+    array (
+      'channel' => 'cu3131343530312f31',
+      'name' => 'channel_added',
+    ),
+    3 => 
+    array (
+      'channel' => 'se30',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000154s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001219s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001180s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '114177'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001265s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131343137372f31' [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '114501'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131343530312f31' [ RunTime:0.000474s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:45:26+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.289653s] [吞吐率：3.45req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001426s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'f41612eb190913580531e428d5cdde2cbcdcd5c28e5d81de97134229617d3951',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885525.836',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000144s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001283s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001147s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001138s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000671s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:48:11+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.126594s] [吞吐率：7.90req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001256s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '3d428c9162357e1fb49a86f802a871f42c32d65d090d889702b5f12803c91257',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885690.9318',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000148s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001348s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000491s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:48:20+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.106138s] [吞吐率：9.42req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001700s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '63a66dc7f433e88c8083e528fcb0343259d59a9b04480aa4b77f7650d43604d4',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885699.9365',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000136s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000750s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001058s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000539s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:49:20+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.102355s] [吞吐率：9.77req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001358s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'bb417f4322acc671d079f99f27f4663a87ffd3ec9ecb34ebe3eef851b4bd1c6b',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885759.9669',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000148s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001074s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001095s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000504s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:50:04+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.129217s] [吞吐率：7.74req/s] [内存消耗：4,510.10kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001243s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '236',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'c7e53f73ef620168e52ad958dc1663cd6a5fe83f9c38a0d90dd3e4441bd98488',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885804.7174',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131343137372f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se20',
+      'name' => 'channel_added',
+    ),
+    2 => 
+    array (
+      'channel' => 'cu3131343530312f31',
+      'name' => 'channel_added',
+    ),
+    3 => 
+    array (
+      'channel' => 'se30',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000151s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000613s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '114177'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131343137372f31' [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '114501'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131343530312f31' [ RunTime:0.000468s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:50:24+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.075521s] [吞吐率：13.24req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001416s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'a75c02708f7c4441beed8d1a7aa69c347075d0da49373d426c5a09b735f5b36f',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885822.7268',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000126s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000595s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001096s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000485s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:50:55+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.075834s] [吞吐率：13.19req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001278s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'e60a00120a69edb1ff7f77fc19c6e3ae1575ec5a1d665161c0fb8e4d021b50f7',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885855.7439',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131363037382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se26',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000127s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000840s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '116078'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001106s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131363037382f31' [ RunTime:0.000581s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:51:23+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.105923s] [吞吐率：9.44req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001267s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '133a0d8e4235c8bf24fc6781a72921f50ac66769122a24dd706c70db5af50232',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885882.7605',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000127s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000936s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001470s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000519s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:51:29+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.196510s] [吞吐率：5.09req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001207s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '1f1e83853621ebe306bc05dbeda042d31e9cd80a33abad9eb84bcd38a32f81f7',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885888.764',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000117s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000564s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:52:29+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.123761s] [吞吐率：8.08req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001258s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'b396458a48d2e61f967750412699e8d327b35bb2b95fb1209d736ef9ecb89610',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885948.7957',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000130s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000802s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000934s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001066s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000507s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:52:52+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：2.095401s] [吞吐率：0.48req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001253s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'a2beb3a01f72e1811f45ea10281d598d899b16a8e98f1dba10e812ebb2f5b96f',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720885969.8068',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000176s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000753s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000989s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001229s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000581s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:53:49+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.043971s] [吞吐率：22.74req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001273s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'a1cc3b1f853682248350f780d7464d8e9dbd81cca7c9fdf1b200c546abb206a5',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886029.8317',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000129s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000855s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001083s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000851s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000449s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:53:56+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.096162s] [吞吐率：10.40req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001235s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '5adf36f789b7815a0722c0c23b2ff0f1adee7fec9c2a11880e14d0589b784951',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886035.8347',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000118s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000559s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001183s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000511s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:54:56+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.076644s] [吞吐率：13.05req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001236s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '419c3f7d90bc66d5119cb3a667e154461a1976ef243f405bb0021b8340c3be47',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886095.8749',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000143s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001119s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001223s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001126s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000507s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:55:02+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.101200s] [吞吐率：9.88req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001352s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '941fa15ef2f4cfc24f12fbdd06349546cfae42ae5cc9a85833edbc305ff4e095',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886101.8759',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000166s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000638s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001153s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000684s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:56:02+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.103439s] [吞吐率：9.67req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001255s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'c8f639c3100e7989364666f8950a1e7854931e1b8374a78b57a26025796045c3',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886161.9106',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000128s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000754s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000621s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:56:05+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.129300s] [吞吐率：7.73req/s] [内存消耗：4,505.34kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001321s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '138',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '7ea1b4ffa4cbaa2834bf0f6e318a2063ead88a4beee40a9f4997a8203395d2c6',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886164.911',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000131s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000612s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000974s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001167s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000642s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:57:05+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.105207s] [吞吐率：9.51req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001242s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '5a57fce02fd8702073bf6c42aa0629b17f7c50dc782e49d7af0d5c900cb9c860',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886224.9406',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131353835382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se24',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000150s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000928s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '115858'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '115858'  AND `business_id` = 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001151s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131353835382f31' [ RunTime:0.000518s ]
+---------------------------------------------------------------
+[ 2024-07-13T23:57:41+08:00 ] 39.105.137.202 POST cs.wmtao.xyz/admin/event
+[运行时间：0.127381s] [吞吐率：7.85req/s] [内存消耗：4,506.90kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001373s ]
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '142',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '6f94cf9f3e24d17b9f3737bd909b76f80b65f9cfc6ede395d192857402a440ff',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'cs.wmtao.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1720886260.9633',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu3131363037382f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se26',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/cs.wmtao.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000151s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/cs.wmtao.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000843s ] mysql:host=127.0.0.1;dbname=cs_wmtao_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000970s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '116078'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '116078'  AND `business_id` = 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001092s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '3131363037382f31' [ RunTime:0.000476s ]

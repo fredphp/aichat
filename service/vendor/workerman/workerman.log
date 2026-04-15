@@ -1,0 +1,35 @@
+2023-11-21 14:27:31 pid:1 Exception: class \Protocols\Https not exist in E:\monad\ui.niapp.top\service\vendor\workerman\workerman\Worker.php:2155
+Stack trace:
+#0 E:\monad\ui.niapp.top\service\src\Pusher.php(127): Workerman\Worker->listen()
+#1 [internal function]: Pusher\Pusher->onStart(Object(Pusher\Pusher))
+#2 E:\monad\ui.niapp.top\service\vendor\workerman\workerman\Worker.php(2306): call_user_func(Array, Object(Pusher\Pusher))
+#3 E:\monad\ui.niapp.top\service\vendor\workerman\workerman\Worker.php(1315): Workerman\Worker->run()
+#4 E:\monad\ui.niapp.top\service\vendor\workerman\workerman\Worker.php(1258): Workerman\Worker::forkWorkersForWindows()
+#5 E:\monad\ui.niapp.top\service\vendor\workerman\workerman\Worker.php(507): Workerman\Worker::forkWorkers()
+#6 E:\monad\ui.niapp.top\service\start.php(44): Workerman\Worker::runAll()
+#7 {main}
+2023-11-21 14:27:32 pid:1 Worker process terminated
+2023-11-24 09:50:56 pid:27223 Workerman[start.php] start in DAEMON mode
+2024-03-27 14:12:44 pid:28977 Workerman[start.php] start in DAEMON mode
+2024-03-27 14:13:14 pid:29174 Workerman[start.php] start in DAEMON mode
+2024-03-27 14:13:45 pid:29323 Workerman[/www/wwwroot/cs.wmtao.xyz/service/start.php] restart 
+2024-03-27 14:13:45 pid:29323 Workerman[/www/wwwroot/cs.wmtao.xyz/service/start.php] is stopping ...
+2024-03-27 14:13:45 pid:29323 Workerman[/www/wwwroot/cs.wmtao.xyz/service/start.php] stop success
+2024-03-31 22:12:57 pid:8944 Workerman[start.php] start in DAEMON mode
+2024-03-31 22:16:33 pid:19769 Workerman[/www/wwwroot/cs.wmtao.xyz/service/start.php] restart 
+2024-03-31 22:16:33 pid:19769 Workerman[/www/wwwroot/cs.wmtao.xyz/service/start.php] is stopping ...
+2024-03-31 22:16:33 pid:8946 Workerman[start.php] stopping ...
+2024-03-31 22:16:33 pid:8946 Workerman[start.php] has been stopped
+2024-03-31 22:16:33 pid:19769 Workerman[/www/wwwroot/cs.wmtao.xyz/service/start.php] stop success
+2024-03-31 22:24:09 pid:2723 Workerman[start.php] start in DAEMON mode
+2024-06-13 13:45:17 pid:17979 Workerman[start.php] start in DAEMON mode
+2024-07-09 17:07:23 pid:30737 Workerman[start.php] start in DAEMON mode
+2024-12-14 11:30:40 pid:9536 Workerman[start.php] start in DAEMON mode
+2025-03-01 16:05:43 pid:1293283 Workerman[/www/wwwroot/kf5.xywlgzs.vip/service/start.php] restart 
+2025-03-01 16:05:43 pid:1293283 Workerman[/www/wwwroot/kf5.xywlgzs.vip/service/start.php] is stopping ...
+2025-03-01 16:05:43 pid:1293283 Workerman[/www/wwwroot/kf5.xywlgzs.vip/service/start.php] stop success
+2025-03-01 16:08:44 pid:1294377 Workerman[/www/wwwroot/kf5.xywlgzs.vip/service/start.php] stop 
+2025-03-01 16:08:44 pid:1294377 Workerman[/www/wwwroot/kf5.xywlgzs.vip/service/start.php] not run
+2025-03-01 16:09:27 pid:1294666 Workerman[service/start.php] start in DAEMON mode
+2025-03-01 16:10:14 pid:1294918 Workerman[service/start.php] start in DAEMON mode
+2025-03-01 16:12:53 pid:1295792 Workerman[service/start.php] start in DAEMON mode

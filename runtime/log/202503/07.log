@@ -1,0 +1,639 @@
+---------------------------------------------------------------
+[ 2025-03-07T23:50:00+08:00 ] 223.160.235.32 GET kf5.xywlgzs.vip/admin/set/getchats
+[运行时间：0.047447s] [吞吐率：21.08req/s] [内存消耗：4,702.48kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000853s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'set',
+    2 => 'getchats',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=3ua5l939ac3sgsaa23j1v19fdc; cu_com=; service_token=8a3cmmG%252FQ8Yz3zFWfRGJp4rc90uyk5GzmLKYMjM6TjjoV7sFAewgnZE; pgv_info=; visiter_id=67ca4a1fkxy74x9srf5; cid=; services=1; itime=; SECKEY_ABVK=Xve+bHevLuononLVhoUMVe2Z2FqHgKHctbnkuZvhcBk%3D; BMAP_SECKEY=X3WTo4wgKxTqdjc2OZ78WEU-xBLGyobQWtAOW5tSEnOpwD3-Hp1jSqur8ZgaA9UONfpfKBTn8GVA73tjhFJn_2M0gnKNB87mCgodB_iLLI-teCGnMKtHibuint3kEYmx2SEaJF81Jm841zGOKjZ7pWWzydbA0Jv6k52cX99GjiHNgurAAdExzNxVZXvol0Po; time=1741361887',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000177s ]
+[ info ] [ RUN ] app\admin\controller\Set->getchats[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Set.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000563s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001137s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.001015s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `visiter_id` FROM `wolive_queue` `queue` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'normal'  AND (  EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = 1 and chats.business_id = 1) ) ORDER BY `timestamp` DESC [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000869s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9') [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.000796s ]
+[ sql ] [ SQL ] SELECT max(cid) as cid FROM `wolive_chats` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9')  AND `service_id` = 1 GROUP BY `visiter_id` ORDER BY `timestamp` DESC [ RunTime:0.003496s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `cid` IN (34385,33512,34436,34077,32337,32346,32406,32257) [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT visiter_id,count(visiter_id) as count FROM `wolive_chats` WHERE  `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' GROUP BY `visiter_id` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_chats` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' LIMIT 1 [ RunTime:0.005550s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:50:59+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.033279s] [吞吐率：30.05req/s] [内存消耗：4,532.16kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000992s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '167',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'dd08fc69797cc52bed2b79068ee400f64494e137a658340f9392ff3aad15e2b3',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741362659.2112',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36376331643961637167766566643432666d302f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000135s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000578s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '67c1d9acqgvefd42fm0'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '67c1d9acqgvefd42fm0'  AND `business_id` = 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001287s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '36376331643961637167766566643432666d302f31' [ RunTime:0.002674s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:50:59+08:00 ] 223.160.235.32 GET kf5.xywlgzs.vip/admin/set/getchats
+[运行时间：0.048664s] [吞吐率：20.55req/s] [内存消耗：4,702.85kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000873s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'set',
+    2 => 'getchats',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=3ua5l939ac3sgsaa23j1v19fdc; cu_com=; service_token=8a3cmmG%252FQ8Yz3zFWfRGJp4rc90uyk5GzmLKYMjM6TjjoV7sFAewgnZE; pgv_info=; visiter_id=67ca4a1fkxy74x9srf5; cid=; services=1; itime=; SECKEY_ABVK=Xve+bHevLuononLVhoUMVe2Z2FqHgKHctbnkuZvhcBk%3D; BMAP_SECKEY=X3WTo4wgKxTqdjc2OZ78WEU-xBLGyobQWtAOW5tSEnOpwD3-Hp1jSqur8ZgaA9UONfpfKBTn8GVA73tjhFJn_2M0gnKNB87mCgodB_iLLI-teCGnMKtHibuint3kEYmx2SEaJF81Jm841zGOKjZ7pWWzydbA0Jv6k52cX99GjiHNgurAAdExzNxVZXvol0Po; time=1741361887',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/chat/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000130s ]
+[ info ] [ RUN ] app\admin\controller\Set->getchats[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Set.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000617s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001139s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001271s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `visiter_id` FROM `wolive_queue` `queue` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'normal'  AND (  EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = 1 and chats.business_id = 1) ) ORDER BY `timestamp` DESC [ RunTime:0.000892s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000881s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9') [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT max(cid) as cid FROM `wolive_chats` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9')  AND `service_id` = 1 GROUP BY `visiter_id` ORDER BY `timestamp` DESC [ RunTime:0.003547s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `cid` IN (34385,33512,34436,34077,32337,32346,32406,32257) [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT visiter_id,count(visiter_id) as count FROM `wolive_chats` WHERE  `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' GROUP BY `visiter_id` [ RunTime:0.001196s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_chats` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' LIMIT 1 [ RunTime:0.005605s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:50:59+08:00 ] 223.160.235.32 GET kf5.xywlgzs.vip/admin/set/getchats
+[运行时间：0.046478s] [吞吐率：21.52req/s] [内存消耗：4,702.53kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000844s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'set',
+    2 => 'getchats',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=3ua5l939ac3sgsaa23j1v19fdc; cu_com=; service_token=8a3cmmG%252FQ8Yz3zFWfRGJp4rc90uyk5GzmLKYMjM6TjjoV7sFAewgnZE; pgv_info=; visiter_id=67ca4a1fkxy74x9srf5; cid=; services=1; itime=; SECKEY_ABVK=Xve+bHevLuononLVhoUMVe2Z2FqHgKHctbnkuZvhcBk%3D; BMAP_SECKEY=X3WTo4wgKxTqdjc2OZ78WEU-xBLGyobQWtAOW5tSEnOpwD3-Hp1jSqur8ZgaA9UONfpfKBTn8GVA73tjhFJn_2M0gnKNB87mCgodB_iLLI-teCGnMKtHibuint3kEYmx2SEaJF81Jm841zGOKjZ7pWWzydbA0Jv6k52cX99GjiHNgurAAdExzNxVZXvol0Po; time=1741361887',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000125s ]
+[ info ] [ RUN ] app\admin\controller\Set->getchats[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Set.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000585s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001183s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001262s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000842s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `visiter_id` FROM `wolive_queue` `queue` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'normal'  AND (  EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = 1 and chats.business_id = 1) ) ORDER BY `timestamp` DESC [ RunTime:0.000966s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9') [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT max(cid) as cid FROM `wolive_chats` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9')  AND `service_id` = 1 GROUP BY `visiter_id` ORDER BY `timestamp` DESC [ RunTime:0.003519s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `cid` IN (34385,33512,34436,34077,32337,32346,32406,32257) [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT visiter_id,count(visiter_id) as count FROM `wolive_chats` WHERE  `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' GROUP BY `visiter_id` [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_chats` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' LIMIT 1 [ RunTime:0.005460s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:52:59+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.049013s] [吞吐率：20.40req/s] [内存消耗：4,530.60kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001274s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '163',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '62cf6dc6b7c4188deb55310ebee3a2a2dde9f1be9e82729a3803ecf704c1096a',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741362779.2114',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36376331643961637167766566643432666d302f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.002770s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000634s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001361s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '67c1d9acqgvefd42fm0'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001382s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '36376331643961637167766566643432666d302f31' [ RunTime:0.002342s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:52:59+08:00 ] 223.160.235.32 GET kf5.xywlgzs.vip/admin/set/getchats
+[运行时间：0.066868s] [吞吐率：14.95req/s] [内存消耗：4,702.85kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001268s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'set',
+    2 => 'getchats',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=3ua5l939ac3sgsaa23j1v19fdc; cu_com=; service_token=8a3cmmG%252FQ8Yz3zFWfRGJp4rc90uyk5GzmLKYMjM6TjjoV7sFAewgnZE; pgv_info=; visiter_id=67ca4a1fkxy74x9srf5; cid=; services=1; itime=; SECKEY_ABVK=Xve+bHevLuononLVhoUMVe2Z2FqHgKHctbnkuZvhcBk%3D; BMAP_SECKEY=X3WTo4wgKxTqdjc2OZ78WEU-xBLGyobQWtAOW5tSEnOpwD3-Hp1jSqur8ZgaA9UONfpfKBTn8GVA73tjhFJn_2M0gnKNB87mCgodB_iLLI-teCGnMKtHibuint3kEYmx2SEaJF81Jm841zGOKjZ7pWWzydbA0Jv6k52cX99GjiHNgurAAdExzNxVZXvol0Po; time=1741361887',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/chat/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000185s ]
+[ info ] [ RUN ] app\admin\controller\Set->getchats[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Set.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001641s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001385s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001432s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000927s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `visiter_id` FROM `wolive_queue` `queue` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'normal'  AND (  EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = 1 and chats.business_id = 1) ) ORDER BY `timestamp` DESC [ RunTime:0.001104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000987s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9') [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001024s ]
+[ sql ] [ SQL ] SELECT max(cid) as cid FROM `wolive_chats` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9')  AND `service_id` = 1 GROUP BY `visiter_id` ORDER BY `timestamp` DESC [ RunTime:0.005066s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `cid` IN (34385,33512,34436,34077,32337,32346,32406,32257) [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT visiter_id,count(visiter_id) as count FROM `wolive_chats` WHERE  `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' GROUP BY `visiter_id` [ RunTime:0.001545s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_chats` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' LIMIT 1 [ RunTime:0.007365s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:53:00+08:00 ] 223.160.235.32 GET kf5.xywlgzs.vip/admin/set/getchats
+[运行时间：0.057558s] [吞吐率：17.37req/s] [内存消耗：4,702.53kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001072s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'set',
+    2 => 'getchats',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=3ua5l939ac3sgsaa23j1v19fdc; cu_com=; service_token=8a3cmmG%252FQ8Yz3zFWfRGJp4rc90uyk5GzmLKYMjM6TjjoV7sFAewgnZE; pgv_info=; visiter_id=67ca4a1fkxy74x9srf5; cid=; services=1; itime=; SECKEY_ABVK=Xve+bHevLuononLVhoUMVe2Z2FqHgKHctbnkuZvhcBk%3D; BMAP_SECKEY=X3WTo4wgKxTqdjc2OZ78WEU-xBLGyobQWtAOW5tSEnOpwD3-Hp1jSqur8ZgaA9UONfpfKBTn8GVA73tjhFJn_2M0gnKNB87mCgodB_iLLI-teCGnMKtHibuint3kEYmx2SEaJF81Jm841zGOKjZ7pWWzydbA0Jv6k52cX99GjiHNgurAAdExzNxVZXvol0Po; time=1741361887',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000157s ]
+[ info ] [ RUN ] app\admin\controller\Set->getchats[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Set.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000745s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001234s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001317s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000911s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000964s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `visiter_id` FROM `wolive_queue` `queue` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'normal'  AND (  EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = 1 and chats.business_id = 1) ) ORDER BY `timestamp` DESC [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000984s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9') [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.000978s ]
+[ sql ] [ SQL ] SELECT max(cid) as cid FROM `wolive_chats` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9')  AND `service_id` = 1 GROUP BY `visiter_id` ORDER BY `timestamp` DESC [ RunTime:0.004289s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `cid` IN (34385,33512,34436,34077,32337,32346,32406,32257) [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT visiter_id,count(visiter_id) as count FROM `wolive_chats` WHERE  `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' GROUP BY `visiter_id` [ RunTime:0.001287s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_chats` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' LIMIT 1 [ RunTime:0.006389s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:53:08+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.030836s] [吞吐率：32.43req/s] [内存消耗：4,532.16kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000846s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '167',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '03f43ba2406105d2c23fd757bcb450ef56099a259000b7873b9e763d50ca5a53',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741362788.2105',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36376331643961637167766566643432666d302f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000157s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000576s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '67c1d9acqgvefd42fm0'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '67c1d9acqgvefd42fm0'  AND `business_id` = 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001096s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '36376331643961637167766566643432666d302f31' [ RunTime:0.003255s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:53:08+08:00 ] 223.160.235.32 GET kf5.xywlgzs.vip/admin/set/getchats
+[运行时间：0.051739s] [吞吐率：19.33req/s] [内存消耗：4,702.85kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000847s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'set',
+    2 => 'getchats',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=3ua5l939ac3sgsaa23j1v19fdc; cu_com=; service_token=8a3cmmG%252FQ8Yz3zFWfRGJp4rc90uyk5GzmLKYMjM6TjjoV7sFAewgnZE; pgv_info=; visiter_id=67ca4a1fkxy74x9srf5; cid=; services=1; itime=; SECKEY_ABVK=Xve+bHevLuononLVhoUMVe2Z2FqHgKHctbnkuZvhcBk%3D; BMAP_SECKEY=X3WTo4wgKxTqdjc2OZ78WEU-xBLGyobQWtAOW5tSEnOpwD3-Hp1jSqur8ZgaA9UONfpfKBTn8GVA73tjhFJn_2M0gnKNB87mCgodB_iLLI-teCGnMKtHibuint3kEYmx2SEaJF81Jm841zGOKjZ7pWWzydbA0Jv6k52cX99GjiHNgurAAdExzNxVZXvol0Po; time=1741361887',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/chat/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000129s ]
+[ info ] [ RUN ] app\admin\controller\Set->getchats[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Set.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000588s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001182s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001294s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.001090s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.001004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.001194s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000948s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `visiter_id` FROM `wolive_queue` `queue` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'normal'  AND (  EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = 1 and chats.business_id = 1) ) ORDER BY `timestamp` DESC [ RunTime:0.001215s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001159s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9') [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.000960s ]
+[ sql ] [ SQL ] SELECT max(cid) as cid FROM `wolive_chats` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9')  AND `service_id` = 1 GROUP BY `visiter_id` ORDER BY `timestamp` DESC [ RunTime:0.004469s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `cid` IN (34385,33512,34436,34077,32337,32346,32406,32257) [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT visiter_id,count(visiter_id) as count FROM `wolive_chats` WHERE  `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' GROUP BY `visiter_id` [ RunTime:0.001375s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_chats` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' LIMIT 1 [ RunTime:0.005781s ]
+---------------------------------------------------------------
+[ 2025-03-07T23:53:09+08:00 ] 223.160.235.32 GET kf5.xywlgzs.vip/admin/set/getchats
+[运行时间：0.058707s] [吞吐率：17.03req/s] [内存消耗：4,702.53kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001036s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'set',
+    2 => 'getchats',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=3ua5l939ac3sgsaa23j1v19fdc; cu_com=; service_token=8a3cmmG%252FQ8Yz3zFWfRGJp4rc90uyk5GzmLKYMjM6TjjoV7sFAewgnZE; pgv_info=; visiter_id=67ca4a1fkxy74x9srf5; cid=; services=1; itime=; SECKEY_ABVK=Xve+bHevLuononLVhoUMVe2Z2FqHgKHctbnkuZvhcBk%3D; BMAP_SECKEY=X3WTo4wgKxTqdjc2OZ78WEU-xBLGyobQWtAOW5tSEnOpwD3-Hp1jSqur8ZgaA9UONfpfKBTn8GVA73tjhFJn_2M0gnKNB87mCgodB_iLLI-teCGnMKtHibuint3kEYmx2SEaJF81Jm841zGOKjZ7pWWzydbA0Jv6k52cX99GjiHNgurAAdExzNxVZXvol0Po; time=1741361887',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000165s ]
+[ info ] [ RUN ] app\admin\controller\Set->getchats[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Set.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000657s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001248s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001333s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `visiter_id` FROM `wolive_queue` `queue` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'normal'  AND (  EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = 1 and chats.business_id = 1) ) ORDER BY `timestamp` DESC [ RunTime:0.000892s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9') [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001004s ]
+[ sql ] [ SQL ] SELECT max(cid) as cid FROM `wolive_chats` WHERE  `business_id` = 1  AND `visiter_id` IN ('67ca4a1fkxy74x9srf5','67bec4afy4m3gw09bj9','67c1d9acqgvefd42fm0','67c6b97a8qrf8zr5ki8','67bf5bd3kic5cyex131','67bf5facb1h7q716oj6','67bf5c5fsm2yf2mw7u1','67bf5663h9w8rh743g9')  AND `service_id` = 1 GROUP BY `visiter_id` ORDER BY `timestamp` DESC [ RunTime:0.006386s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `cid` IN (34385,33512,34436,34077,32337,32346,32406,32257) [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT visiter_id,count(visiter_id) as count FROM `wolive_chats` WHERE  `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' GROUP BY `visiter_id` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_chats` WHERE  `service_id` = 1  AND `business_id` = 1  AND `state` = 'unread'  AND `direction` = 'to_service' LIMIT 1 [ RunTime:0.007030s ]

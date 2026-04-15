@@ -1,0 +1,23 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>安全码访问</title>
+  <script>
+    function checkAccessCode() {
+      var accessCode = prompt("请输入安全码：");
+      if (accessCode === "123456") {
+        // 安全码正确，跳转到指定页面
+        window.location.href = "your_target_page.html"; // 替换为您的目标页面URL
+      } else {
+        // 安全码错误，显示错误消息
+        alert("安全码错误，请重新输入！");
+        // 可以选择让用户重新输入或执行其他操作
+      }
+    }
+  </script>
+</head>
+<body onload="checkAccessCode();">
+  <!-- 这里可以添加一些页面内容或提示信息 -->
+</body>
+</html>

@@ -1,0 +1,88 @@
+          {if $atype == 'open'}
+                <div class="tool-item" id="clickbf" >
+                    <div class="tool-icon" >
+                        
+                        <img class="layui-img-icon" alt="" src="/assets/images/icon/yy.png" onclick="recOpen()">
+                        </div>
+                        <!-- <i class="layui-icon" onclick="recOpen()" style="font-size: 30px;font-weight: 500;cursor: pointer;color: #999"></i></div> -->
+                    <div class="tool-txt">语音</div>
+                </div>
+                {/if}
+
+                <div class="tool-item">
+                    <div class="tool-icon" id="clickbf" >
+                        
+                        <a id="images" href="javascript:"  style="    padding: 6px 0;">
+                            <form id="picture" enctype="multipart/form-data">
+                                <img class="layui-img-icon" alt="" src="/assets/images/icon/tp.png">
+
+                                <div class="layui-box input-but  size">
+                                    <input type="file" name="upload" class="fileinput" onchange="put()"/>
+                                </div>
+                            </form>
+                        </a>
+                    </div>
+                    <div class="tool-txt">图片</div>
+                </div>
+
+                <div class="tool-item">
+                    <div class="tool-icon" id="clickbf" >
+                        
+                        <a id="files" href="javascript:"  style="    padding: 6px 0;">
+                            <form id="file" enctype="multipart/form-data">
+                                <img class="layui-img-icon" alt="" src="/assets/images/icon/wj.png">
+                                <div class="layui-box input-but  size">
+                                    <input type="file" name="folder" class="fileinput" onchange="putfile()"/>
+                                </div>
+                            </form>
+                        </a>
+                    </div>
+                    <div class="tool-txt">文件</div>
+                </div>
+                {if $locationtype == 'open'}
+                <div class="tool-item" id="location_icon" onclick="get_location()">
+                    <div class="tool-icon" >
+                        <img class="layui-img-icon" alt="" src="/assets/images/icon/wz.png">
+                        <!-- <i class="layui-icon " style="font-size: 30px;font-weight: 500;cursor: pointer;color: #999"></i> -->
+                    </div>
+                    <div class="tool-txt">位置</div>
+                </div>
+                
+                {/if}
+                <div class="tool-item" id="clickbf" onclick="msg()">
+                    <div class="tool-icon" >
+                        <img class="layui-img-icon" alt="" src="/assets/images/icon/ly.png">
+                        <!-- <i class="layui-icon layui-icon-dialogue" style="font-size: 30px;font-weight: 500;cursor: pointer;color: #999"  ></i> -->
+                    </div>
+                    <div class="tool-txt">留言</div>
+                </div>
+                <div class="tool-item"  >
+                    <div class="tool-icon" >
+                        <a style="padding: 6px 0;" target="_blank" href="" id="exportchat" alt="下载聊天记录">
+                            <img class="layui-img-icon" alt="" src="/assets/images/icon/xx.png">
+                        <!-- <i  class="layui-icon layui-icon-download-circle" style="font-weight: 500;font-size: 35px;cursor: pointer;color: #999"></i> -->
+                    </a></div>
+                    <div class="tool-txt">消息记录</div>
+                </div>
+                <div class="tool-item" id="clickbf" onclick="config_phone()">
+                    <div class="tool-icon" >
+                        <img class="layui-img-icon" alt="" src="/assets/images/icon/dh.png">
+                        <!-- <i class="layui-icon layui-icon-cellphone-fine" style="font-size: 30px;font-weight: 500;cursor: pointer;color: #999"></i> -->
+                    </div>
+                    <div class="tool-txt">电话</div>
+                </div>
+                <div class="tool-item" id="clickbf" onclick="zhuanrengong({$business_id})">
+                    <div class="tool-icon" >
+                        <img class="layui-img-icon" alt="" src="/assets/images/icon/zrg.png">
+                        <!-- <i class="layui-icon layui-icon-service" style="font-size: 30px;font-weight: 500;cursor: pointer;color: #999"></i> -->
+                    </div>
+                    <div class="tool-txt">转人工</div>
+                </div>
+                <div class="tool-item" id="lang">
+                    <div class="tool-icon" >
+                        <img  class="layui-img-icon " alt="" src="/assets/images/icon/yu.png">
+                        <!-- <i id="lang" class="layui-icon layui-icon-website" style="font-size: 30px;font-weight: 500;cursor: pointer;color: #999"></i> -->
+                    </div>
+                    <div class="tool-txt">语言</div><br>
+                </div>
+            </div>

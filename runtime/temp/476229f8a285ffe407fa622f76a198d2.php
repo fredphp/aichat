@@ -1,0 +1,315 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"/www/wwwroot/kkk.wmkf.xyz/public/../application/service/view/setting/button.html";i:1701397346;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/component/pear/css/pear.css"/>
+    <style>
+        .layui-form-label{
+            text-align: left;
+        }
+        .layui-button{
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          height: 38px;
+          line-height: 38px;
+          border: 1px solid transparent;
+          padding: 0 18px;
+          background-color: #16baaa;
+          color: #fff;
+          white-space: nowrap;
+          text-align: center;
+          font-size: 14px;
+          border-radius: 2px;
+          cursor: pointer;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+<form class="layui-row layui-col-space10 layui-form">
+    <div class="layui-col-md12">
+        <div class="layui-card" style="margin-left: 20px;margin-top: 20px;">
+            <div class="layui-card-header">开关设置</div>
+         
+          
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用QQ二维码</label>
+            <div class="layui-input-inline">
+              <select name="qq_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['qq_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['qq_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label" style="width: 220px">qq二维码</label>
+              <div class="layui-input-block" style="display: flex;align-items: center">
+                <button type="button" class="layui-button">上传图片
+                  <input onchange="uploadChange(this)" type="file" style="opacity: 0;position: absolute;left:0;width: 100%;height: 100%" name="qqImg">
+                </button> &nbsp;<p> (建议200*200px)</p>
+                <div  style="margin-left: 10px">
+              </div>
+            </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用微信二维码</label>
+            <div class="layui-input-inline">
+              <select name="wx_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['wx_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['wx_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">微信二维码</label>
+            <div class="layui-input-block" style="display: flex;align-items: center">
+              <button type="button" class="layui-button">上传图片
+                <input onchange="uploadChange(this)" type="file" style="opacity: 0;position: absolute;left:0;width: 100%;height: 100%" name="wxImg">
+              </button> &nbsp;<p> (建议200*200px)</p>
+              <div style="margin-left: 10px"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用电话留言</label>
+            <div class="layui-input-inline">
+              <select name="phone_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['phone_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['phone_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用在线电话拨号</label>
+            <div class="layui-input-inline">
+              <select name="tel_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['tel_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['tel_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">输入电话号码</label>
+            <div class="layui-input-inline">
+              <input type="text" value="<?php echo $buttonSwitch['tel_text']; ?>" name="tel_text" placeholder="请输入电话号码" autocomplete="off" class="layui-input"  style="width: 350px;display: inline-block;margin-right: 10px">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用转人工客服</label>
+            <div class="layui-input-inline">
+              <select name="labour_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['labour_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['labour_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用留言功能</label>
+            <div class="layui-input-inline">
+              <select name="leave_message_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['leave_message_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['leave_message_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用消息记录下载</label>
+            <div class="layui-input-inline">
+              <select name="message_log_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['message_log_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['message_log_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用语音消息</label>
+            <div class="layui-input-inline">
+              <select name="voice_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['voice_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['voice_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          
+           <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用定位功能</label>
+            <div class="layui-input-inline">
+              <select name="location_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['location_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['location_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用图片发送</label>
+            <div class="layui-input-inline">
+              <select name="photo_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['photo_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['photo_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用文件上传</label>
+            <div class="layui-input-inline">
+              <select name="file_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['file_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['file_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用翻译</label>
+            <div class="layui-input-inline">
+              <select name="translators_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['translators_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['translators_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用自定义链接</label>
+            <div class="layui-input-inline">
+              <select name="link_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['link_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['link_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">超链接跳转网址</label>
+            <div class="layui-input-inline">
+              <input type="text" value="<?php echo $buttonSwitch['link_url']; ?>" name="link_url" placeholder="请输入链接地址" autocomplete="off" class="layui-input"  style="width: 350px;display: inline-block;margin-right: 10px">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">超链接名称</label>
+            <div class="layui-input-inline">
+              <input type="text" value="<?php echo $buttonSwitch['link_text']; ?>" name="link_text" placeholder="请输入链接名称" autocomplete="off" class="layui-input"  style="width: 350px;display: inline-block;margin-right: 10px">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用顶部二级文字</label>
+            <div class="layui-input-inline">
+              <select name="top_text_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['top_text_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['top_text_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">顶部文字描述</label>
+            <div class="layui-input-inline">
+              <input type="text" value="<?php echo $buttonSwitch['top_text']; ?>" name="top_text" placeholder="请输入顶部文字" autocomplete="off" class="layui-input"  style="width: 350px;display: inline-block;margin-right: 10px">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用底部版权文字</label>
+            <div class="layui-input-inline">
+              <select name="bottom_text_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['bottom_text_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['bottom_text_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">底部文字描述</label>
+            <div class="layui-input-inline">
+              <input type="text" value="<?php echo $buttonSwitch['bottom_text']; ?>" name="bottom_text" placeholder="底部文字" autocomplete="off" class="layui-input"  style="width: 350px;display: inline-block;margin-right: 10px">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 220px">是否启用客服消息切换</label>
+            <div class="layui-input-inline">
+              <select name="kefu_select_state" lay-verify="required" >
+                <option value="open" <?php if($buttonSwitch['kefu_select_state'] == 'open'): ?>selected<?php endif; ?>>启用</option>
+                <option value="close" <?php if($buttonSwitch['kefu_select_state'] == 'close'): ?>selected<?php endif; ?>>禁用</option>
+              </select>
+            </div>
+          </div>
+            <div class="layui-input-block" style="min-height: 80px;">
+                <button type="submit" class="pear-btn pear-btn-primary" lay-submit="" lay-filter="save">保存</button>
+                <button type="reset" class="pear-btn">重置</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="/static/component/layui/layui.js"></script>
+<script src="/static/component/pear/pear.js"></script>
+<script type="text/javascript" src="/assets/libs/jquery/jquery.min.js"></script>
+<script>
+  function uploadChange(that){
+    let img = that.files[0];
+    $(that).parent().next().text(img.name)
+  }
+    layui.use(['form', 'jquery'], function () {
+        let form = layui.form;
+        let $ = layui.jquery;
+
+        form.on('submit(save)', function (data) {
+          let wxImg= $("input[name=wxImg]")[0].files[0];
+          let qqImg= $("input[name=qqImg]")[0].files[0];
+          let formData = new FormData();
+
+          if (wxImg){
+            formData.append("wxImg",wxImg)
+          }
+          if (qqImg){
+            formData.append("qqImg",qqImg)
+          }
+          for (const key of Object.keys(data.field)) {
+            if (key=='wxImg' || key=='qqImg') continue;
+            formData.append(key,data.field[key])
+          };
+            $.ajax({
+                data: formData,
+                type: 'post',
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    if (res.code === 1) {
+                        layer.msg(res.msg, {
+                            icon: 1
+                        }, function() {
+                            location.reload();
+                        });
+                    } else {
+                        layer.msg(res.msg, {icon: 2, time: 1500})
+                    }
+                }
+            });
+            return false;
+        });
+    });
+
+    function tpl(name)
+    {
+        layer.open({
+            type: 2,
+            skin:"tablist",
+            title:"教程",
+            area: ['1020px', '800px'],shadeClose:true,
+            content: '/assets/images/admin/'+name+'.png'
+        });
+    }
+
+    function creattoken(d,len=32){
+        var $chars = 'I1UuVv9gqoOLlABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        $(d).val(pwd);
+        return false;
+    }
+</script>
+</body>
+</html>

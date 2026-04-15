@@ -1,0 +1,55 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"/www/wwwroot/kf5.xywlgzs.vip/public/../application/mobile/view/index/export.html";i:1666324510;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>我的聊天记录</title>
+    <style type="text/css">
+        .send {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .event {
+            padding: 1px 0 2px 10px;
+            color: #333;
+            font-size: 13px;
+            font-family: Georgia;
+        }
+
+        .message {
+            padding: 2px 0 2px 10px;
+        }
+
+        .message p {
+            margin: 0;
+        }
+
+        .image img {
+            max-width: 60%;
+            padding: 2px 0px 2px 10px;
+        }
+
+        hr {
+            border-color: #ececec;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style='text-align: center;margin: 5px auto;'>我的的聊天记录</h3>
+    <hr>
+    		    <?php foreach($list as $key=>$vo): if(strtoupper($vo['direction']) == 'to_visiter'): ?>
+		    	 <div class="send"><?php echo $vo['name']; ?>&nbsp;&nbsp;<?php echo $vo['infotime']; ?></div>
+				    <div class="message"
+				        style="font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#000;line-height:1.4;"><?php echo $vo['content']; ?>
+				    </div>
+		    	
+		    	<?php else: ?> 
+		    	    <div class="send"><?php echo $vo['name']; ?>&nbsp;&nbsp;<?php echo $vo['infotime']; ?></div>
+    				<div class="message"><?php echo $vo['content']; ?></div>	  
+		    	<?php endif; endforeach; ?>
+
+</body>
+
+</html>

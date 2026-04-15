@@ -1,0 +1,728 @@
+---------------------------------------------------------------
+[ 2023-12-20T05:37:31+08:00 ] 198.235.24.197 GET kkk.wmkf.xyz/
+[运行时间：0.041400s] [吞吐率：24.15req/s] [内存消耗：2,882.09kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002481s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39; presences on the Internet. If you would like to be excluded from our scans, please send IP addresses/domains to: scaninfo@paloaltonetworks.com',
+  'host' => 'kkk.wmkf.xyz',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000656s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-12-20T14:13:23+08:00 ] 45.79.221.160 GET 999.zhuanw.cn/
+[运行时间：0.041754s] [吞吐率：23.95req/s] [内存消耗：2,881.13kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002467s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000218s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-12-20T22:04:31+08:00 ] 111.18.188.203 GET 999.zhuanw.cn/
+[运行时间：0.077260s] [吞吐率：12.94req/s] [内存消耗：2,886.16kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004707s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'visiter_id=6579b59f176p7zqsrq7',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/wxpic,image/sharpp,image/apng,image/tpg,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000584s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-12-20T22:04:31+08:00 ] 111.18.188.203 GET 999.zhuanw.cn/index/index/welcome
+[运行时间：0.051667s] [吞吐率：19.35req/s] [内存消耗：3,901.77kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002343s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'visiter_id=6579b59f176p7zqsrq7; PHPSESSID=f4uqoldsu18ii06p5bnq8ujerc',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/wxpic,image/sharpp,image/apng,image/tpg,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000180s ]
+[ info ] [ RUN ] app\index\controller\Index->welcome[ /www/wwwroot/kkk.wmkf.xyz/application/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/index/view/index/mobile.html [ array (
+  0 => 'basename',
+  1 => 'theme',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001581s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.002392s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000801s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:04:32+08:00 ] 111.18.188.203 GET 999.zhuanw.cn/layer?theme=129936&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1
+[运行时间：0.074769s] [吞吐率：13.37req/s] [内存消耗：4,547.57kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002385s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'layer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://999.zhuanw.cn/',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/wxpic,image/sharpp,image/apng,image/tpg,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'upgrade-insecure-requests' => '1',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'theme' => '129936',
+  'visiter_id' => '',
+  'visiter_name' => '',
+  'avatar' => '',
+  'business_id' => '1',
+  'groupid' => '0',
+  'product' => '{}',
+  'special' => '1',
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000267s ]
+[ info ] [ RUN ] app\layer\controller\Index->index[ /www/wwwroot/kkk.wmkf.xyz/application/layer/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ VIEW ] /www/wwwroot/kkk.wmkf.xyz/public/../application/layer/view/index/index.html [ array (
+  0 => 'basename',
+  1 => 'lang',
+  2 => 'reststate',
+  3 => 'buttonSwitch',
+  4 => 'restsetting',
+  5 => 'business_name',
+  6 => 'baidu_map_key',
+  7 => 'groupid',
+  8 => 'app_key',
+  9 => 'ismoblie',
+  10 => 'whost',
+  11 => 'value',
+  12 => 'wport',
+  13 => 'port',
+  14 => 'url',
+  15 => 'visiter',
+  16 => 'business_id',
+  17 => 'from_url',
+  18 => 'channel',
+  19 => 'visiter_id',
+  20 => 'avatar',
+  21 => 'special',
+  22 => 'theme',
+  23 => 'business_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000954s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.002479s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `ip` = '111.18.188.203' LIMIT 1 [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.002487s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_rest_setting` [ RunTime:0.001327s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_rest_setting` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_button_switch` [ RunTime:0.001433s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_button_switch` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000887s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:04:33+08:00 ] 111.18.188.203 GET 999.zhuanw.cn/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.041279s] [吞吐率：24.23req/s] [内存消耗：2,573.52kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002198s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'cdn',
+    2 => 'element-ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://999.zhuanw.cn/layer?theme=129936&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'host' => '999.zhuanw.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'theme-chalk',
+  'fonts' => 'element-icons.woff',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-12-20T22:04:36+08:00 ] 111.18.188.203 POST 999.zhuanw.cn/admin/event/notice
+[运行时间：0.288844s] [吞吐率：3.46req/s] [内存消耗：4,554.43kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001949s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'notice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://999.zhuanw.cn/layer?theme=129936&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://999.zhuanw.cn',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '213',
+  'host' => '999.zhuanw.cn',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '656421499uv3eeswam7',
+  'visiter_name' => '游客656421499uv3eeswam7',
+  'business_id' => '1',
+  'from_url' => 'http://999.zhuanw.cn/',
+  'avatar' => '/assets/images/index/avatar-red2s.png',
+  'groupid' => '0',
+  'special' => '1',
+  'name' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000297s ]
+[ info ] [ RUN ] app\admin\controller\Event->notice[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001357s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.002160s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001335s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001177s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online',`ip`='111.18.188.203',`location`='陕西西安'  WHERE  `channel` = '36353634323134393975763365657377616d372f31' [ RunTime:0.002737s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `avatar`='/assets/images/index/avatar-red2s.png',`login_times`=login_times+1,`visiter_name`='游客656421499uv3eeswam7'  WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 [ RunTime:0.002934s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001858s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001281s ]
+[ sql ] [ SQL ] SELECT `avatar`,`business_id`,`email`,`open_id`,`groupid`,`nick_name`,`service_id`,`state` FROM `wolive_service` WHERE  `service_id` = 1  AND `groupid` = '0' LIMIT 1 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1  AND `state` = 'normal' LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `service_id`=1,`groupid`=0  WHERE  `qid` = 3691 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_sentence` [ RunTime:0.002575s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_sentence` WHERE  `lang` = 'cn'  AND `service_id` = 1  AND `state` = 'using' LIMIT 1 [ RunTime:0.001343s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:04:37+08:00 ] 111.18.188.203 POST 999.zhuanw.cn/admin/event/getquestion
+[运行时间：0.061867s] [吞吐率：16.16req/s] [内存消耗：4,338.05kb] [文件加载：74]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001684s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'getquestion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://999.zhuanw.cn/layer?theme=129936&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://999.zhuanw.cn',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '44',
+  'host' => '999.zhuanw.cn',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '656421499uv3eeswam7',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000257s ]
+[ info ] [ RUN ] app\admin\controller\Event->getquestion[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001031s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.002537s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000831s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.003033s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_question` [ RunTime:0.001642s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1  AND `keyword` <> '' LIMIT 1 [ RunTime:0.000885s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:04:37+08:00 ] 111.18.188.203 POST 999.zhuanw.cn/admin/event/chatdata
+[运行时间：0.099940s] [吞吐率：10.01req/s] [内存消耗：4,304.08kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002004s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'chatdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://999.zhuanw.cn/layer?theme=129936&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://999.zhuanw.cn',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '55',
+  'host' => '999.zhuanw.cn',
+)
+[ info ] [ PARAM ] array (
+  'hid' => '',
+  'vid' => '656421499uv3eeswam7',
+  'service_id' => '1',
+  'business_id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000396s ]
+[ info ] [ RUN ] app\admin\controller\Event->chatdata[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013600s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.008357s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 ORDER BY `timestamp` DESC,`cid` ASC LIMIT 10 [ RunTime:0.006850s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.002404s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001703s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:04:37+08:00 ] 111.18.188.203 POST 999.zhuanw.cn/admin/event/gettishi
+[运行时间：0.074569s] [吞吐率：13.41req/s] [内存消耗：4,093.30kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002095s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'gettishi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://999.zhuanw.cn/layer?theme=129936&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://999.zhuanw.cn',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '44',
+  'host' => '999.zhuanw.cn',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '656421499uv3eeswam7',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000256s ]
+[ info ] [ RUN ] app\admin\controller\Event->gettishi[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004235s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001842s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001711s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001321s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000676s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:04:39+08:00 ] 198.44.185.96 POST kkk.wmkf.xyz/admin/event
+[运行时间：0.125651s] [吞吐率：7.96req/s] [内存消耗：4,488.30kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002022s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '163',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'a64f2ff557cf17f4a1611bce4912f469a5e11da712201ef9a7a9f3cfa307155e',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kkk.wmkf.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1703081079.4415',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36353634323134393975763365657377616d372f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000346s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001836s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.002778s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000919s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.002139s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '36353634323134393975763365657377616d372f31' [ RunTime:0.000833s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:05:39+08:00 ] 198.44.185.96 POST kkk.wmkf.xyz/admin/event
+[运行时间：0.146405s] [吞吐率：6.83req/s] [内存消耗：4,489.86kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001753s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '167',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '87def67ed1421ca9b87c89f5dedf4f917a4fd09a61156d08d2d5ea9a18297502',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kkk.wmkf.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1703081139.4924',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36353634323134393975763365657377616d372f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000373s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001057s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001626s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000868s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 [ RunTime:0.000790s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.002034s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '36353634323134393975763365657377616d372f31' [ RunTime:0.002779s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:07:33+08:00 ] 111.18.188.203 POST 999.zhuanw.cn/admin/event/checkchat
+[运行时间：0.072681s] [吞吐率：13.76req/s] [内存消耗：4,318.53kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002451s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'checkchat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://999.zhuanw.cn/layer?theme=129936&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://999.zhuanw.cn',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; V2199A Build/TP1A.220624.014) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.86 MQQBrowser/14.6 Mobile Safari/537.36 COVC/046803',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '57',
+  'host' => '999.zhuanw.cn',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '656421499uv3eeswam7',
+  'business_id' => '1',
+  'service_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000549s ]
+[ info ] [ RUN ] app\admin\controller\Event->checkchat[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002523s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.005327s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.002211s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '656421499uv3eeswam7' LIMIT 1 [ RunTime:0.001408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.002017s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 ORDER BY `timestamp` DESC [ RunTime:0.001645s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:07:38+08:00 ] 198.44.185.96 POST kkk.wmkf.xyz/admin/event
+[运行时间：1.267853s] [吞吐率：0.79req/s] [内存消耗：4,488.30kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001933s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '163',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '033897fb5a94f84bf58b6b61f8a3589dfd92ea361ba357fb956332586a7046af',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kkk.wmkf.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1703081256.5982',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36353634323134393975763365657377616d372f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000435s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001229s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.002093s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.002361s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '36353634323134393975763365657377616d372f31' [ RunTime:0.005308s ]
+---------------------------------------------------------------
+[ 2023-12-20T22:09:02+08:00 ] 198.44.185.96 POST kkk.wmkf.xyz/admin/event
+[运行时间：0.190344s] [吞吐率：5.25req/s] [内存消耗：4,489.86kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002042s ]
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '167',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'f191eaa130f18b14c400729cfb0e2337cef187b28ce33899af9288d855506f27',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kkk.wmkf.xyz',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1703081340.6642',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36353634323134393975763365657377616d372f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kkk.wmkf.xyz/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000383s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kkk.wmkf.xyz/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001514s ] mysql:host=127.0.0.1;dbname=kkk_wmkf_xyz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001898s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.002673s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '656421499uv3eeswam7'  AND `business_id` = 1 [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.002139s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '36353634323134393975763365657377616d372f31' [ RunTime:0.005200s ]

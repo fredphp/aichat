@@ -1,0 +1,3323 @@
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/backend/busines/index?page=1&limit=10
+[运行时间：0.025405s] [吞吐率：39.36req/s] [内存消耗：4,182.27kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000852s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'busines',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/backend/busines/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000165s ]
+[ info ] [ RUN ] app\backend\controller\Busines->index[ /www/wwwroot/kf5.xywlgzs.vip/application/backend/controller/Busines.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_business` LIMIT 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_service` WHERE  `business_id` = 3 LIMIT 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_service` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000218s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/banwords/index?page=1&limit=10
+[运行时间：0.029906s] [吞吐率：33.44req/s] [内存消耗：4,223.52kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000835s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'banwords',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/banwords/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000275s ]
+[ info ] [ RUN ] app\service\controller\Banwords->index[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Banwords.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000492s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000964s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001175s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000906s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.001318s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_banword` [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_banword` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_banword` WHERE  `business_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000208s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/groups/index?page=1&limit=10
+[运行时间：0.032475s] [吞吐率：30.79req/s] [内存消耗：4,226.95kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000966s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'groups',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/groups/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000164s ]
+[ info ] [ RUN ] app\service\controller\Groups->index[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Groups.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000533s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000963s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_group` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_service` WHERE  `groupid` = '1' LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_service` WHERE  `groupid` = '3' LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_service` WHERE  `groupid` = '4' LIMIT 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_service` WHERE  `groupid` = '2' LIMIT 1 [ RunTime:0.000178s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/vgroups/index?page=1&limit=10
+[运行时间：0.034566s] [吞吐率：28.93req/s] [内存消耗：4,246.91kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000969s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'vgroups',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/vgroups/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000156s ]
+[ info ] [ RUN ] app\service\controller\Vgroups->index[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Vgroups.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000599s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001226s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001125s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_vgroup` [ RunTime:0.000861s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_vgroup` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `business_id` = 1 ORDER BY `id` ASC LIMIT 0,10 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.000993s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `wolive_queue` WHERE  `groupid` = 1 GROUP BY `service_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `wolive_queue` WHERE  `groupid` = 2 GROUP BY `service_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `wolive_queue` WHERE  `groupid` = 3 GROUP BY `service_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000231s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/questions/index?page=1&limit=10
+[运行时间：0.031229s] [吞吐率：32.02req/s] [内存消耗：4,232.54kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000929s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'questions',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/questions/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000153s ]
+[ info ] [ RUN ] app\service\controller\Questions->index[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Questions.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000542s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001018s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001229s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000908s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_question` [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_question` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_question` WHERE  `business_id` = 1 ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.000230s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/setting/sentence?page=1&limit=10
+[运行时间：0.031004s] [吞吐率：32.25req/s] [内存消耗：4,410.74kb] [文件加载：82]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000907s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'setting',
+    2 => 'sentence',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'time=; cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/setting/sentence',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000153s ]
+[ info ] [ RUN ] app\service\controller\Setting->sentence[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000439s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001012s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001241s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_sentence` [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_sentence` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_sentence` WHERE  `business_id` = 1 ORDER BY `sid` DESC LIMIT 0,10 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT `nick_name`,`service_id` FROM `wolive_service` WHERE  `service_id` IN (1) [ RunTime:0.000189s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/services/index?page=1&limit=10
+[运行时间：0.031070s] [吞吐率：32.19req/s] [内存消耗：4,252.88kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000953s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'services',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/services/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000166s ]
+[ info ] [ RUN ] app\service\controller\Services->index[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Services.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000517s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001049s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000176s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT `expire_time` FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_service` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `business_id` = 1 ORDER BY `service_id` DESC LIMIT 0,10 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000170s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/log?page=1&limit=10
+[运行时间：0.059723s] [吞吐率：16.74req/s] [内存消耗：7,985.20kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001442s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'log',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/log/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000162s ]
+[ info ] [ RUN ] app\service\controller\Log->index[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Log.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000619s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001187s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001463s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.001007s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.001024s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.001021s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin_log` [ RunTime:0.000932s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin_log` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_admin_log` WHERE  `uid` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000210s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/visitors/index?page=1&limit=10
+[运行时间：0.040887s] [吞吐率：24.46req/s] [内存消耗：7,996.63kb] [文件加载：79]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000929s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'visitors',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/visitors/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000143s ]
+[ info ] [ RUN ] app\service\controller\Visitors->index[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Visitors.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000526s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001153s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000906s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `wolive_visiter` `v` LEFT JOIN `wolive_queue` `q` ON `q`.`visiter_id`=`v`.`visiter_id` WHERE  `v`.`business_id` = 1 GROUP BY `q`.`visiter_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` `v` LEFT JOIN `wolive_queue` `q` ON `q`.`visiter_id`=`v`.`visiter_id` WHERE  `v`.`business_id` = 1 GROUP BY `q`.`visiter_id` ORDER BY `vid` DESC LIMIT 0,10 [ RunTime:0.001099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_vgroup` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_vgroup` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000225s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/service/upload/ueditor/action/config/service_id/1/admin_id/0.html?action=config&&noCache=1741708100872
+[运行时间：0.027577s] [吞吐率：36.26req/s] [内存消耗：3,982.09kb] [文件加载：74]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000857s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'service',
+    1 => 'upload',
+    2 => 'ueditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/settingnow/index',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'config',
+  'noCache' => '1741708100872',
+  'service_id' => '1',
+  'admin_id' => '0',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000140s ]
+[ info ] [ RUN ] app\service\controller\Upload->ueditor[ /www/wwwroot/kf5.xywlgzs.vip/application/service/controller/Upload.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000592s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001063s ]
+[ sql ] [ SQL ] SELECT `open_id` FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001184s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_group` [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_group` WHERE  `business_id` = 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_admin` [ RunTime:0.000796s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_admin` LIMIT 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_wechat_platform` [ RunTime:0.000951s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_wechat_platform` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000276s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:22+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/checkchat
+[运行时间：0.028998s] [吞吐率：34.48req/s] [内存消耗：4,355.98kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000826s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'checkchat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=2eab0f&visiter_id=&visiter_name=&avatar=&business_id=1&product=%7B%7D&groupid=1&special=1',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '57',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'service_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000141s ]
+[ info ] [ RUN ] app\admin\controller\Event->checkchat[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000650s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001523s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001183s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC [ RunTime:0.000641s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:48:23+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/656351ede171e3661.png
+[运行时间：0.013368s] [吞吐率：74.81req/s] [内存消耗：2,588.99kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000888s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/settingnow/index',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:48:23+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/656351f3552d17884.png
+[运行时间：0.012961s] [吞吐率：77.16req/s] [内存消耗：2,588.99kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000827s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cu_com=; visiter_id=67ca4a1fkxy74x9srf5; services=1; itime=; pgv_info==undefined; time=; service_token=8b21kss58veFNPx7P6eCAYKNVLJGBevfSFfDhaO0ErFHEWHsKn2ldBM; PHPSESSID=imri93b46am53vhlch3edhf4b7; cid=34953; SECKEY_ABVK=ICsNk5Uu+YkQcmdEm/MdZBngeDHjPYyYZVGTx5ck2/g%3D; BMAP_SECKEY=ICsNk5Uu-YkQcmdEm_MdZBMiVnWyhmh34E6Kv-csodzeM1gBFIQheFra5S57M3cWihmTD6m-da5k5vq-y9RkE0cbymU7kNXuLhsMRv6bFiQeyJ3Nn0Xc4DU0W3xaFYOiMsewFP5Wk5kmz-xr2qA0FGc55x3YS7HrH5gkGe_9vI468vGqCpv6EVz5GpHNnbl1',
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/service/settingnow/index',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:49:17+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.030428s] [吞吐率：32.86req/s] [内存消耗：4,513.82kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001021s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '172',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '07f7336a733d38598afc69164a4a199f37b3667b09e57bceab8a42b6143aa5cc',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741708157.2101',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'ud1',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'all1',
+      'name' => 'channel_removed',
+    ),
+    2 => 
+    array (
+      'channel' => 'kefu1',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000146s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000526s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001122s ]
+[ sql ] [ SQL ] UPDATE `wolive_service`  SET `state`='offline'  WHERE  `service_id` = 1 [ RunTime:0.001983s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:50:20+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.033956s] [吞吐率：29.45req/s] [内存消耗：4,522.30kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000989s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '167',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => 'acd219255987c15f824ad4ea646e49d1968a14090d393cc2b31222af0b9bf54d',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741708220.2088',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36376361346131666b787937347839737266352f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000149s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000572s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001182s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001036s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.002411s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:50:45+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1
+[运行时间：0.034317s] [吞吐率：29.14req/s] [内存消耗：4,566.84kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001474s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'layer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'http://vccccc.cc/',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'theme' => '1696f5',
+  'visiter_id' => '',
+  'visiter_name' => '',
+  'avatar' => '',
+  'business_id' => '1',
+  'groupid' => '0',
+  'product' => '{}',
+  'special' => '1',
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000144s ]
+[ info ] [ RUN ] app\layer\controller\Index->index[ /www/wwwroot/kf5.xywlgzs.vip/application/layer/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ VIEW ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/layer/view/index/index.html [ array (
+  0 => 'basename',
+  1 => 'lang',
+  2 => 'reststate',
+  3 => 'buttonSwitch',
+  4 => 'restsetting',
+  5 => 'business_name',
+  6 => 'baidu_map_key',
+  7 => 'groupid',
+  8 => 'app_key',
+  9 => 'ismoblie',
+  10 => 'whost',
+  11 => 'value',
+  12 => 'wport',
+  13 => 'port',
+  14 => 'url',
+  15 => 'visiter',
+  16 => 'business_id',
+  17 => 'from_url',
+  18 => 'channel',
+  19 => 'visiter_id',
+  20 => 'avatar',
+  21 => 'special',
+  22 => 'theme',
+  23 => 'business_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000599s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001184s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `ip` = '223.160.234.103' LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001403s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_rest_setting` [ RunTime:0.000843s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_rest_setting` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_button_switch` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_button_switch` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000251s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:50:45+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.017391s] [吞吐率：57.50req/s] [内存消耗：2,587.36kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000881s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'cdn',
+    2 => 'element-ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'theme-chalk',
+  'fonts' => 'element-icons.woff',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:50:45+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.013838s] [吞吐率：72.26req/s] [内存消耗：2,586.61kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000823s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:50:46+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/1/1680153468.png
+[运行时间：0.019932s] [吞吐率：50.17req/s] [内存消耗：2,586.92kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001124s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:50:46+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/656351ede171e3661.png
+[运行时间：0.021936s] [吞吐率：45.59req/s] [内存消耗：2,586.94kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002410s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:50:47+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/notice
+[运行时间：0.336415s] [吞吐率：2.97req/s] [内存消耗：4,590.82kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000873s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'notice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '209',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'visiter_name' => '游客67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'from_url' => 'http://vccccc.cc/',
+  'avatar' => '/assets/images/index/avatar-red2s.png',
+  'groupid' => '0',
+  'special' => '1',
+  'name' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000151s ]
+[ info ] [ RUN ] app\admin\controller\Event->notice[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000542s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001294s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000662s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online',`ip`='223.160.234.103',`location`=''  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.003636s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `avatar`='/assets/images/index/avatar-red2s.png',`login_times`=login_times+1,`visiter_name`='游客67ca4a1fkxy74x9srf5'  WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 [ RunTime:0.002442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001079s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT `avatar`,`business_id`,`email`,`open_id`,`groupid`,`nick_name`,`service_id`,`state` FROM `wolive_service` WHERE  `service_id` = 1  AND `groupid` = '0' LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1  AND `state` = 'normal' LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `service_id`=1,`groupid`=0  WHERE  `service_id` = 1  AND `qid` = 4131 [ RunTime:0.001777s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_sentence` [ RunTime:0.000938s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_sentence` WHERE  `lang` = 'cn'  AND `service_id` = 1  AND `state` = 'using' [ RunTime:0.000318s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:50:47+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/getquestion
+[运行时间：0.030961s] [吞吐率：32.30req/s] [内存消耗：4,373.13kb] [文件加载：74]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000866s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'getquestion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000119s ]
+[ info ] [ RUN ] app\admin\controller\Event->getquestion[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000432s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001417s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_question` [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1  AND `keyword` <> '' LIMIT 1 [ RunTime:0.000324s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:50:47+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/chatdata
+[运行时间：0.043390s] [吞吐率：23.05req/s] [内存消耗：4,338.72kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003967s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'chatdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '55',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'hid' => '',
+  'vid' => '67ca4a1fkxy74x9srf5',
+  'service_id' => '1',
+  'business_id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000511s ]
+[ info ] [ RUN ] app\admin\controller\Event->chatdata[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000472s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC,`cid` ASC LIMIT 10 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001546s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001275s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000246s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:50:47+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/gettishi
+[运行时间：0.039225s] [吞吐率：25.49req/s] [内存消耗：4,128.87kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001006s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'gettishi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000150s ]
+[ info ] [ RUN ] app\admin\controller\Event->gettishi[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000553s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001097s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000977s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000343s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:50:50+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.028923s] [吞吐率：34.57req/s] [内存消耗：4,520.73kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000856s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '163',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '1dc0e8638348767979717869e02752e57622fe1a85ccad1d7b33643f863f30eb',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741708250.2112',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36376361346131666b787937347839737266352f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000144s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000573s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001011s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.000370s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:51:14+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.037373s] [吞吐率：26.76req/s] [内存消耗：4,522.30kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000966s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '166',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '0b23fed5ce065997cddbb20f08f41b7bc1af1005ff1f509c5c5dac1597d1cac5',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741708274.2104',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36376361346131666b787937347839737266352f31',
+      'name' => 'channel_removed',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_removed',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000151s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000600s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001114s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `remind_tpl`=0,`remind_comment`=0  WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='offline'  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.006370s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:51:47+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1
+[运行时间：0.033187s] [吞吐率：30.13req/s] [内存消耗：4,566.84kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000984s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'layer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'http://vccccc.cc/',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'theme' => '1696f5',
+  'visiter_id' => '',
+  'visiter_name' => '',
+  'avatar' => '',
+  'business_id' => '1',
+  'groupid' => '0',
+  'product' => '{}',
+  'special' => '1',
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000161s ]
+[ info ] [ RUN ] app\layer\controller\Index->index[ /www/wwwroot/kf5.xywlgzs.vip/application/layer/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ VIEW ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/layer/view/index/index.html [ array (
+  0 => 'basename',
+  1 => 'lang',
+  2 => 'reststate',
+  3 => 'buttonSwitch',
+  4 => 'restsetting',
+  5 => 'business_name',
+  6 => 'baidu_map_key',
+  7 => 'groupid',
+  8 => 'app_key',
+  9 => 'ismoblie',
+  10 => 'whost',
+  11 => 'value',
+  12 => 'wport',
+  13 => 'port',
+  14 => 'url',
+  15 => 'visiter',
+  16 => 'business_id',
+  17 => 'from_url',
+  18 => 'channel',
+  19 => 'visiter_id',
+  20 => 'avatar',
+  21 => 'special',
+  22 => 'theme',
+  23 => 'business_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000637s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `ip` = '223.160.234.103' LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001321s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_rest_setting` [ RunTime:0.001133s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_rest_setting` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_button_switch` [ RunTime:0.001040s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_button_switch` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000273s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:51:47+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.014290s] [吞吐率：69.98req/s] [内存消耗：2,587.36kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000889s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'cdn',
+    2 => 'element-ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'theme-chalk',
+  'fonts' => 'element-icons.woff',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:51:47+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.012929s] [吞吐率：77.35req/s] [内存消耗：2,586.61kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000815s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:51:49+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/notice
+[运行时间：0.347266s] [吞吐率：2.88req/s] [内存消耗：4,590.82kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000989s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'notice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '209',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'visiter_name' => '游客67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'from_url' => 'http://vccccc.cc/',
+  'avatar' => '/assets/images/index/avatar-red2s.png',
+  'groupid' => '0',
+  'special' => '1',
+  'name' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000138s ]
+[ info ] [ RUN ] app\admin\controller\Event->notice[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000594s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001412s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001256s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000589s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online',`ip`='223.160.234.103',`location`=''  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.002713s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `avatar`='/assets/images/index/avatar-red2s.png',`login_times`=login_times+1,`visiter_name`='游客67ca4a1fkxy74x9srf5'  WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 [ RunTime:0.001864s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001186s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT `avatar`,`business_id`,`email`,`open_id`,`groupid`,`nick_name`,`service_id`,`state` FROM `wolive_service` WHERE  `service_id` = 1  AND `groupid` = '0' LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1  AND `state` = 'normal' LIMIT 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `service_id`=1,`groupid`=0  WHERE  `service_id` = 1  AND `qid` = 4131 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_sentence` [ RunTime:0.001072s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_sentence` WHERE  `lang` = 'cn'  AND `service_id` = 1  AND `state` = 'using' [ RunTime:0.000320s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:51:49+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/656351ede171e3661.png
+[运行时间：0.013232s] [吞吐率：75.57req/s] [内存消耗：2,586.94kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000927s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:51:50+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/1/1680153468.png
+[运行时间：0.012914s] [吞吐率：77.44req/s] [内存消耗：2,586.92kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000836s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:51:50+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/getquestion
+[运行时间：0.042822s] [吞吐率：23.35req/s] [内存消耗：4,373.13kb] [文件加载：74]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002711s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'getquestion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000842s ]
+[ info ] [ RUN ] app\admin\controller\Event->getquestion[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003013s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001514s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002188s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001116s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_question` [ RunTime:0.001963s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001149s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1  AND `keyword` <> '' LIMIT 1 [ RunTime:0.000946s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:51:50+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/chatdata
+[运行时间：0.043416s] [吞吐率：23.03req/s] [内存消耗：4,338.72kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002436s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'chatdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '55',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'hid' => '',
+  'vid' => '67ca4a1fkxy74x9srf5',
+  'service_id' => '1',
+  'business_id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000148s ]
+[ info ] [ RUN ] app\admin\controller\Event->chatdata[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001993s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC,`cid` ASC LIMIT 10 [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001530s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000976s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001512s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000953s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:51:50+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/gettishi
+[运行时间：0.046840s] [吞吐率：21.35req/s] [内存消耗：4,128.87kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001343s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'gettishi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000149s ]
+[ info ] [ RUN ] app\admin\controller\Event->gettishi[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000520s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001811s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001209s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000339s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:51:50+08:00 ] 43.133.11.179 POST kf5.xywlgzs.vip/admin/event
+[运行时间：0.028184s] [吞吐率：35.48req/s] [内存消耗：4,520.73kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000842s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '163',
+  'content-type' => 'application/json',
+  'x-pusher-signature' => '820301405f2ad47a2055ba1623b81287757acbdae0dba6d6d84bb1345199e011',
+  'x-pusher-key' => 'xd5bgugi03uzg9wl',
+  'connection' => 'close',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'time_ms' => '1741708310.2089',
+  'events' => 
+  array (
+    0 => 
+    array (
+      'channel' => 'cu36376361346131666b787937347839737266352f31',
+      'name' => 'channel_added',
+    ),
+    1 => 
+    array (
+      'channel' => 'se1',
+      'name' => 'channel_added',
+    ),
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000151s ]
+[ info ] [ RUN ] app\admin\controller\Event->index[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000576s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001171s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001063s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online'  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.000357s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:52:20+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/checkchat
+[运行时间：0.030756s] [吞吐率：32.51req/s] [内存消耗：4,356.16kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001038s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'checkchat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '57',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'service_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000182s ]
+[ info ] [ RUN ] app\admin\controller\Event->checkchat[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000667s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001425s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001345s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC [ RunTime:0.000551s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:52:53+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1
+[运行时间：0.033211s] [吞吐率：30.11req/s] [内存消耗：4,566.84kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000936s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'layer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'http://vccccc.cc/',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'theme' => '1696f5',
+  'visiter_id' => '',
+  'visiter_name' => '',
+  'avatar' => '',
+  'business_id' => '1',
+  'groupid' => '0',
+  'product' => '{}',
+  'special' => '1',
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000158s ]
+[ info ] [ RUN ] app\layer\controller\Index->index[ /www/wwwroot/kf5.xywlgzs.vip/application/layer/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ VIEW ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/layer/view/index/index.html [ array (
+  0 => 'basename',
+  1 => 'lang',
+  2 => 'reststate',
+  3 => 'buttonSwitch',
+  4 => 'restsetting',
+  5 => 'business_name',
+  6 => 'baidu_map_key',
+  7 => 'groupid',
+  8 => 'app_key',
+  9 => 'ismoblie',
+  10 => 'whost',
+  11 => 'value',
+  12 => 'wport',
+  13 => 'port',
+  14 => 'url',
+  15 => 'visiter',
+  16 => 'business_id',
+  17 => 'from_url',
+  18 => 'channel',
+  19 => 'visiter_id',
+  20 => 'avatar',
+  21 => 'special',
+  22 => 'theme',
+  23 => 'business_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000789s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001249s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `ip` = '223.160.234.103' LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001550s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_rest_setting` [ RunTime:0.001046s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_rest_setting` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_button_switch` [ RunTime:0.001110s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_button_switch` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000325s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:52:53+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.014896s] [吞吐率：67.13req/s] [内存消耗：2,587.36kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001221s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'cdn',
+    2 => 'element-ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'theme-chalk',
+  'fonts' => 'element-icons.woff',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:52:53+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.014206s] [吞吐率：70.39req/s] [内存消耗：2,586.61kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000964s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:52:57+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/notice
+[运行时间：0.178894s] [吞吐率：5.59req/s] [内存消耗：4,590.82kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001162s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'notice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '209',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'visiter_name' => '游客67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'from_url' => 'http://vccccc.cc/',
+  'avatar' => '/assets/images/index/avatar-red2s.png',
+  'groupid' => '0',
+  'special' => '1',
+  'name' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000176s ]
+[ info ] [ RUN ] app\admin\controller\Event->notice[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000729s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001498s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001566s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online',`ip`='223.160.234.103',`location`=''  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `avatar`='/assets/images/index/avatar-red2s.png',`login_times`=login_times+1,`visiter_name`='游客67ca4a1fkxy74x9srf5'  WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 [ RunTime:0.002308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001633s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001358s ]
+[ sql ] [ SQL ] SELECT `avatar`,`business_id`,`email`,`open_id`,`groupid`,`nick_name`,`service_id`,`state` FROM `wolive_service` WHERE  `service_id` = 1  AND `groupid` = '0' LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1  AND `state` = 'normal' LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `service_id`=1,`groupid`=0  WHERE  `service_id` = 1  AND `qid` = 4131 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_sentence` [ RunTime:0.001170s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_sentence` WHERE  `lang` = 'cn'  AND `service_id` = 1  AND `state` = 'using' [ RunTime:0.000403s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:52:58+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/chatdata
+[运行时间：0.037309s] [吞吐率：26.80req/s] [内存消耗：4,338.72kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001340s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'chatdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '55',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'hid' => '',
+  'vid' => '67ca4a1fkxy74x9srf5',
+  'service_id' => '1',
+  'business_id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000188s ]
+[ info ] [ RUN ] app\admin\controller\Event->chatdata[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000697s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001904s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC,`cid` ASC LIMIT 10 [ RunTime:0.000807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001446s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000301s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:52:58+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/getquestion
+[运行时间：0.048248s] [吞吐率：20.73req/s] [内存消耗：4,373.13kb] [文件加载：74]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001521s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'getquestion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000320s ]
+[ info ] [ RUN ] app\admin\controller\Event->getquestion[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001453s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.002799s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001996s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_question` [ RunTime:0.001693s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1  AND `keyword` <> '' LIMIT 1 [ RunTime:0.000430s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:52:58+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/gettishi
+[运行时间：0.030653s] [吞吐率：32.62req/s] [内存消耗：4,128.87kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001017s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'gettishi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000198s ]
+[ info ] [ RUN ] app\admin\controller\Event->gettishi[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000566s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001818s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001469s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001246s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000421s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:52:59+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/656351ede171e3661.png
+[运行时间：0.013515s] [吞吐率：73.99req/s] [内存消耗：2,586.94kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000851s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:52:59+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/1/1680153468.png
+[运行时间：0.015365s] [吞吐率：65.08req/s] [内存消耗：2,586.92kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001143s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:53:28+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/checkchat
+[运行时间：0.029789s] [吞吐率：33.57req/s] [内存消耗：4,356.16kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000993s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'checkchat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '57',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'service_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000135s ]
+[ info ] [ RUN ] app\admin\controller\Event->checkchat[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000613s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001475s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001006s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC [ RunTime:0.000639s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:56:24+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1
+[运行时间：0.032537s] [吞吐率：30.73req/s] [内存消耗：4,566.84kb] [文件加载：76]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001001s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'layer',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'http://vccccc.cc/',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"Windows"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'theme' => '1696f5',
+  'visiter_id' => '',
+  'visiter_name' => '',
+  'avatar' => '',
+  'business_id' => '1',
+  'groupid' => '0',
+  'product' => '{}',
+  'special' => '1',
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000172s ]
+[ info ] [ RUN ] app\layer\controller\Index->index[ /www/wwwroot/kf5.xywlgzs.vip/application/layer/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ VIEW ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/layer/view/index/index.html [ array (
+  0 => 'basename',
+  1 => 'lang',
+  2 => 'reststate',
+  3 => 'buttonSwitch',
+  4 => 'restsetting',
+  5 => 'business_name',
+  6 => 'baidu_map_key',
+  7 => 'groupid',
+  8 => 'app_key',
+  9 => 'ismoblie',
+  10 => 'whost',
+  11 => 'value',
+  12 => 'wport',
+  13 => 'port',
+  14 => 'url',
+  15 => 'visiter',
+  16 => 'business_id',
+  17 => 'from_url',
+  18 => 'channel',
+  19 => 'visiter_id',
+  20 => 'avatar',
+  21 => 'special',
+  22 => 'theme',
+  23 => 'business_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000538s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001192s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `ip` = '223.160.234.103' LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_rest_setting` [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_rest_setting` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_button_switch` [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_button_switch` WHERE  `business_id` = 1 LIMIT 1 [ RunTime:0.000282s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:56:24+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.014260s] [吞吐率：70.13req/s] [内存消耗：2,587.36kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000945s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'cdn',
+    2 => 'element-ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'theme-chalk',
+  'fonts' => 'element-icons.woff',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:56:24+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.013192s] [吞吐率：75.80req/s] [内存消耗：2,586.61kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000890s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:56:24+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/656351ede171e3661.png
+[运行时间：0.014590s] [吞吐率：68.54req/s] [内存消耗：2,586.94kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000973s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:56:25+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/1/1680153468.png
+[运行时间：0.013369s] [吞吐率：74.80req/s] [内存消耗：2,586.92kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000966s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:56:25+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/upload/images/656351ede171e3661.png
+[运行时间：0.014321s] [吞吐率：69.83req/s] [内存消耗：2,586.94kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001461s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'image',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:56:25+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/notice
+[运行时间：0.259275s] [吞吐率：3.86req/s] [内存消耗：4,590.82kb] [文件加载：78]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000966s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'notice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '209',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'visiter_name' => '游客67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'from_url' => 'http://vccccc.cc/',
+  'avatar' => '/assets/images/index/avatar-red2s.png',
+  'groupid' => '0',
+  'special' => '1',
+  'name' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000161s ]
+[ info ] [ RUN ] app\admin\controller\Event->notice[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000522s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.002006s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001562s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000614s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `state`='online',`ip`='223.160.234.103',`location`=''  WHERE  `channel` = '36376361346131666b787937347839737266352f31' [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] UPDATE `wolive_visiter`  SET `avatar`='/assets/images/index/avatar-red2s.png',`login_times`=login_times+1,`visiter_name`='游客67ca4a1fkxy74x9srf5'  WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 [ RunTime:0.002089s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_queue` [ RunTime:0.001396s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.001023s ]
+[ sql ] [ SQL ] SELECT `avatar`,`business_id`,`email`,`open_id`,`groupid`,`nick_name`,`service_id`,`state` FROM `wolive_service` WHERE  `service_id` = 1  AND `groupid` = '0' LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1  AND `business_id` = 1 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_queue` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1  AND `state` = 'normal' LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] UPDATE `wolive_queue`  SET `service_id`=1,`groupid`=0  WHERE  `service_id` = 1  AND `qid` = 4131 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_sentence` [ RunTime:0.001147s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_sentence` WHERE  `lang` = 'cn'  AND `service_id` = 1  AND `state` = 'using' [ RunTime:0.000358s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:56:25+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/chatdata
+[运行时间：0.029558s] [吞吐率：33.83req/s] [内存消耗：4,338.72kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001101s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'chatdata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '55',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'hid' => '',
+  'vid' => '67ca4a1fkxy74x9srf5',
+  'service_id' => '1',
+  'business_id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000145s ]
+[ info ] [ RUN ] app\admin\controller\Event->chatdata[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000483s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.001025s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC,`cid` ASC LIMIT 10 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000850s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000233s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:56:25+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/getquestion
+[运行时间：0.032896s] [吞吐率：30.40req/s] [内存消耗：4,373.13kb] [文件加载：74]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001214s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'getquestion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000176s ]
+[ info ] [ RUN ] app\admin\controller\Event->getquestion[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000566s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001852s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001628s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.001008s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_question` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `wolive_question` WHERE  `business_id` = 1  AND `lang` = 'cn'  AND `status` = 1  AND `keyword` <> '' LIMIT 1 [ RunTime:0.000301s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:56:25+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/gettishi
+[运行时间：0.025558s] [吞吐率：39.13req/s] [内存消耗：4,128.87kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000855s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'gettishi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=1, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '44',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'business_id' => '1',
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000143s ]
+[ info ] [ RUN ] app\admin\controller\Event->gettishi[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000572s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001237s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_service` [ RunTime:0.000936s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_service` WHERE  `service_id` = 1 LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000310s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:56:55+08:00 ] 223.160.234.103 POST kf5.xywlgzs.vip/admin/event/checkchat
+[运行时间：0.027506s] [吞吐率：36.36req/s] [内存消耗：4,356.16kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000983s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'event',
+    2 => 'checkchat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'https://kf5.xywlgzs.vip',
+  'sec-ch-ua-mobile' => '?0',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-ch-ua-platform' => '"Windows"',
+  'content-length' => '57',
+  'host' => 'kf5.xywlgzs.vip',
+)
+[ info ] [ PARAM ] array (
+  'visiter_id' => '67ca4a1fkxy74x9srf5',
+  'business_id' => '1',
+  'service_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/public/../application/lang/cn.php
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.000162s ]
+[ info ] [ RUN ] app\admin\controller\Event->checkchat[ /www/wwwroot/kf5.xywlgzs.vip/application/admin/controller/Event.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;dbname=kf5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_business` [ RunTime:0.001287s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_business` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_visiter` [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT `lang` FROM `wolive_visiter` WHERE  `visiter_id` = '67ca4a1fkxy74x9srf5' LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wolive_chats` [ RunTime:0.000843s ]
+[ sql ] [ SQL ] SELECT * FROM `wolive_chats` WHERE  `service_id` = 1  AND `visiter_id` = '67ca4a1fkxy74x9srf5'  AND `business_id` = 1 ORDER BY `timestamp` DESC [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2025-03-11T23:57:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.013695s] [吞吐率：73.02req/s] [内存消耗：2,587.36kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000918s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'cdn',
+    2 => 'element-ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'theme-chalk',
+  'fonts' => 'element-icons.woff',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:57:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/cdn/element-ui/2.15.1/theme-chalk/fonts/element-icons.woff
+[运行时间：0.013734s] [吞吐率：72.81req/s] [内存消耗：2,586.61kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000935s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'referer' => 'https://kf5.xywlgzs.vip/layer?theme=1696f5&visiter_id=&visiter_name=&avatar=&business_id=1&groupid=0&product=%7B%7D&special=1',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'style',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/css,*/*;q=0.1',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Chromium";v="134", "Not:A-Brand";v="24", "Microsoft Edge";v="134"',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-ch-ua-platform' => '"Windows"',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:57:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/css/app.ccaa54a563bd7edef54a4a5dbd192ae7.css.map
+[运行时间：0.013374s] [吞吐率：74.77req/s] [内存消耗：2,583.24kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000936s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'app.ccaa54a563bd7edef54a4a5dbd192ae7.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=4, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:57:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/static/css/app.ccaa54a563bd7edef54a4a5dbd192ae7.css.map
+[运行时间：0.013406s] [吞吐率：74.59req/s] [内存消耗：2,582.89kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000956s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=4, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:57:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/assets/libs/jquery/jquery.form.min.js.map
+[运行时间：0.014150s] [吞吐率：70.67req/s] [内存消耗：2,583.04kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000951s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'libs',
+    2 => 'jquery',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=4, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2025-03-11T23:57:21+08:00 ] 223.160.234.103 GET kf5.xywlgzs.vip/assets/libs/jquery/jquery.form.min.js.map
+[运行时间：0.013383s] [吞吐率：74.72req/s] [内存消耗：2,582.86kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000911s ]
+[ info ] [ LANG ] /www/wwwroot/kf5.xywlgzs.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'priority' => 'u=4, i',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br, zstd',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
+  'sec-fetch-storage-access' => 'active',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'host' => 'kf5.xywlgzs.vip',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
