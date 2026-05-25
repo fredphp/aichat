@@ -1247,6 +1247,10 @@ function gohaoma_url($gameid, $game) {
         $html = $curl->fetch_url($url."&t=".$time);
         $json=json_decode($html,true);
         file_put_contents(
+                'log_url.txt',
+                $url."&t=".$time
+        )
+        file_put_contents(
             'log.txt',
             json_encode($json, JSON_UNESCAPED_UNICODE)
         );
