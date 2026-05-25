@@ -340,14 +340,14 @@ iframe {
 
 
 /* lottery_top and lottery_next moved above header */
-.main > .lottery_top {
+.scroll_box > .lottery_top {
 	position: relative;
 	overflow: hidden;
 	border-bottom: solid 1px #eaeaea;
 	height: 86px;
 	background-color: #fff;
 }
-.main > .lottery_next {
+.scroll_box > .lottery_next {
 	width: auto;
 	position: relative;
 	float: none;

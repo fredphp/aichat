@@ -1,6 +1,25 @@
 <?php include template("header"); ?>
 <div class="main">
-		<div class="lottery_top">
+		
+		
+        <div class="header">
+                <a class="back" href="javascript:history.back(-1)" title="<?php echo L('go_back')?>"><i class="iconfont icon-fanhui"></i></a>
+                <a class="pic" href="?a=user" title="<?php echo L('member_center')?>">
+                        <?php
+                        if ($user['pic']) {
+                                if(preg_match('/^\d*$/',$user['pic'])){
+                                        echo '<img class="pic" src="statics/images/pic/'.$user['pic'].'.jpg" alt="PIC" />';
+                                } else {
+                                        echo '<img class="pic" src="uppic/user/'.$user['pic'].'" alt="PIC" />';
+                                }
+                        }
+                        ?>
+                </a>
+                <a class="order" href="?a=order" title="<?php echo L('my_bet_order')?>"><i class="iconfont icon-liebiao"></i></a>
+                <h4><?php echo $gamename?></h4>
+        </div>
+        <div class="scroll_box">
+                		<div class="lottery_top">
                                 <div class="lottery_now">
                                         <div id="qishu_now">
                                                 <i>001</i><?php echo L('period')?>
@@ -24,24 +43,7 @@
                                 <a class="go_more" href="?a=haoma"><?php echo L('history_lottery')?></a>
                                 <a class="more" href="javascript:;" title="<?php echo L('more')?>"></a>
                         </div>
-        <div class="header">
-                <a class="back" href="javascript:history.back(-1)" title="<?php echo L('go_back')?>"><i class="iconfont icon-fanhui"></i></a>
-                <a class="pic" href="?a=user" title="<?php echo L('member_center')?>">
-                        <?php
-                        if ($user['pic']) {
-                                if(preg_match('/^\d*$/',$user['pic'])){
-                                        echo '<img class="pic" src="statics/images/pic/'.$user['pic'].'.jpg" alt="PIC" />';
-                                } else {
-                                        echo '<img class="pic" src="uppic/user/'.$user['pic'].'" alt="PIC" />';
-                                }
-                        }
-                        ?>
-                </a>
-                <a class="order" href="?a=order" title="<?php echo L('my_bet_order')?>"><i class="iconfont icon-liebiao"></i></a>
-                <h4><?php echo $gamename?></h4>
-        </div>
-        <div class="scroll_box">
-                <div class="lottery_box">
+		<div class="lottery_box">
                         
                         
                         <div class="val_box">
