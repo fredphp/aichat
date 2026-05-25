@@ -244,6 +244,7 @@ var I18N_PACKS = {
         'gambling_warning':      '理性投注，切勿沉迷',
         'period_no':             '期号',
         'period_bet_order':      '期注单',
+        'next_period':           '下期',
         'total_amount_label':    '总金额：',
 
         // === Transaction Labels ===
@@ -522,6 +523,7 @@ var I18N_PACKS = {
         'gambling_warning':      'Bet responsibly',
         'period_no':             'Period No.',
         'period_bet_order':      'Period bet order',
+        'next_period':           'Next',
         'total_amount_label':    'Total: ',
 
         // === Transaction Labels ===
@@ -800,6 +802,7 @@ var I18N_PACKS = {
         'gambling_warning':      'သတိထား၍ချိန်းပါ',
         'period_no':             'ပွဲစဉ်အမှတ်',
         'period_bet_order':      'ပွဲစဉ်ချိန်းမှတ်တမ်း',
+        'next_period':           'နောက်ပွဲစဉ်',
         'total_amount_label':    'စုစုပေါင်း: ',
 
         // === ငွေစာရင်းအရောင်းကွက်များ ===

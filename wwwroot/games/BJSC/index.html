@@ -13,6 +13,16 @@
         <meta name="keywords" content="北京赛车-开奖直播" />
         <link type="text/css" href="./css/page.min.css?v=20260521b" rel="stylesheet" />
         <title>北京赛车-开奖直播</title>
+        <script type="text/javascript">
+                // Read language from URL parameter passed by parent page
+                (function() {
+                        var params = new URLSearchParams(window.location.search);
+                        var lang = params.get('lang') || 'zh-cn';
+                        var validLangs = ['zh-cn', 'en-us', 'my-mm'];
+                        window.I18N_LANG = validLangs.indexOf(lang) !== -1 ? lang : 'zh-cn';
+                })();
+        </script>
+        <script type="text/javascript" src="../../statics/js/i18n.js?v=20260525e"></script>
 </head>
 <body>
         <div class="drawing-video pk10">
@@ -20,10 +30,10 @@
                 <!-- 头部信息 -->
                 <div class="head clearfix">
                         <div class="cai-num fl pk10-num">
-                                等待开奖
+                                <span id="wait_lottery_text"></span>
                         </div>
                         <div class="fr clearfix">
-                                <p class="next"><em>下期：</em><span>--</span></p>
+                                <p class="next"><em id="next_period_text"></em><span>--</span></p>
                                 <a href="javascript:;" class="voice-btn"></a>
                         </div>
                 </div>
@@ -147,6 +157,13 @@
                 </div>
         </div>
         <script type="text/javascript" src="./js/jquery.js?v=20260521b"></script>
+        <script type="text/javascript">
+                // Apply i18n translations to static elements
+                $(function() {
+                        $('#wait_lottery_text').text(__('wait_lottery'));
+                        $('#next_period_text').text(__('next_period') + '：');
+                });
+        </script>
         <script type="text/javascript" src="./js/tweenmax.js?v=20260521b"></script>
         <script type="text/javascript" src="./js/pk10.min.js?v=20260521b"></script>
 </body>
