@@ -1,7 +1,7 @@
 <?php include template("header"); ?>
 <div class="main">
-		
-		
+                
+                
         <div class="header">
                 <a class="back" href="javascript:history.back(-1)" title="<?php echo L('go_back')?>"><i class="iconfont icon-fanhui"></i></a>
                 <a class="pic" href="?a=user" title="<?php echo L('member_center')?>">
@@ -19,7 +19,7 @@
                 <h4><?php echo $gamename?></h4>
         </div>
         <div class="scroll_box">
-                		<div class="lottery_top">
+                                <div class="lottery_top">
                                 <div class="lottery_now">
                                         <div id="qishu_now">
                                                 <i>001</i><?php echo L('period')?>
@@ -35,7 +35,7 @@
                                         <?php } ?>
                                 </div>
                         </div>
-		<div class="lottery_next">
+                <div class="lottery_next">
                                 <span id="qishu_next">
                                         <i>002</i><?php echo L('period')?>
                                 </span>
@@ -43,7 +43,20 @@
                                 <a class="go_more" href="?a=haoma"><?php echo L('history_lottery')?></a>
                                 <a class="more" href="javascript:;" title="<?php echo L('more')?>"></a>
                         </div>
-		<div class="lottery_box">
+                <?php if($gametemplate == 'pk10'): ?>
+                <style type="text/css">
+                        .dh_box {
+                                position: relative;
+                                overflow: hidden;
+                                height: 220px;
+                                background-color: #27282a;
+                        }
+                </style>
+                <div class="dh_box">
+                        <iframe frameborder="0" src="games/BJSC/index.html?lang=<?php echo defined('ROUTE_LANG') ? ROUTE_LANG : 'zh-cn'?>" width="100%" height="100%" scrolling="no" allowTransparency="true"></iframe>
+                </div>
+                <?php endif; ?>
+                <div class="lottery_box">
                         
                         
                         <div class="val_box">
@@ -422,8 +435,9 @@ $(function () {
                                 width: c - 1
                         })
                 } else {
+                        var dhBoxHeight = $(".dh_box").length ? 220 : 0;
                         $(".chat_box, .game_box, .game_box_shade").css({
-                                height: a - 219
+                                height: a - 219 - dhBoxHeight
                         });
                 }
         }).resize();
