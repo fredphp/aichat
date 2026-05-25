@@ -1,7 +1,7 @@
 <?php include template("header"); ?>
 <div class="main">
         <div class="header">
-                <a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+                <a class="back" href="javascript:history.back(-1)" title="<?php echo L('go_back')?>"><i class="iconfont icon-fanhui"></i></a>
                 <a class="pic" href="?a=user" title="<?php echo L('member_center')?>">
                         <?php
                         if ($user['pic']) {

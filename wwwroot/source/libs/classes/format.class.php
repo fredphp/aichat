@@ -23,7 +23,7 @@ class format {
 			$str = $showtime ? date('m/d/Y H:i:s', $times) : date('m/d/Y', $times);
 		} 
 		if ($check && $timestamp <= SYS_TIME) {
-			$str = '<span style="color:#FF0000;" title="已过期">' . $str . '</span>';
+			$str = '<span style="color:#FF0000;" title="'.L('expired').'">' . $str . '</span>';
 		} 
 		return $str;
 	} 
@@ -36,7 +36,7 @@ class format {
 	public static function week($timestamp) {
 		$times = intval($timestamp);
 		if (!$times) return true;
-		$weekarray = array('星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六');
+		$weekarray = array(L('sunday'), L('monday'), L('tuesday'), L('wednesday'), L('thursday'), L('friday'), L('saturday'));
 		return $weekarray[date("w", $timestamp)];
 	} 
 } 

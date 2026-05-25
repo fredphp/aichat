@@ -8,14 +8,14 @@ $uid = intval(get_cookie('uid'));
 $pwd = get_cookie('password');
 if (!$uid || !$pwd) {
     $re['state'] = 0;
-    $re['msg'] = '请先登录';
+    $re['msg'] = L('not_logged_in_please_login');
     echo json_encode($re);
     exit;
 }
 $udb = $go -> get_one(array('uid' => $uid));
 if (!$udb || $pwd != md5($udb['uid'] . $udb['password'])) {
     $re['state'] = 0;
-    $re['msg'] = '登录已过期';
+    $re['msg'] = L('captcha_expired');
     echo json_encode($re);
     exit;
 }

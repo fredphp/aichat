@@ -273,6 +273,32 @@ var I18N_PACKS = {
         'game_data_error':       '游戏数据异常，请联系客服！',
         'template_not_exist':    '模板文件不存在！',
         'username_not_exist':    '用户名不存在！'
+
+        // === FanTan Specific (Missing Keys) ===
+        'fan_fan_1':             '番1',
+        'fan_fan_2':             '番2',
+        'fan_fan_3':             '番3',
+        'fan_fan_4':             '番4',
+        'fan_zheng_1':           '正1',
+        'fan_zheng_2':           '正2',
+        'fan_zheng_3':           '正3',
+        'fan_zheng_4':           '正4',
+        'fan_1_nian_2':          '1念2',
+        'fan_1_nian_3':          '1念3',
+        'fan_1_nian_4':          '1念4',
+        'fan_2_nian_1':          '2念1',
+        'fan_2_nian_3':          '2念3',
+        'fan_2_nian_4':          '2念4',
+        'fan_3_nian_1':          '3念1',
+        'fan_3_nian_2':          '3念2',
+        'fan_3_nian_4':          '3念4',
+        'fan_4_nian_1':          '4念1',
+        'fan_4_nian_2':          '4念2',
+        'fan_4_nian_3':          '4念3',
+        'crown_big':             '冠亚大',
+        'crown_small':           '冠亚小',
+        'crown_odd':             '冠亚单',
+        'crown_even':            '冠亚双',
     },
 
     'en-us': {
@@ -525,6 +551,32 @@ var I18N_PACKS = {
         'game_data_error':       'Game data error, please contact customer service!',
         'template_not_exist':    'Template file does not exist!',
         'username_not_exist':    'Username does not exist!'
+
+        // === FanTan Specific (Missing Keys) ===
+        'fan_fan_1':             'Fan 1',
+        'fan_fan_2':             'Fan 2',
+        'fan_fan_3':             'Fan 3',
+        'fan_fan_4':             'Fan 4',
+        'fan_zheng_1':           'Zheng 1',
+        'fan_zheng_2':           'Zheng 2',
+        'fan_zheng_3':           'Zheng 3',
+        'fan_zheng_4':           'Zheng 4',
+        'fan_1_nian_2':          '1 Nian 2',
+        'fan_1_nian_3':          '1 Nian 3',
+        'fan_1_nian_4':          '1 Nian 4',
+        'fan_2_nian_1':          '2 Nian 1',
+        'fan_2_nian_3':          '2 Nian 3',
+        'fan_2_nian_4':          '2 Nian 4',
+        'fan_3_nian_1':          '3 Nian 1',
+        'fan_3_nian_2':          '3 Nian 2',
+        'fan_3_nian_4':          '3 Nian 4',
+        'fan_4_nian_1':          '4 Nian 1',
+        'fan_4_nian_2':          '4 Nian 2',
+        'fan_4_nian_3':          '4 Nian 3',
+        'crown_big':             'Crown Big',
+        'crown_small':           'Crown Small',
+        'crown_odd':             'Crown Odd',
+        'crown_even':            'Crown Even',
     },
 
     'my-mm': {
@@ -777,6 +829,32 @@ var I18N_PACKS = {
         'game_data_error':       'ဂိမ်းဒေတာမမှန်ကန်ပါ၊ ဝန်ဆောင်မှုဌာနကိုဆက်သွယ်ပါ!',
         'template_not_exist':    'တမ်းပလိတ်ဖိုင်မရှိပါ!',
         'username_not_exist':    'အသုံးပြုသူအမည်မရှိပါ!'
+
+        // === ဖန်တန်အထူး (Missing Keys) ===
+        'fan_fan_1':             'ဖန် ၁',
+        'fan_fan_2':             'ဖန် ၂',
+        'fan_fan_3':             'ဖန် ၃',
+        'fan_fan_4':             'ဖန် ၄',
+        'fan_zheng_1':           'တန်း ၁',
+        'fan_zheng_2':           'တန်း ၂',
+        'fan_zheng_3':           'တန်း ၃',
+        'fan_zheng_4':           'တန်း ၄',
+        'fan_1_nian_2':          '၁ နှမ်း ၂',
+        'fan_1_nian_3':          '၁ နှမ်း ၃',
+        'fan_1_nian_4':          '၁ နှမ်း ၄',
+        'fan_2_nian_1':          '၂ နှမ်း ၁',
+        'fan_2_nian_3':          '၂ နှမ်း ၃',
+        'fan_2_nian_4':          '၂ နှမ်း ၄',
+        'fan_3_nian_1':          '၃ နှမ်း ၁',
+        'fan_3_nian_2':          '၃ နှမ်း ၂',
+        'fan_3_nian_4':          '၃ နှမ်း ၄',
+        'fan_4_nian_1':          '၄ နှမ်း ၁',
+        'fan_4_nian_2':          '၄ နှမ်း ၂',
+        'fan_4_nian_3':          '၄ နှမ်း ၃',
+        'crown_big':             'ချန်ပီယံကြီး',
+        'crown_small':           'ချန်ပီယံငယ်',
+        'crown_odd':             'ချန်ပီယံမ',
+        'crown_even':            'ချန်ပီယံစုံ',
     }
 };
 
@@ -1027,3 +1105,4 @@ function __(key, params) {
     }
     return text;
 }
+
