@@ -17,9 +17,14 @@
                 </a>
                 <a class="order" href="?a=order" title="<?php echo L('my_bet_order')?>"><i class="iconfont icon-liebiao"></i></a>
                 <h4><?php echo $gamename?></h4>
+                <?php if($gametemplate == 'pk10'): ?>
+                <a class="header_history" href="?a=haoma"><?php echo L('history_lottery')?><span class="arrow">▼</span></a>
+                <?php endif; ?>
         </div>
         <div class="scroll_box">
-                                <div class="lottery_top">
+                                <?php if($gametemplate == 'pk10'): ?>
+                <!-- PK10: lottery_top hidden, JS still writes to #qishu_now/#haoma/#haoma_type/#money_now -->
+                <div class="lottery_top" style="display:none;">
                                 <div class="lottery_now">
                                         <div id="qishu_now">
                                                 <i>001</i><?php echo L('period')?>
@@ -35,12 +40,32 @@
                                         <?php } ?>
                                 </div>
                         </div>
-                <div class="lottery_next">
+                <?php else: ?>
+                <div class="lottery_top">
+                                <div class="lottery_now">
+                                        <div id="qishu_now">
+                                                <i>001</i><?php echo L('period')?>
+                                        </div>
+                                        <div id="haoma" class="hm_list"></div>
+                                        <div id="haoma_type"></div>
+                                </div>
+                                <div class="user">
+                                        <?php if($user) { ?>
+                                                <a href="?a=account" title="<?php echo L('funds_flow')?>"><i class="iconfont icon-money"></i><?php echo $this -> setting['stamp'].' <em id="money_now">'.$user['money'].'</em>' ?></a>
+                                        <?php } else { ?>
+                                                <a href="?a=login" title="<?php echo L('user_login')?>"><i class="iconfont icon-money"></i><?php echo L('please_login')?></a>
+                                        <?php } ?>
+                                </div>
+                        </div>
+                <?php endif; ?>
+                <div class="lottery_next<?php if($gametemplate == 'pk10'): ?> pk10_lottery_next<?php endif; ?>">
                                 <span id="qishu_next">
                                         <i>002</i><?php echo L('period')?>
                                 </span>
                                 <span id="time"><i>00:00</i><em><?php echo L('sealed')?></em></span>
+                                <?php if($gametemplate != 'pk10'): ?>
                                 <a class="go_more" href="?a=haoma"><?php echo L('history_lottery')?></a>
+                                <?php endif; ?>
                                 <a class="more" href="javascript:;" title="<?php echo L('more')?>"></a>
                         </div>
                 <?php if($gametemplate == 'pk10'): ?>
@@ -50,6 +75,60 @@
                                 overflow: hidden;
                                 height: 220px;
                                 background-color: #27282a;
+                        }
+                        .header a.header_history {
+                                left: auto;
+                                right: 85px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: auto;
+                                height: auto;
+                                display: inline-block;
+                                padding: 3px 10px;
+                                background-color: rgba(0, 0, 0, 0.35);
+                                color: #fff;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                border-radius: 10px;
+                                text-decoration: none;
+                                white-space: nowrap;
+                                z-index: 10;
+                        }
+                        .header a.header_history:active {
+                                background-color: rgba(0, 0, 0, 0.6);
+                        }
+                        .header a.header_history .arrow {
+                                font-size: 10px;
+                                margin-left: 2px;
+                        }
+                        /* PK10: 压缩lottery_next行，紧贴动画上方 */
+                        .scroll_box > .lottery_next.pk10_lottery_next {
+                                background-color: #27282a;
+                                color: #fff;
+                                padding: 4px 10px;
+                                height: 22px;
+                                line-height: 22px;
+                                font-size: 13px;
+                        }
+                        .scroll_box > .lottery_next.pk10_lottery_next #qishu_next {
+                                color: #e0b356;
+                        }
+                        .scroll_box > .lottery_next.pk10_lottery_next #qishu_next i {
+                                color: #e0b356;
+                        }
+                        .scroll_box > .lottery_next.pk10_lottery_next #time i {
+                                background-color: #cb0816;
+                        }
+                        .scroll_box > .lottery_next.pk10_lottery_next #time em {
+                                color: #999;
+                        }
+                        .scroll_box > .lottery_next.pk10_lottery_next a.more {
+                                top: 6px;
+                                border-color: #e0b356;
+                        }
+                        .scroll_box > .lottery_next.pk10_lottery_next a.more.a {
+                                top: 12px;
                         }
                 </style>
                 <div class="dh_box">
@@ -436,8 +515,9 @@ $(function () {
                         })
                 } else {
                         var dhBoxHeight = $(".dh_box").length ? 220 : 0;
+                        var lotteryTopHeight = $(".lottery_top").is(":visible") ? 86 : 0;
                         $(".chat_box, .game_box, .game_box_shade").css({
-                                height: a - 219 - dhBoxHeight
+                                height: a - 219 - dhBoxHeight + (86 - lotteryTopHeight)
                         });
                 }
         }).resize();
