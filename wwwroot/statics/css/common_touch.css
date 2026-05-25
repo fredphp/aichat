@@ -1327,17 +1327,19 @@ iframe {
 
 .send_box .fast_li a {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	margin: 1px;
+	width: auto;
+	min-width: 42px;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 8px;
+	margin: 2px;
 	background-color: #927402;
 	text-align: center;
 	color: #fff;
-	font-size: 14px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
+	font-size: 13px;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
 }
 
 .send_box .btn_li {

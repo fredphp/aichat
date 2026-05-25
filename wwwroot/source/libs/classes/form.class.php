@@ -63,7 +63,7 @@ class form {
          * @param string $background 背景使用什么颜色
          */
         public static function checkcode($id = 'checkcode', $code_len = 4, $font_size = 20, $width = 130, $height = 50, $font = '', $font_color = '', $background = '', $vform = false, $charset = '') {
-                return "<img id='$id' style='cursor:pointer;' title='看不清？点击更换验证码' onclick='".($vform ? '$("#code")[0].validform_valid="false";' : '')."this.src=this.src+\"&\"+Math.random()' src='api.php?op=checkcode&code_len=$code_len&font_size=$font_size&width=$width&height=$height&font=" . urlencode($font) . "&font_color=" . urlencode($font_color) . "&background=" . urlencode($background) . "&charset=$charset&rand=" . rand() . "' />";
+                return "<img id='$id' style='cursor:pointer;' title='看不清？点击更换验证码' onclick='".($vform ? '$("#code")[0].validform_valid="false";' : '')."this.src=this.src+\"&\"+Math.random()' src='checkcode.php?code_len=$code_len&font_size=$font_size&width=$width&height=$height&font=" . urlencode($font) . "&font_color=" . urlencode($font_color) . "&background=" . urlencode($background) . "&charset=$charset&rand=" . rand() . "' />";
         }
 
         /**
