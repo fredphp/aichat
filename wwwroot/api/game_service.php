@@ -1246,10 +1246,11 @@ function gohaoma_url($gameid, $game) {
         $curl->set_user_agent("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.3.4000 Chrome/30.0.1599.101");
         $html = $curl->fetch_url($url."&t=".$time);
         $json=json_decode($html,true);
+        $urlstr = $url."&t=".$time;
         file_put_contents(
-                'log_url.txt',
-                $url."&t=".$time
-        )
+            'log_url.txt',
+            $urlstr . PHP_EOL,
+        );
         file_put_contents(
             'log.txt',
             json_encode($json, JSON_UNESCAPED_UNICODE)
