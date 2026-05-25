@@ -1246,7 +1246,10 @@ function gohaoma_url($gameid, $game) {
         $curl->set_user_agent("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.3.4000 Chrome/30.0.1599.101");
         $html = $curl->fetch_url($url."&t=".$time);
         $json=json_decode($html,true);
-        
+        file_put_contents(
+            'log.txt',
+            json_encode($json, JSON_UNESCAPED_UNICODE)
+        );
         $expect=trim($json['data'][0]['expect']);
 	$opencode= isset($json['data'][0]['opencode']) ? trim($json['data'][0]['opencode']) : trim($json['data'][0]['open_code']);
         $opentime= isset($json['data'][0]['opentime']) ? trim($json['data'][0]['opentime']) : trim($json['data'][0]['open_time']);
