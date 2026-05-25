@@ -17,9 +17,6 @@
                 </a>
                 <a class="order" href="?a=order" title="<?php echo L('my_bet_order')?>"><i class="iconfont icon-liebiao"></i></a>
                 <h4><?php echo $gamename?></h4>
-                <?php if($gametemplate == 'pk10'): ?>
-                <a class="header_history" href="?a=haoma"><?php echo L('history_lottery')?><span class="arrow">▼</span></a>
-                <?php endif; ?>
         </div>
         <div class="scroll_box">
                                 <?php if($gametemplate == 'pk10'): ?>
@@ -63,9 +60,7 @@
                                         <i>002</i><?php echo L('period')?>
                                 </span>
                                 <span id="time"><i>00:00</i><em><?php echo L('sealed')?></em></span>
-                                <?php if($gametemplate != 'pk10'): ?>
                                 <a class="go_more" href="?a=haoma"><?php echo L('history_lottery')?></a>
-                                <?php endif; ?>
                                 <a class="more" href="javascript:;" title="<?php echo L('more')?>"></a>
                         </div>
                 <?php if($gametemplate == 'pk10'): ?>
@@ -76,31 +71,18 @@
                                 height: 220px;
                                 background-color: #27282a;
                         }
-                        .header a.header_history {
-                                left: auto;
-                                right: 85px;
-                                top: 50%;
-                                transform: translateY(-50%);
-                                width: auto;
-                                height: auto;
-                                display: inline-block;
-                                padding: 3px 10px;
-                                background-color: rgba(0, 0, 0, 0.35);
-                                color: #fff;
+                        /* PK10: 历史开奖记录按钮移至lottery_next行 */
+                        .scroll_box > .lottery_next.pk10_lottery_next a.go_more {
+                                position: absolute;
+                                right: 28px;
+                                top: 2px;
+                                color: #e0b356;
                                 font-size: 12px;
-                                font-weight: 400;
-                                line-height: 20px;
-                                border-radius: 10px;
                                 text-decoration: none;
-                                white-space: nowrap;
-                                z-index: 10;
+                                line-height: 18px;
                         }
-                        .header a.header_history:active {
-                                background-color: rgba(0, 0, 0, 0.6);
-                        }
-                        .header a.header_history .arrow {
-                                font-size: 10px;
-                                margin-left: 2px;
+                        .scroll_box > .lottery_next.pk10_lottery_next a.go_more:active {
+                                color: #fff;
                         }
                         /* PK10: 压缩lottery_next行，紧贴动画上方 */
                         .scroll_box > .lottery_next.pk10_lottery_next {
