@@ -60,7 +60,6 @@ if (empty($lotteryname)) {
         echo json_encode($re);
         exit;
 }
-
 $account = intval($_REQUEST['account']);
 $db = base :: load_model('haoma_model');
 $db2 = base :: load_model('order_model');
