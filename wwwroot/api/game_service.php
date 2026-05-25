@@ -87,6 +87,17 @@ $cfgarr = array(
                 //'url' => HOST.'/api?token='.TOKEN.'&code=gdklsf&rows=1&format=json',//采集URL
                 'url' => OPNEJIANG_HOST.'/api?token='.OPNEJIANG_TOKEN.'&t=jisuklsf&rows=5&p=json',
         ),
+        'pk10' => array(
+                'name' => '北京赛车',
+                'starttime' => '',//开奖时间
+                'endtime' => '',  //关奖时间
+                'time' => 45,     //结算刷新时间
+                'maxtime' => 1200,//最大更新时间
+                'id' => array(6, 11),//入库字段ID，入库多个ID数组
+                'template' => array('pk10', 'pkpj'),//操作模板
+ //               'url' => HOST.'/api?token='.TOKEN.'&code=bjpk10&rows=1&format=json',//采集URL
+                'url' => OPNEJIANG_HOST.'/api?token='.OPNEJIANG_TOKEN.'&t=bjpk10&rows=5&p=json',
+        ),
         'xync' => array(//幸运农场 重庆快乐十分，10分钟一期,时间为全天
                 'name' => '幸运农场',
                 'starttime' => '',//开奖时间
@@ -117,17 +128,6 @@ $cfgarr = array(
                 'id' => array(5, 10),//入库字段ID，入库多个ID数组
                 'template' => array('fantan', 'pc28'),//操作模板
                 'url' => HOST.'/api?token='.TOKEN.'&code=jnd28&rows=1&format=json',//采集URL
-        ),
-        'pk10' => array(
-                'name' => '北京赛车',
-                'starttime' => '',//开奖时间
-                'endtime' => '',  //关奖时间
-                'time' => 45,     //结算刷新时间
-                'maxtime' => 1200,//最大更新时间
-                'id' => array(6, 11),//入库字段ID，入库多个ID数组
-                'template' => array('pk10', 'pkpj'),//操作模板
- //               'url' => HOST.'/api?token='.TOKEN.'&code=bjpk10&rows=1&format=json',//采集URL
-                'url' => OPNEJIANG_HOST.'/api?token='.OPNEJIANG_TOKEN.'&t=bjpk10&rows=5&p=json',
         ),
         'teqdd' => array(//极速28 自开奖 每天从早上00：00至23:59：59每2分钟 30秒一期
                 'name' => '极速28',
