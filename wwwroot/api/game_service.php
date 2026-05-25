@@ -117,7 +117,8 @@ $cfgarr = array(
                 'maxtime' => 300,         //最大更新时间
                 'id' => array(4, 9),//入库字段ID，入库多个ID数组
                 'template' => array('fantan', 'pc28'),//操作模板
-                'url' => HOST.'/api?token='.TOKEN.'&code=pcdd&rows=1&format=json',//采集URL
+                // 'url' => HOST.'/api?token='.TOKEN.'&code=pcdd&rows=1&format=json',//采集URL
+                'url' => OPNEJIANG_HOST.'/api?token='.OPNEJIANG_TOKEN.'&t=pcdd&rows=5&p=json',
         ),
         'jnd28' => array(//加拿大28，每三分半钟开一期，每天维护时间为: 晚上20:00点到21:30点，周一可能会有延迟
                 'name' => '加拿大28',
