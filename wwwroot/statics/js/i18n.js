@@ -272,7 +272,7 @@ var I18N_PACKS = {
         'game_not_exist':        '游戏不存在！',
         'game_data_error':       '游戏数据异常，请联系客服！',
         'template_not_exist':    '模板文件不存在！',
-        'username_not_exist':    '用户名不存在！'
+        'username_not_exist':    '用户名不存在！',
 
         // === FanTan Specific (Missing Keys) ===
         'fan_fan_1':             '番1',
@@ -550,7 +550,7 @@ var I18N_PACKS = {
         'game_not_exist':        'Game does not exist!',
         'game_data_error':       'Game data error, please contact customer service!',
         'template_not_exist':    'Template file does not exist!',
-        'username_not_exist':    'Username does not exist!'
+        'username_not_exist':    'Username does not exist!',
 
         // === FanTan Specific (Missing Keys) ===
         'fan_fan_1':             'Fan 1',
@@ -828,7 +828,7 @@ var I18N_PACKS = {
         'game_not_exist':        'ဂိမ်းမရှိပါ!',
         'game_data_error':       'ဂိမ်းဒေတာမမှန်ကန်ပါ၊ ဝန်ဆောင်မှုဌာနကိုဆက်သွယ်ပါ!',
         'template_not_exist':    'တမ်းပလိတ်ဖိုင်မရှိပါ!',
-        'username_not_exist':    'အသုံးပြုသူအမည်မရှိပါ!'
+        'username_not_exist':    'အသုံးပြုသူအမည်မရှိပါ!',
 
         // === ဖန်တန်အထူး (Missing Keys) ===
         'fan_fan_1':             'ဖန် ၁',
