@@ -1150,16 +1150,23 @@ class Set extends Base
     {
         $post = $this->request->post();
         $login = $_SESSION['Msg'];
-        $visiter_id = $post['sdata']['visiter_id'];
+        
+        // Fix: null protection for sdata
+        $sdata_input = isset($post['sdata']) ? $post['sdata'] : [];
+        $visiter_id = isset($sdata_input['visiter_id']) ? $sdata_input['visiter_id'] : '';
+        
+        if (empty($visiter_id)) {
+            $data = ['code' => 0, 'msg' => 'success'];
+            return $data;
+        }
+        
         $res = Admins::table('wolive_queue')->where('visiter_id', $visiter_id)->where('business_id', $login['business_id'])->where('service_id', $login['service_id'])->find();
-
-        // var_dump($res['state']);exit;
 
         $sdata = Admins::table('wolive_visiter')->where('visiter_id', $visiter_id)->where('business_id', $login['business_id'])->find();
 
         $chats = Admins::table('wolive_chats')->where(['visiter_id' => $visiter_id, 'service_id' => $login['service_id'], 'direction' => 'to_service'])->group('cid desc')->find();
 
-        if ($res['state'] == 'complete') {
+        if ($res && isset($res['state']) && $res['state'] == 'complete') {
 
             $res = Admins::table('wolive_queue')->where('visiter_id', $visiter_id)->where('business_id', $login['business_id'])->update(['state' => 'normal']);
         }

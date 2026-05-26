@@ -508,9 +508,10 @@ class Event extends Controller
             // var_dump($chatModel->getLastInsID());die;
             if ($chid) {
                 $chid = $chatModel->getLastInsID();
-                $pusher->trigger('kefu' . $service_id, 'cu-event', array('message' => $arr));
-                // Also trigger on 'all' channel so all service agents in this business receive the notification
-                $pusher->trigger('all' . $arr['business_id'], 'cu-event', array('message' => $arr));
+                $push_result = $pusher->trigger('kefu' . $service_id, 'cu-event', array('message' => $arr));
+            // Also trigger on 'all' channel so all service agents receive real-time notifications
+            $pusher->trigger('all' . $arr['business_id'], 'on_notice', array('message' => array('msg' => '新消息', 'groupid' => 0)));
+
             }
 
 
