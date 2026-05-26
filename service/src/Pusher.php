@@ -174,9 +174,6 @@ class Pusher extends Worker
         );
 
         $connection->send(json_encode($data));
-        // DEBUG LOG
-        $debug_msg = date('Y-m-d H:i:s') . ' | WS_CONNECT | app_key=' . $app_key . ' | socket_id=' . $socket_id;
-        file_put_contents('/www/wwwroot/kf.hjdsaf.com/debug_chat.log', $debug_msg . "\n", FILE_APPEND);
     }
 
     /**
@@ -366,9 +363,6 @@ class Pusher extends Worker
      * @return void
      */
     public function subscribePublicChannel($connection, $channel) {
-        // DEBUG LOG
-        $debug_msg = date('Y-m-d H:i:s') . ' | SUBSCRIBE | app_key=' . $connection->appKey . ' | channel=' . $channel . ' | socket_id=' . $connection->socketID;
-        file_put_contents('/www/wwwroot/kf.hjdsaf.com/debug_chat.log', $debug_msg . "\n", FILE_APPEND);
         $app_key                                                        = $connection->appKey;
         $connection->channels[$channel]                                 = '';
         $this->_eventClients[$app_key][$channel][$connection->socketID] = $connection;
@@ -537,10 +531,6 @@ class Pusher extends Worker
      */
     public function publishToClients($app_key, $channel, $event, $data, $socket_id = null)
     {
-        // DEBUG LOG
-        $client_count = isset($this->_eventClients[$app_key][$channel]) ? count($this->_eventClients[$app_key][$channel]) : 0;
-        $debug_msg = date('Y-m-d H:i:s') . ' | PUBLISH | app_key=' . $app_key . ' | channel=' . $channel . ' | event=' . $event . ' | clients=' . $client_count . ' | socket_id=' . var_export($socket_id, true);
-        file_put_contents('/www/wwwroot/kf.hjdsaf.com/debug_chat.log', $debug_msg . "\n", FILE_APPEND);
         if (!isset($this->_eventClients[$app_key][$channel])) {
             return;
         }
@@ -664,9 +654,6 @@ class Pusher extends Worker
                 $channels = $package['channels'];
                 $event    = $package['name'];
                 $data     = $package['data'];
-                // DEBUG LOG
-                $debug_msg = date('Y-m-d H:i:s') . ' | API_EVENT | app_key=' . $app_key . ' | channels=' . json_encode($channels) . ' | event=' . $event;
-                file_put_contents('/www/wwwroot/kf.hjdsaf.com/debug_chat.log', $debug_msg . "\n", FILE_APPEND);
                 foreach ($channels as $channel) {
                     $socket_id = isset($package['socket_id']) ? $package['socket_id'] : null;
                     $this->publishToClients($app_key, $channel, $event, $data, $socket_id);

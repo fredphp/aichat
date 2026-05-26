@@ -508,13 +508,7 @@ class Event extends Controller
             // var_dump($chatModel->getLastInsID());die;
             if ($chid) {
                 $chid = $chatModel->getLastInsID();
-                // DEBUG: Log trigger attempt
-                $debug_channel = 'kefu' . $service_id;
-                $debug_log = date('Y-m-d H:i:s') . ' | TRIGGER | channel=' . $debug_channel . ' | event=cu-event | visiter_id=' . $arr['visiter_id'] . ' | business_id=' . $arr['business_id'] . ' | service_id=' . $service_id;
-                file_put_contents('/www/wwwroot/kf.hjdsaf.com/debug_chat.log', $debug_log . "\n", FILE_APPEND);
-                $trigger_result = $pusher->trigger('kefu' . $service_id, 'cu-event', array('message' => $arr));
-                $debug_log2 = date('Y-m-d H:i:s') . ' | TRIGGER_RESULT | ' . var_export($trigger_result, true) . ' | pusher_settings=' . json_encode($pusher->getSettings());
-                file_put_contents('/www/wwwroot/kf.hjdsaf.com/debug_chat.log', $debug_log2 . "\n", FILE_APPEND);
+                $pusher->trigger('kefu' . $service_id, 'cu-event', array('message' => $arr));
                 // Also trigger on 'all' channel so all service agents in this business receive the notification
                 $pusher->trigger('all' . $arr['business_id'], 'cu-event', array('message' => $arr));
             }
