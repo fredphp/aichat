@@ -17,8 +17,35 @@
     <script src="__libs__/swiper-4.3.3.min.js?v=__lkversion__" type="text/javascript"></script>
     <script src="__libs__/push/pusher.min.js?v=__lkversion__" type="text/javascript"></script>
     <script src="__libs__/adapter.js?v=__lkversion__"></script>
-    <script>var BMapGL=BMapGL||{Geocoder:function(){this.getLocation=function(){}}};var BMap=BMap||{_rd:{}};</script>
-    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak={$baidu_map_key}" onerror="console.log('Baidu Map load failed')"></script>
+    <script>
+    // Baidu Map stubs - prevent popup alerts from unauthorized API key
+    (function(){
+      var noop=function(){return this};
+      var noopFactory=function(){return{getLocation:noop,addListener:noop,removeListener:noop,openInfoWindow:noop,setPosition:noop,enableDragging:noop,addOverlay:noop,close:noop,search:noop,setViewport:noop,getResults:function(){return{getPoi:function(){return{point:{lng:0,lat:0}}}}}}};
+      window.BMap=window.BMap||{};
+      window.BMap.Map=function(){return{centerAndZoom:noop,addOverlay:noop,removeOverlay:noop,openInfoWindow:noop,enableScrollWheelZoom:noop,setViewport:noop,clearOverlays:noop,panTo:noop}};
+      window.BMap.Point=function(lng,lat){this.lng=lng||0;this.lat=lat||0};
+      window.BMap.Marker=function(){return{setPosition:noop,enableDragging:noop,addOverlay:noop}};
+      window.BMap.Icon=function(){return{}};
+      window.BMap.Size=function(){return{}};
+      window.BMap.Geocoder=noopFactory;
+      window.BMap.Geolocation=function(){this.getCurrentPosition=function(cb){cb&&cb({point:{lng:0,lat:0}})}};
+      window.BMap.LocalSearch=noopFactory;
+      window.BMap.InfoWindow=function(){return{}};
+      window.BMap._rd={};
+      window.BMapGL=window.BMapGL||{};
+      window.BMapGL.Geocoder=noopFactory;
+      window.BMapGL.Point=function(lng,lat){this.lng=lng||0;this.lat=lat||0};
+      window.BMapGL.Convertor=function(){this.translate=function(){return{then:function(cb){cb&&cb([])}}}};
+      var _origAlert=window.alert;
+      window.alert=function(msg){
+        if(msg&&(msg.indexOf('lbsyun.baidu.com')>-1||msg.indexOf('\u5546\u7528\u6388\u6743')>-1||msg.indexOf('\u5730\u56fe\u670d\u52a1')>-1))return;
+        _origAlert.call(window,msg);
+      };
+    })();
+    </script>
+    <!-- Baidu Map API disabled to prevent authorization popup -->
+    <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak={$baidu_map_key}" onerror="console.log('Baidu Map load failed')"></script> -->
     <link rel="stylesheet" href="/static/component/pear/css/pear.css" />
     <link rel="stylesheet" href="/static/css/common.css?v=20230312" />
     <link href="/static/css/app.ccaa54a563bd7edef54a4a5dbd192ae7.css" rel="stylesheet">
