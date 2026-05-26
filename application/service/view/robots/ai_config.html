@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/component/pear/css/pear.css" />
+    <link rel="stylesheet" href="/static/component/layui/css/layui.css" />
+</head>
+<body style="padding: 20px;">
+
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">启用AI客服</label>
+            <div class="layui-input-block">
+                <input type="checkbox" id="ai_switch" lay-skin="switch">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">AI模型</label>
+            <div class="layui-input-block">
+                <input type="text" id="api_model" class="layui-input" placeholder="例如：gpt-4o-mini|deepseek-chat">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">请求地址</label>
+            <div class="layui-input-block">
+                <input type="text" id="api_url" class="layui-input" placeholder="例如：https://api.openai.com/v1/chat/completions">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">API Key</label>
+            <div class="layui-input-block">
+                <input type="text" id="api_key" class="layui-input" placeholder="例如：sk-xxxxxxxxxxxxxxxxx">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">系统指令</label>
+            <div class="layui-input-block">
+                <textarea id="api_system_prompt" class="layui-textarea" placeholder="例如：
+你是电商平台的智能客服 小宇，负责解答商品信息、支付问题和售后服务。
+商品咨询：“iPhone 16 Pro 有 128GB、256GB 和 512GB 三种存储容量，颜色包括黑色、白色、蓝色等。”
+订单查询：“您的订单正在配送中，预计 3 天内送达。”
+支付问题：“本店支持支付宝、微信支付，并可选择花呗 3 期免息分期。”
+售后服务：“如果商品有质量问题，您可以在 7 天内申请退货”
+联系客服：QQ 39208685  微信 XY6686T
+请提供准确、简洁的答案
+                "></textarea>
+            </div>
+        </div>
+
+        <!--<div class="layui-form-item">-->
+        <!--    <div class="layui-input-block">-->
+        <!--        <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="saveAIConfig">保存</button>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <div class="bottom">
+            <div class="button-container">
+                <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="saveAIConfig">保存</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="/static/component/layui/layui.js"></script>
+    <!--<script src="/static/component/jquery/jquery.min.js"></script>-->
+    <script>
+        
+document.addEventListener('DOMContentLoaded', function () {
+    // 获取表单元素
+    let aiSwitch = document.getElementById('ai_switch');
+    let apiModel = document.getElementById('api_model');
+    let apiUrl = document.getElementById('api_url');
+    let apiKey = document.getElementById('api_key');
+    let apiSystemPrompt = document.getElementById('api_system_prompt');
+    let saveButton = document.getElementById('saveAIConfig');
+
+    // 获取 AI 配置并填充表单
+    fetch('/admin/ai_config/getAIConfig')
+        .then(response => response.json())
+        .then(res => {
+            if (res.code === 200) {
+                let data = res.data;
+                aiSwitch.checked = data.ai_switch == 1;
+                apiModel.value = data.api_model;
+                apiUrl.value = data.api_url;
+                apiKey.value = data.api_key;
+                apiSystemPrompt.value = data.api_system_prompt;
+
+                // 兼容 layui 的表单渲染
+                if (typeof layui !== 'undefined' && layui.form) {
+                    layui.form.render();
+                }
+            } else {
+                alert('获取 AI 配置失败');
+            }
+        })
+        .catch(error => console.error('获取 AI 配置失败:', error));
+
+    // 绑定保存按钮事件
+    saveButton.addEventListener('click', function () {
+        let data = {
+            ai_switch: aiSwitch.checked ? 1 : 0,
+            api_model: apiModel.value,
+            api_url: apiUrl.value,
+            api_key: apiKey.value,
+            api_system_prompt: apiSystemPrompt.value
+        };
+
+        fetch('/admin/ai_config/updateAIConfig', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(res => {
+                if (res.code === 200) {
+                    alert('AI 配置更新成功');
+                    if (typeof parent.layer !== 'undefined') {
+                        let index = parent.layer.getFrameIndex(window.name);
+                        parent.layer.close(index);
+                    }
+                } else {
+                    alert('更新失败');
+                }
+            })
+            .catch(error => console.error('更新失败:', error));
+    });
+});
+    </script>
+
+</body>
+</html>
