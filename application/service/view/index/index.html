@@ -60,6 +60,20 @@
               , authEndpoint: '/admin/login/auth'
               ,disableStats: true
       });
+      
+      // DEBUG: Log Pusher connection state changes
+      pusher.connection.bind('state_change', function(states) {
+          console.log('[PUSHER DEBUG] Connection state:', states.previous, '->', states.current);
+          if (typeof showDebugMsg === 'function') showDebugMsg('Pusher: ' + states.current);
+      });
+      pusher.connection.bind('connected', function() {
+          console.log('[PUSHER DEBUG] Connected! Socket ID:', pusher.connection.socket_id);
+          if (typeof showDebugMsg === 'function') showDebugMsg('Pusher CONNECTED: ' + pusher.connection.socket_id);
+      });
+      pusher.connection.bind('error', function(err) {
+          console.log('[PUSHER DEBUG] Connection error:', err);
+          if (typeof showDebugMsg === 'function') showDebugMsg('Pusher ERROR: ' + JSON.stringify(err));
+      });
 
 
           var web = "{$arr['business_id']}";
@@ -94,6 +108,7 @@
 
           // Handle cu-event on all channel - so super_manager receives messages from all service agents
           channelall.bind("cu-event", function (data) {
+              console.log('[PUSHER DEBUG] cu-event received on all channel:', JSON.stringify(data).substring(0, 200));
               getnow(data.message);
               getchat();
               layer.close();
@@ -101,6 +116,11 @@
           });
 
           var channel =pusher.subscribe("kefu" + value);
+          console.log('[PUSHER DEBUG] Subscribed to kefu' + value);
+          channel.bind('pusher:subscription_succeeded', function() {
+              console.log('[PUSHER DEBUG] kefu' + value + ' subscription succeeded');
+              if (typeof showDebugMsg === 'function') showDebugMsg('Subscribed kefu' + value + ' OK');
+          });
           // 发送一个推送
           channel.bind("callbackpusher",function(data){
               $.post("{:url('admin/set/callback','',true,true)}",data,function(res){
@@ -188,6 +208,8 @@
           });
           // 接受消息
           channel.bind("cu-event", function (data) {
+              console.log('[PUSHER DEBUG] cu-event received on kefu channel:', JSON.stringify(data).substring(0, 200));
+              if (typeof showDebugMsg === 'function') showDebugMsg('cu-event: ' + JSON.stringify(data.message).substring(0, 100));
 
               if("{$voice}" == 'open'){
                   audioElementHovertree = document.createElement('audio');
@@ -329,6 +351,29 @@
 </head>
 <!-- 结 构 代 码 -->
 <body class="layui-layout-body pear-admin">
+<!-- DEBUG PANEL -->
+<div id="pusher-debug-panel" style="position:fixed;bottom:0;right:0;z-index:99999;background:rgba(0,0,0,0.85);color:#0f0;font-size:12px;padding:8px;max-width:400px;max-height:200px;overflow-y:auto;display:none;">
+<div style="color:#ff0;margin-bottom:4px;">Pusher Debug (Ctrl+Shift+D to toggle)</div>
+<div id="pusher-debug-log"></div>
+</div>
+<script>
+var debugPanelVisible = false;
+function showDebugMsg(msg) {
+    var el = document.getElementById('pusher-debug-log');
+    if (el) {
+        var now = new Date();
+        var time = now.getHours()+':'+now.getMinutes()+':'+now.getSeconds();
+        el.innerHTML += '<div>['+time+'] '+msg+'</div>';
+        el.scrollTop = el.scrollHeight;
+    }
+}
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+        debugPanelVisible = !debugPanelVisible;
+        document.getElementById('pusher-debug-panel').style.display = debugPanelVisible ? 'block' : 'none';
+    }
+});
+</script>
 <!-- 布 局 框 架 -->
 <div class="layui-layout layui-layout-admin">
   <div class="layui-header">
