@@ -11,6 +11,10 @@
 	<script type="text/javascript" src="<?php echo JS_PATH?>jquery-1.8.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo JS_PATH?>layer/layer.min.js"></script>
 	<script type="text/javascript" src="<?php echo JS_PATH?>Validform_v5.3.2.js"></script>
+	<script type="text/javascript" src="<?php echo JS_PATH?>i18n.js?v=20260526"></script>
+	<script type="text/javascript">
+		var I18N_LANG = 'zh-cn'; // 后台固定中文
+	</script>
 	<script type="text/javascript" src="<?php echo JS_PATH?>global.js"></script>
 	<script type="text/javascript" src="<?php echo JS_PATH?>admin.js"></script>
 </head>
