@@ -79,6 +79,8 @@ class settings extends admin {
                         // 写入本地文件
                         $iscache = base :: load_config('system', 'iscache'); //是否开启设置缓存
                         if ($iscache) write_config($setting, 'setting.php');
+                        // ★ 清除Nginx FastCGI缓存，确保设置立即生效
+                        @system('rm -rf /var/cache/nginx/fastcgi/* 2>/dev/null');
                         showmessage('更新成功！', HTTP_REFERER);
                 }
                 $settingarr = $this -> get_settings(); //读取系统设置
