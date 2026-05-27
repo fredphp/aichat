@@ -295,25 +295,29 @@ function account($gameid, $game, $template) {
 											$rebate_log_db = base :: load_model('agent_rebate_log_model');
 											$rebate_check = $rebate_log_db -> get_one(array('order_id' => $order['id']));
 											if (!$rebate_check) {
-												// 先读取代理余额（更新前）
+												// ★ 读取代理最新余额（每次都重新读取，避免批量处理时countmoney不准）
 												$agent_oldmoney = $db3 -> get_one(array('uid' => $agent_uid));
+												$new_countmoney = bcadd($agent_oldmoney['money'], $rebate_money, 2);
 												// 更新代理余额
 												$db3 -> update(array('money' => '+='.$rebate_money, 'commission' => '+='.$rebate_money), array('uid' => $agent_uid));
 												// 记录代理流水
 												$db4 -> insert(array(
 													'uid' => $agent_uid,
 													'money' => $rebate_money,
-													'countmoney' => $agent_oldmoney['money'] + $rebate_money,
+													'countmoney' => $new_countmoney,
 													'type' => 6,
 													'addtime' => $time,
 													'comment' => '代理分成(UID:'.$order['uid'].' 下注 '.$order['money'].')'
 												));
+												// ★ 获取刚插入的流水记录ID，用于关联分成日志
+												$account_insert_id = $db4 -> insert_id();
 												// 记录分成日志
 												$rebate_log_db -> insert(array(
 													'uid' => $order['uid'],
 													'agent_id' => $lookup_agent_id > 0 ? $lookup_agent_id : $order_user['agent_id'],
 													'agent_uid' => $agent_uid,
 													'order_id' => $order['id'],
+													'account_id' => $account_insert_id,
 													'order_money' => $order['money'],
 													'rebate' => $agent_info['rebate'],
 													'rebate_money' => $rebate_money,

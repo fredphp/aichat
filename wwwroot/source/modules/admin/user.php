@@ -165,7 +165,15 @@ class user extends admin {
 					if ($agent_user) {
 						$update['agent'] = $agent_user['uid'];
 					}
+					// ★ 如果代理类型变更，同步更新下级玩家的agent_id
+					if ($data['agent_id'] != $agent_id && $data['aid'] == 1) {
+						$this -> db -> update(array('agent_id' => $agent_id), array('agent' => $uid));
+					}
 				} else {
+					// ★ 如果从代理降为普通用户，清理下级玩家的代理关系
+					if ($data['aid'] == 1) {
+						$this -> db -> update(array('agent' => 0, 'agents' => 0, 'agent_id' => 0), array('agent' => $uid));
+					}
 					$update['agent_id'] = 0;
 					$update['aid'] = 0;
 					$update['agent'] = 0;
@@ -311,6 +319,12 @@ class user extends admin {
 		}
 		$r = $this -> db -> get_one(array('uid' => $uid));
 		if ($r) {
+			// ★ 如果删除的是代理用户，先清理下级玩家的代理关系
+			if ($r['aid'] == 1) {
+				$this -> db -> update(array('agent' => 0, 'agents' => 0, 'agent_id' => 0), array('agent' => $uid));
+			}
+			// ★ 清理以下级该用户为agents的记录
+			$this -> db -> update(array('agents' => 0), array('agents' => $uid));
 			if ($this -> db -> delete(array('uid' => $uid))) {
 				@unlink('./uppic/user/'.$r['pic']);//删除用户图像
 				$db2 = base :: load_model('order_model');//注单

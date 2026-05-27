@@ -9,7 +9,7 @@ class user extends daili {
 		$this -> db = base :: load_model('user_model');
 		$this -> db2 = base :: load_model('order_model');
 		$this -> lock = array(0 => '否', 1 => '<span style="color: #F00;">是</span>');
-		$this -> daili = array(0 => '否', 1 => '<span style="color: #F00;">一级</span>', 2 => '<span style="color: #F00;">二级</span>', 3 => '<span style="color: #F00;">二级(阅)</span>');
+		$this -> daili = array(0 => '否', 1 => '<span style="color: #F00;">代理</span>');
 		$this -> aid = $this -> get_userinfo('aid');
 		$this -> uid = intval($this -> get_userid());
 		$this -> username = trim($this -> get_username());

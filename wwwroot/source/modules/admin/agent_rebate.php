@@ -74,9 +74,14 @@ class agent_rebate extends admin {
 		if ($log && $log['rebate_money'] > 0 && $log['agent_uid'] > 0) {
 			$user_db = base :: load_model('user_model');
 			$user_db -> update(array('money' => '-='.$log['rebate_money'], 'commission' => '-='.$log['rebate_money']), array('uid' => $log['agent_uid']));
-			// ★ 同时删除对应的流水记录(type=6 代理分成)
+			// ★ 通过account_id精确删除对应的流水记录（避免误删同秒同金额的记录）
 			$account_db = base :: load_model('account_model');
-			$account_db -> delete("uid = '".$log['agent_uid']."' AND type = 6 AND money = '".$log['rebate_money']."' AND addtime = '".$log['addtime']."'");
+			if ($log['account_id'] > 0) {
+				$account_db -> delete(array('id' => $log['account_id']));
+			} else {
+				// 兼容旧记录：用模糊条件删除
+				$account_db -> delete("uid = '".$log['agent_uid']."' AND type = 6 AND money = '".$log['rebate_money']."' AND addtime = '".$log['addtime']."' LIMIT 1");
+			}
 		}
 		if ($this -> db -> delete(array('id' => $id))) {
 			echo json_encode(array('run' => 'yes', 'msg' => '删除成功！', 'id' => 'list_' . $id));

@@ -28,12 +28,6 @@ include $this->daili_tpl('header');
 								用户名/昵称 <input class="input-text" type="text" id="username" name="search[username]" value="<?php echo $search_username?>">
 								<?php if ($this -> aid == 1) {?>
 								代理人UID <input class="input-text" type="text" id="agent" name="search[agent]" style="width:50px;" value="<?php echo $search_agent?>">
-								<select name="search[aid]">
-									<option value="0" <?php echo $aidoption[0]?>>全部账户</option>
-									<option value="4" <?php echo $aidoption[4]?>>普通账户</option>
-									<option value="2" <?php echo $aidoption[2]?>>二级代理</option>
-									<option value="3" <?php echo $aidoption[3]?>>二级代理(阅)</option>
-								</select>
 								<?php }?>
 								<input type="submit" value="搜索" class="button" name="dosubmit">
 							</div>
@@ -69,7 +63,7 @@ include $this->daili_tpl('header');
 					<td align="left"><?php echo $v['money']?></td>
 					<td align="center"><?php echo $this -> lock[$v['lock']]?></td>
 					<td align="center"><?php echo $this -> daili[$v['aid']]?></td>
-					<td align="left"><?php echo $v['agents'] ? $this -> go_user($v['agent']) : '--'?></td>
+					<td align="left"><?php echo $v['agent'] ? $this -> go_user($v['agent']) : '--'?></td>
 					<td align="left"><p><?php echo format::date($v['logintime'], 1)?></p><p><?php echo format::date($v['regtime'], 1)?></p></td>
 					<td align="center">
 						<p>
