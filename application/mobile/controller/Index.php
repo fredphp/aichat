@@ -355,6 +355,8 @@ class Index extends Controller
             // URL传入的语言参数优先级最高（如 &lang=my-mm）
             $business['lang'] = $url_lang;
             session('user_lang', $url_lang);
+            // ★ 同步更新访客语言到数据库，确保下次进入时也使用正确语言
+            User::name('wolive_visiter')->where('visiter_id', $visiter_id)->update(['lang' => $url_lang]);
         }elseif($visiter_lang){
             $business['lang'] = $visiter_lang;
         }else{
@@ -406,6 +408,8 @@ class Index extends Controller
         $this->assign('business_name',$business['business_name']);
         $this->assign('baidu_map_key',baidu_map_key);
         $this->assign('alias_visiter_name',$alias_visiter_name);
+        // ★ 传递当前语言代码到前端JS，用于notice等API请求
+        $this->assign('current_lang_code', isset($business['lang']) ? $business['lang'] : 'cn');
         $this->assign('groupid', $groupid);
         $this->assign('app_key', $app_key);
         $this->assign('whost', $arr['host']);

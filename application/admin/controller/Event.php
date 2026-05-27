@@ -818,17 +818,26 @@ class Event extends Controller
         $business_id = $arr['business_id'];
         $special = isset($arr['special']) ? $arr['special'] : null;
 
-        $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
-        if ($visiter_lang) {
-            $lang = $visiter_lang;
+        // ★ 语言优先级：URL参数 > session > 数据库访客记录 > IP自动检测 > 商户默认
+        $url_lang_param = $this->request->post('lang', '');
+        if ($url_lang_param && preg_match('/^[a-zA-Z0-9\-]+$/', $url_lang_param)) {
+            $lang = $url_lang_param;
+            session('user_lang', $lang);
+        } elseif (session('user_lang')) {
+            $lang = session('user_lang');
         } else {
-            $lang = $business['lang'];
-            if ($business['auto_ip'])
-                $lang = Ip::check_country($ip) ?: $business['lang'];
-            if (session('user_lang'))
-                $lang = session('user_lang');
+            $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
+            if ($visiter_lang) {
+                $lang = $visiter_lang;
+            } else {
+                $lang = $business['lang'];
+                if ($business['auto_ip'])
+                    $lang = Ip::check_country($ip) ?: $business['lang'];
+            }
         }
         $arr['lang'] = $lang;
+        // ★ 同步更新访客语言到数据库
+        Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->update(['lang' => $lang]);
 
         if ($business['state'] == 'close') {
             $returndata = ['code' => 1, 'msg' => $this->lang_array['service_ban']];
@@ -842,7 +851,8 @@ class Event extends Controller
 
             if ($visiter) {
                 //老用户
-                $service = Admins::table('wolive_queue')->where('service_id', $special)->where(['visiter_id' => $visiter_id, 'business_id' => $business_id])->where('state', 'normal')->find();
+                // ★ 修复：按visiter_id+business_id查找队列记录（不再依赖service_id=$special匹配）
+                $service = Admins::table('wolive_queue')->where(['visiter_id' => $visiter_id, 'business_id' => $business_id])->where('state', 'normal')->order('qid desc')->find();
 
                 if (!$service) {
 
@@ -973,7 +983,13 @@ class Event extends Controller
                 // 替换成最新头像 'login_times'=> ['exp','login_times+1']
                 Admins::table('wolive_visiter')->where(['visiter_id' => $visiter_id, 'business_id' => $business_id])->update(array_filter(['avatar' => $arr['avatar'], 'login_times' => Db::raw('login_times+1'), 'visiter_name' => $arr['visiter_name']]));
                 // 老用户
-                $service = Admins::table('wolive_queue')->where('service_id', $special)->where(['visiter_id' => $visiter_id, 'business_id' => $business_id])->find();
+                // ★ 修复：先尝试按special查找，找不到则按visiter_id+business_id查找（解决返回用户找不到历史记录问题）
+                $service = Admins::table('wolive_queue')->where(['visiter_id' => $visiter_id, 'business_id' => $business_id])->order('qid desc')->find();
+                if (!$service) {
+                    // 完全没有队列记录，视为新用户
+                    $returndata = ['code' => 2, 'msg' => isset($this->lang_array['waiting_claim']) ? $this->lang_array['waiting_claim'] : '等待认领！', 'data' => 0];
+                    return json($returndata);
+                }
                 //最后服务id
                 $service_id = $service['service_id'];
                 $service_data = Admins::table("wolive_service")->field('avatar,business_id,email,open_id,groupid,nick_name,service_id,state')->where('service_id', $service_id)->where('groupid', $arr['groupid'])->find();
@@ -1415,9 +1431,16 @@ class Event extends Controller
         $vid = $post['vid'];
         $service_id = $post['service_id'];
 
+        // ★ 修复：当service_id为0或空时，按visiter_id+business_id查找所有聊天记录（支持返回用户查看历史消息）
+        if (empty($service_id) || $service_id == 0) {
+            $chat_where = ['visiter_id' => $vid, 'business_id' => $post['business_id']];
+        } else {
+            $chat_where = ['service_id' => $service_id, 'visiter_id' => $vid, 'business_id' => $post['business_id']];
+        }
+
         if ($post["hid"] == '') {
 
-            $data = Admins::table('wolive_chats')->where(['service_id' => $service_id, 'visiter_id' => $vid, 'business_id' => $post['business_id']])->order('timestamp desc,cid asc')->limit(10)->select();
+            $data = Admins::table('wolive_chats')->where($chat_where)->order('timestamp desc,cid asc')->limit(10)->select();
 
             $vdata = Admins::table('wolive_visiter')->where('visiter_id', $vid)->find();
             $sdata = Admins::table('wolive_service')->where('service_id', $service_id)->find();
@@ -1437,7 +1460,7 @@ class Event extends Controller
             }
             reset($data);
         } else {
-            $data = Admins::table('wolive_chats')->where(['service_id' => $service_id, 'visiter_id' => $vid, 'business_id' => $post['business_id']])->where('cid', '<', $post['hid'])->order('timestamp desc,cid asc')->limit(10)->select();
+            $data = Admins::table('wolive_chats')->where($chat_where)->where('cid', '<', $post['hid'])->order('timestamp desc,cid asc')->limit(10)->select();
             $vdata = Admins::table('wolive_visiter')->where('visiter_id', $vid)->find();
             $sdata = Admins::table('wolive_service')->where('service_id', $service_id)->find();
 

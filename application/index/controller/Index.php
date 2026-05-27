@@ -411,12 +411,20 @@ class Index extends Controller
 
 
         $business = User::table('wolive_business')->where('id', $business_id)->find();
+        // URL参数lang优先级最高 - 支持外部系统传入语言设置
+        $url_lang = $this->request->param('lang', '');
         $visiter_lang = User::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
-        if ($visiter_lang) {
+        if($url_lang && preg_match('/^[a-zA-Z0-9\-]+$/', $url_lang)){
+            // URL传入的语言参数优先级最高
+            $business['lang'] = $url_lang;
+            session('user_lang', $url_lang);
+            // 同步更新访客语言到数据库
+            User::name('wolive_visiter')->where('visiter_id', $visiter_id)->update(['lang' => $url_lang]);
+        }elseif($visiter_lang){
             $business['lang'] = $visiter_lang;
-        } else {
-            if ($business['auto_ip']) $business['lang'] = Ip::check_country($this->request->ip()) ?: $business['lang'];
-            if (session('user_lang')) $business['lang'] = session('user_lang');
+        }else{
+            if($business['auto_ip']) $business['lang'] = Ip::check_country($this->request->ip())?:$business['lang'];
+            if(session('user_lang')) $business['lang'] = session('user_lang');
         }
 
         $rest = RestSetting::get(['business_id' => $business_id]);
@@ -459,6 +467,8 @@ class Index extends Controller
         $this->assign('groupid', $groupid);
         $this->assign('visiter', $visiter_name);
         $this->assign('alias_visiter_name', $alias_visiter_name);
+        // ★ 传递当前语言代码到前端JS
+        $this->assign('current_lang_code', isset($business['lang']) ? $business['lang'] : 'cn');
         $this->assign('business_id', $business_id);
         $this->assign('from_url', $from_url);
         $this->assign('channel', $channel);

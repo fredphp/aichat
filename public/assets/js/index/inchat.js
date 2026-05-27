@@ -713,7 +713,7 @@ var init = function () {
     $.ajax({
         url:ROOT_URL+"/admin/event/notice",
         type: 'post',
-        data: {visiter_id:visiter_id, visiter_name: visiter, business_id: business_id, from_url: record, avatar: pic,groupid:cid,special:special,name:alias_visiter_name},
+        data: {visiter_id:visiter_id, visiter_name: visiter, business_id: business_id, from_url: record, avatar: pic,groupid:cid,special:special,name:alias_visiter_name,lang:current_lang_code},
         success: function (res) {
             if(res.code == 0){
 
