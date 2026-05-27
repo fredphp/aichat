@@ -16,7 +16,8 @@ function getOuterLeft(v,tab = 3) {
     str += `<img  class="my-circle  se_pic" src=${v.avatar} width="40px" height="40px" />`;
     
   }
-  if(v.nick_name=='系统'){
+  var systemName = (typeof langSystemName !== 'undefined') ? langSystemName : '系统';
+  if(v.nick_name=='系统' || v.nick_name==systemName){
 
       str += `<div class='outer-left' ><span style="color: #aca7a7; margin-bottom: 2px;">${v.nick_name}${nbs};${v.time}</span><div class='service2'">`;
   }else{
@@ -42,29 +43,23 @@ function getOuterRight(v,tab = 3) {
   for (let i = 0;i<tab;i++){
     nbs+='&nbsp';
   }
+  var readText = (typeof langReadStatus !== 'undefined') ? langReadStatus : '已读';
+  var unreadText = (typeof langUnreadStatus !== 'undefined') ? langUnreadStatus : '未读';
   let name = '';
   if(v.is_read==1){
-    name="已读";
+    name=readText;
   }else if(v.is_read==0){
-    name="未读";
+    name=unreadText;
   }
+ var meText = (typeof langMe !== 'undefined') ? langMe : '我';
  let str = `<li class="chatmsg" id="xiaox_${v.cid}" style="flex-direction: row-reverse;">`;
-  if(v.pic!=undefined && v.pic==='我'){
-    // str += `<h2   class="my-circle cu_pic" style="position: unset;float:right;width: 30px;height: 40px;font-size: 14px">${v.pic}</h2>`;
+  var meText = (typeof langMe !== 'undefined') ? langMe : '我';
+  if(v.pic!=undefined && (v.pic==='我' || v.pic===meText)){
     str += `<div class="" style="position: absolute;right: 0px;"><img class="my-circle" src="${pic}" width="35px" height="35px"></div>`;
   }
   else if (v.pic!=undefined && v.pic!==''){
     str += `<div class="" style="position: absolute;right: 0px;"><img class="my-circle cu_pic" src="${v.pic}" width="35px" height="35px"></div>`;
   }
-//   else {
-//     str += `<div class="" style="position: absolute;right: 0px;"><img class="my-circle cu_pic" src="${pic}" width="35px" height="35px"></div>`;
-//   }
-  
-
-// =============================
-//   str += '<div class="" style="position: absolute;right: 0px;"><img class="my-circle" src="' + v.avatar + '" width="35px" height="35px"></div>';
-
-//   str += '<div class="" style="position: absolute;right: 0px;"><img class="my-circle" src="' + pic + '" width="35px" height="35px"></div>';
 
   str += `<div class='outer-right'><pre id='cid${v.cid}' class='noredcustomer'>${name}</pre><div class='msg_body'><span style="color: #aca7a7;">${v.time}</span><div class='customer'>`;
 
@@ -124,11 +119,13 @@ function commentStr(data){
 }
 
 function getNickName(v) {
+    var visitorPrefix = (typeof langVisitorPrefix !== 'undefined') ? langVisitorPrefix : '游客';
+    var areaUnknown = (typeof langAreaUnknown !== 'undefined') ? langAreaUnknown : '地区未知';
 
-    if(v.visiter_name.indexOf("游客") === 0){
+    if(v.visiter_name.indexOf(visitorPrefix) === 0 || v.visiter_name.indexOf("游客") === 0){
         v.visiter_name = "";
     }
 
-    v.visiter_name = (v.visiter_name ? v.visiter_name + '-' : "") + (v.location ? v.location : "地区未知") + '-' + v.ip;
+    v.visiter_name = (v.visiter_name ? v.visiter_name + '-' : "") + (v.location ? v.location : areaUnknown) + '-' + v.ip;
     return v.name !== "" ? v.name : v.visiter_name;
 }

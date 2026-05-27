@@ -378,6 +378,13 @@ class Index extends Controller
         $this->assign('lang', Lang::load($lang_file));
         $this->assign('buttonSwitch', ButtonSwitch::get(['business_id'=>$business_id]));
         $this->assign('reststate', $state);
+        // ★ Translate restsetting reply to current language if it's the default Chinese or empty
+        if (is_array($rest)) {
+            $lang_data = Lang::load(APP_PATH.'lang/'.$business['lang'].'.php');
+            if (empty($rest['reply']) || $rest['reply'] == '您好！当前客服目前离线，您可以留言，我们将在客服上线后尽快回复您') {
+                $rest['reply'] = isset($lang_data['service_offline_reply']) ? $lang_data['service_offline_reply'] : $rest['reply'];
+            }
+        }
         $this->assign('restsetting',$rest);
         $this->assign('business_name',$business['business_name']);
         $this->assign('baidu_map_key',baidu_map_key);

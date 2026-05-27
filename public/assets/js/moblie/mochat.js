@@ -239,7 +239,7 @@ function put() {
 
 
                 if(res.code == 0){
-                    var str = getOuterRight({pic:'我',content:res.data,time:formattingTime(new Date())})
+                    var str = getOuterRight({pic:langMe,content:res.data,time:formattingTime(new Date())})
 
 
                     $(".conversation").append(str);
@@ -434,7 +434,7 @@ function put1() {
                     var myDate = new Date();
 
                     var time = myDate.toLocaleTimeString();
-                    var str = getOuterRight({pic:'我',msg:res.data,time:formattingTime(myDate)});
+                    var str = getOuterRight({pic:langMe,msg:res.data,time:formattingTime(myDate)});
 
 
 
@@ -566,7 +566,7 @@ function putfile() {
 
                     }
 
-                  str = getOuterRight({pic:'我',content:str,time:formattingTime(myDate)})
+                  str = getOuterRight({pic:langMe,content:str,time:formattingTime(myDate)})
 
 
                     $(".conversation").append(str);
@@ -666,7 +666,7 @@ function putfile1() {
 
                     }
 
-                    str  = getOuterRight({pic:'我',content:str,time:formattingTime(myDate)})
+                    str  = getOuterRight({pic:langMe,content:str,time:formattingTime(myDate)})
 
 
 
@@ -949,7 +949,7 @@ function getdata(is_init = true) {
 
                     }
 
-                    var name="已读";
+                    var name=langReadStatus;
 
                     if (v.direction == 'to_service') {
 
@@ -1430,7 +1430,7 @@ function gettishi(business_id){
                 var str = "<i class='layui-icon "+v[0]+"' style='font-size: 0px;cursor: pointer;'></i>&nbsp;" ;
                     str +="<font color='#000'>"+v[1] + "<font>";
 
-                 str =    getOuterLeft({nick_name:'系统',time:time,type:1,avatar:ROOT_URL + '/assets/images/index/ai_service.png',content:str})
+                 str =    getOuterLeft({nick_name:langSystemName,time:time,type:1,avatar:ROOT_URL + '/assets/images/index/ai_service.png',content:str})
 
 
                 num =num+1;
@@ -1521,7 +1521,7 @@ function zhuanrengong(business_id){
 
 
                 str += "</ul>";
-               str  =  getOuterLeft({nick_name:'系统',time:formattingTime(new Date()),type:1,avatar:'/assets/images/index/ai_service.png',content:str})
+               str  =  getOuterLeft({nick_name:langSystemName,time:formattingTime(new Date()),type:1,avatar:'/assets/images/index/ai_service.png',content:str})
 
 
                 $(".conversation").append(str);
@@ -1562,7 +1562,7 @@ function tz(business_id,groupid,id){
 
 function getanswer(id,question){
 
-    var str = getOuterRight({pic:'我',content:question,time:formattingTime(new Date())})
+    var str = getOuterRight({pic:langMe,content:question,time:formattingTime(new Date())})
 
     $(".conversation").append(str);
 
@@ -1769,7 +1769,7 @@ var send = function () {
 
 
 
-        var str  =  getOuterRight({pic:'我',content:msg2,time:formattingTime(new Date()),is_read:0,cid: '00'})
+        var str  =  getOuterRight({pic:langMe,content:msg2,time:formattingTime(new Date()),is_read:0,cid: '00'})
 
 
         $(".conversation").append(str);

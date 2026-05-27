@@ -57,6 +57,25 @@
     <script>
       var langCancel = '{$lang["cancel"]}';
         var langSubmit = '{$lang["submit"]}';
+        var langVoiceSendFail = '{$lang["voice_send_fail"]}';
+        var langPleaseSpeak = '{$lang["please_speak"]}';
+        var langVoiceSendBtn = '{$lang["voice_send_btn"]}';
+        var langVoiceCancelBtn = '{$lang["voice_cancel_btn"]}';
+        var langReadStatus = '{$lang["read_status"]}';
+        var langUnreadStatus = '{$lang["unread_status"]}';
+        var langMe = '{$lang["me"]}';
+        var langSystemName = '{$lang["system_name"]}';
+        var langOnlineStatus = '{$lang["online_status"]}';
+        var langOfflineStatus = '{$lang["offline_status"]}';
+        var langAreaUnknown = '{$lang["area_unknown"]}';
+        var langTencent = '{$lang["tencent"]}';
+        var langVisitorPrefix = '{$lang["visitor_prefix"]}';
+        var langGetLocationFail = '{$lang["get_location_fail"]}';
+        var langServiceOfflineReply = '{$lang["service_offline_reply"]}';
+        var langTransferHumanSuccess = '{$lang["transfer_human_success"]}';
+        var langSelectService = '{$lang["select_service"]}';
+        var langNoRecommendQuestion = '{$lang["no_recommend_question"]}';
+        var langHello = '{$lang["hello"]}';
         let imageSrc = '__image__';
      var sound = new Howl({
           src: ['/upload/voice/warning.mp3']
@@ -1869,7 +1888,7 @@ if (layerElement) {
                                         }
                                     });
                                 }else{
-                                    showError("获取定位地址失败");
+                                    showError(langGetLocationFail);
                                 }
                             });
 
@@ -1994,7 +2013,7 @@ if (layerElement) {
             recStart();
         },function(msg,isUserNotAllow){
             console.log((isUserNotAllow?"UserNotAllow，":"")+"无法录音:"+msg);
-            layer.msg("语音发送失败")
+            layer.msg(langVoiceSendFail)
         });
     };
 
@@ -2041,12 +2060,12 @@ if (layerElement) {
             rec.start();
             layui.use(['jquery', 'layer'], function () {
                 var layer = layui.layer;
-                layer.msg("请说话...", {
+                layer.msg(langPleaseSpeak, {
                     icon: 16
                     , shade: 0.01
                     , skin: 'layui-layer-lan'
                     , time: 0
-                    , btn: ["发送", "取消"]
+                    , btn: [langVoiceSendBtn, langVoiceCancelBtn]
                     , yes: function (index, layero) {
                         //按钮【按钮一】的回调
                         rec.stop(function(blob,duration){
@@ -2113,7 +2132,7 @@ if (layerElement) {
             });
             console.log("已开始录音...");
         }else{
-            layer.msg("语音发送失败")
+            layer.msg(langVoiceSendFail)
         }
     }
 

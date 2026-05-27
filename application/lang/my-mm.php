@@ -74,7 +74,6 @@ return [
     'service_title' => 'အွန်လိုင်းဝန်ဆောင်မှု',
     'banword_tip' => 'ပို့၍မရပါ၊ အကြောင်းအရာတွင်တားမြစ်စာလုံးပါဝင်နေပါသည်',
     'leave_a_message' => 'မှတ်ချက်ချပါ',
-    // Additional entries for hardcoded Chinese text in the template
     'evaluate_tip' => 'ကျေးဇူးပြု၍ဝန်ဆောင်မှုကိုအကဲဖြတ်ပါ၊ ကျေနပ်လျှင်ကြယ်၅လုံးပေးပါ',
     'service_attitude' => 'ဝန်ဆောင်မှုဆက်ဆံမှု',
     'suggestions' => 'အကြံပြုချက်',
@@ -91,7 +90,6 @@ return [
     'logo_display' => 'LOGO ပြသမှု -',
     'about_us' => 'ကျွန်ုပ်တို့အကြောင်း -',
     'entering' => 'ရိုက်နေဆဲ...',
-    'enter_content' => 'အကြောင်းအရာထည့်ပါ...',
     'voice' => 'အသံ',
     'image' => 'ပုံ',
     'video' => 'ဗီဒီယို',
@@ -112,5 +110,32 @@ return [
     'cancel_send' => 'ပယ်ဖျက်ပို့ပါ',
     'read' => 'ဖတ်ပြီး',
     'tourist' => 'ဧည့်သည်',
-];
 
+    // === New keys for previously hardcoded Chinese text ===
+    'voice_send_fail' => 'အသံပို့၍မရပါ',
+    'please_speak' => 'ကျေးဇူးပြု၍ပြောပါ...',
+    'voice_send_btn' => 'ပို့ရန်',
+    'voice_cancel_btn' => 'ပယ်ဖျက်',
+    'read_status' => 'ဖတ်ပြီး',
+    'unread_status' => 'မဖတ်ရသေး',
+    'me' => 'ကျွန်ုပ်',
+    'system_name' => 'စနစ်',
+    'online_status' => '(အွန်လိုင်း)',
+    'offline_status' => '(အောဖလိုင်း)',
+    'area_unknown' => 'ဒေသမသိ',
+    'tencent' => 'QQ',
+    'opening_recorder' => 'အသံသွင်းစက်ဖွင့်နေပါသည်၊ မိုက်ခရိုဖုန်းခွင့်ပြုချက်တောင်းနေပါသည်...',
+    'recorder_opened' => 'အသံသွင်းစက်ဖွင့်ပြီးပါပြီ၊ စတင်နိုင်ပါပြီ',
+    'recorder_closed' => 'ပိတ်ပြီးပါပြီ',
+    'recorder_not_open' => 'အသံသွင်းစက်မဖွင့်ရသေးပါ',
+    'recording_started' => 'အသံသွင်းနေပါသည်...',
+    'get_location_fail' => 'တည်နေရာရရှိမှုမအောင်မြင်ပါ',
+    'visitor_prefix' => 'ဧည့်သည်',
+
+    'get_location_fail' => 'တည်နေရာရရှိမှုမအောင်မြင်ပါ',
+    'service_offline_reply' => 'မင်္ဂလာပါ! လက်ရှိဝန်ဆောင်မှုသည်အောဖလိုင်းဖြစ်နေပါသည်၊ သင့်အနေဖြင့်မှတ်ချက်ချနိုင်ပါသည်၊ ဝန်ဆောင်မှုအွန်လိုင်းပြန်လာလျှင်အမြန်ဆုံးဖြေကြားပေးပါမည်',
+    'transfer_human_success' => 'လူဝန်ဆောင်မှုသို့အောင်မြင်စွာချိတ်ဆက်ပြီးပါပြီ',
+    'select_service' => 'ကျေးဇူးပြု၍ဝန်ဆောင်မှုရွေးချယ်ပါ',
+    'no_recommend_question' => 'အကြံပြုမေးခွန်းမရှိပါ',
+
+];

@@ -621,7 +621,7 @@ class Event extends Controller
                 $cid = Db::table('wolive_chats')->insertGetId($robot_arr);
                 $robot_arr['cid'] = $cid;
                 $robot_arr['tip'] = '';
-                $robot_arr['nick_name'] = '系统';
+                $robot_arr['nick_name'] = isset($this->lang_array['system_name']) ? $this->lang_array['system_name'] : '系统';
                 $robot_arr['avatar'] = '/assets/images/index/ai_service.png';
                 // $pusher->trigger("cu" . $channel, 'my-event', ['message' => $robot_arr]);
 
@@ -2008,7 +2008,7 @@ class Event extends Controller
                 'direction' => 'to_visiter',
                 'timestamp' => time() + 1,
                 'type' => 2,
-                'nick_name' => '系统',
+                'nick_name' => isset($this->lang_array['system_name']) ? $this->lang_array['system_name'] : '系统',
                 'avatar' => '/assets/images/index/ai_service.png'
             ];
 
@@ -2152,7 +2152,7 @@ class Event extends Controller
             $cid = Db::table('wolive_chats')->insertGetId($robot_arr);
             $robot_arr['cid'] = $cid;
             $robot_arr['tip'] = '';
-            $robot_arr['nick_name'] = '系统';
+            $robot_arr['nick_name'] = isset($this->lang_array['system_name']) ? $this->lang_array['system_name'] : '系统';
             $robot_arr['avatar'] = '/assets/images/index/ai_service.png';
 
             // 发送到前端
