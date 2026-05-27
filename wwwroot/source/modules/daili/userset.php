@@ -16,9 +16,12 @@ class userset extends daili {
 
 	public function init() {
 		$user = $this -> db -> get_one(array('uid' => $this -> uid));
-		// 获取代理配置
-		$agent_config_db = base :: load_model('agent_config_model');
-		$agent_config = $user['config_id'] ? $agent_config_db -> get_one(array('id' => $user['config_id'])) : array();
+		// 获取代理配置 - 使用bc_agent表
+		$agent_config = array();
+		if ($user['agent_id'] > 0) {
+			$agent_db = base :: load_model('agent_model');
+			$agent_config = $agent_db -> get_one(array('id' => $user['agent_id']));
+		}
 		include $this -> daili_tpl('userset');
 	}
 

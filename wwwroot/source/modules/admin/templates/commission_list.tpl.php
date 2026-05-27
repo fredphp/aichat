@@ -33,6 +33,7 @@ include $this->admin_tpl('header');
 				<th>ID</th>
 				<th>玩家UID</th>
 				<th>代理UID</th>
+				<th>代理类型</th>
 				<th>注单ID</th>
 				<th>下注金额(流水)</th>
 				<th>分成比例</th>
@@ -44,23 +45,29 @@ include $this->admin_tpl('header');
 			<?php
 			if (!empty($list)) {
 				foreach ($list as $v) {
-					$agent_info = $this -> db2 -> get_one(array('uid' => $v['agent_uid']));
+					$agent_user = $this -> db2 -> get_one(array('uid' => $v['agent_uid']));
+					$agent_name = '';
+					if ($v['agent_id'] > 0) {
+						$agent_cfg = $this -> db3 -> get_one(array('id' => $v['agent_id']));
+						$agent_name = $agent_cfg ? $agent_cfg['name'] : '';
+					}
 			?>
 			<tr>
 				<td><?php echo $v['id'];?></td>
 				<td><?php echo $v['uid'];?></td>
-				<td><?php echo $v['agent_uid'];?><?php echo $agent_info ? ' ('.$agent_info['username'].')' : '';?></td>
+				<td><?php echo $v['agent_uid'];?><?php echo $agent_user ? ' ('.$agent_user['username'].')' : '';?></td>
+				<td><?php echo $agent_name;?></td>
 				<td><?php echo $v['order_id'];?></td>
 				<td><?php echo $v['order_money'];?></td>
 				<td><?php echo $v['rebate'];?>%</td>
-				<td><span style="color:#FF0000;font-weight:bold;"><?php echo $v['commission'];?></span></td>
+				<td><span style="color:#FF0000;font-weight:bold;"><?php echo $v['rebate_money'];?></span></td>
 				<td><?php echo date('Y-m-d H:i:s', $v['addtime']);?></td>
 			</tr>
 			<?php
 				}
 			} else {
 			?>
-			<tr><td colspan="8" style="text-align:center;">暂无分成记录</td></tr>
+			<tr><td colspan="9" style="text-align:center;">暂无分成记录</td></tr>
 			<?php } ?>
 		</tbody>
 	</table>

@@ -269,20 +269,30 @@ function account($gameid, $game, $template) {
                                 // ★ 代理分成逻辑 - 基于下注流水计算
                                 if ($order['uid'] && $order['money'] > 0) {
                                         $order_user = $db3 -> get_one(array('uid' => $order['uid']));
-                                        if ($order_user && $order_user['aid'] == 0 && $order_user['agent_id'] > 0) {
+                                        if ($order_user && $order_user['aid'] == 0 && ($order_user['agent_id'] > 0 || $order_user['agent'] > 0)) {
                                                 // 该用户是普通账户且关联了代理
+                                                // 查找代理配置ID - 优先用agent_id，否则从上级代理用户获取
+                                                $lookup_agent_id = $order_user['agent_id'];
+                                                if ($lookup_agent_id <= 0 && $order_user['agent'] > 0) {
+                                                        $agent_user_fallback = $db3 -> get_one(array('uid' => $order_user['agent']));
+                                                        if ($agent_user_fallback && $agent_user_fallback['agent_id'] > 0) {
+                                                                $lookup_agent_id = $agent_user_fallback['agent_id'];
+                                                        }
+                                                }
                                                 $agent_db_tmp = base :: load_model('agent_model');
-                                                $agent_info = $agent_db_tmp -> get_one(array('id' => $order_user['agent_id'], 'state' => 1));
+                                                $agent_info = $lookup_agent_id > 0 ? $agent_db_tmp -> get_one(array('id' => $lookup_agent_id, 'state' => 1)) : false;
                                                 if ($agent_info && $agent_info['rebate'] > 0) {
                                                         $rebate_money = round($order['money'] * $agent_info['rebate'] / 100, 2);
                                                         if ($rebate_money > 0) {
-                                                                // 查找代理用户UID
-                                                                $agent_uid = 0;
-                                                                $agent_user_tmp = $db3 -> get_one("agent_id = '".$order_user['agent_id']."' AND aid = 1", 'uid,agentconfig', 'uid ASC');
-                                                                if ($agent_user_tmp) {
-                                                                        $agent_uid = $agent_user_tmp['uid'];
+                                                                // 查找代理用户UID - 优先用agent字段直接获取
+                                                                $agent_uid = $order_user['agent'] > 0 ? $order_user['agent'] : 0;
+                                                                if ($agent_uid <= 0 && $lookup_agent_id > 0) {
+                                                                        $agent_user_tmp2 = $db3 -> get_one("agent_id = '".$lookup_agent_id."' AND aid = 1", 'uid', 'uid ASC');
+                                                                        if ($agent_user_tmp2) $agent_uid = $agent_user_tmp2['uid'];
+                                                                }
+                                                                if ($agent_uid > 0) {
                                                                         // 更新代理余额
-                                                                        $db3 -> update(array('money' => '+='.$rebate_money), array('uid' => $agent_uid));
+                                                                        $db3 -> update(array('money' => '+='.$rebate_money, 'commission' => '+='.$rebate_money), array('uid' => $agent_uid));
                                                                         // 记录代理流水
                                                                         $agent_oldmoney = $db3 -> get_one(array('uid' => $agent_uid));
                                                                         $db4 -> insert(array(
@@ -298,7 +308,7 @@ function account($gameid, $game, $template) {
                                                                 $rebate_log_db = base :: load_model('agent_rebate_log_model');
                                                                 $rebate_log_db -> insert(array(
                                                                         'uid' => $order['uid'],
-                                                                        'agent_id' => $order_user['agent_id'],
+                                                                        'agent_id' => $lookup_agent_id > 0 ? $lookup_agent_id : $order_user['agent_id'],
                                                                         'agent_uid' => $agent_uid,
                                                                         'order_id' => $order['id'],
                                                                         'order_money' => $order['money'],

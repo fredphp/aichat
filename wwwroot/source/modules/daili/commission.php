@@ -4,36 +4,42 @@ base :: load_app_class('daili', 'daili', 0);
 
 class commission extends daili {
 
-	private $db, $db2, $uid, $username;
+	private $db, $db2, $db3, $uid, $username;
 
 	public function __construct() {
 		parent :: __construct();
-		$this -> db = base :: load_model('commission_model');
+		$this -> db = base :: load_model('agent_rebate_log_model');
 		$this -> db2 = base :: load_model('user_model');
+		$this -> db3 = base :: load_model('agent_model');
 		$this -> uid = intval($this -> get_userid());
 		$this -> username = trim($this -> get_username());
 	}
 
 	public function init() {
-		// 显示分成汇总
+		// 获取当前代理信息
 		$agent_info = $this -> db2 -> get_one(array('uid' => $this -> uid));
+		// 获取代理配置
+		$agent_config = array();
+		if ($agent_info['agent_id'] > 0) {
+			$agent_config = $this -> db3 -> get_one(array('id' => $agent_info['agent_id']));
+		}
 		// 今日分成
 		$starttime = strtotime(date('Y-m-d'));
-		$today_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime'", 'SUM(commission) as total');
+		$today_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime'", 'SUM(rebate_money) as total');
 		$today_total = $today_commission[0]['total'] ? $today_commission[0]['total'] : 0;
 		// 昨日分成
 		$starttime_y = strtotime(date('Y-m-d')) - 86400;
 		$endtime_y = strtotime(date('Y-m-d'));
-		$yesterday_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime_y' AND addtime < '$endtime_y'", 'SUM(commission) as total');
+		$yesterday_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime_y' AND addtime < '$endtime_y'", 'SUM(rebate_money) as total');
 		$yesterday_total = $yesterday_commission[0]['total'] ? $yesterday_commission[0]['total'] : 0;
 		// 本月分成
 		$starttime_m = mktime(0, 0, 0, date('m'), 1, date('Y'));
-		$month_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime_m'", 'SUM(commission) as total');
+		$month_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime_m'", 'SUM(rebate_money) as total');
 		$month_total = $month_commission[0]['total'] ? $month_commission[0]['total'] : 0;
 		// 上月分成
 		$starttime_lm = mktime(0, 0, 0, date('m')-1, 1, date('Y'));
 		$endtime_lm = mktime(23, 59, 59, date('m'), 0, date('Y'));
-		$lastmonth_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime_lm' AND addtime < '$endtime_lm'", 'SUM(commission) as total');
+		$lastmonth_commission = $this -> db -> select("agent_uid = '$this->uid' AND addtime >= '$starttime_lm' AND addtime < '$endtime_lm'", 'SUM(rebate_money) as total');
 		$lastmonth_total = $lastmonth_commission[0]['total'] ? $lastmonth_commission[0]['total'] : 0;
 		// 今日流水
 		$order_db = base :: load_model('order_model');
@@ -42,10 +48,6 @@ class commission extends daili {
 		// 本月流水
 		$month_flow = $order_db -> select("agent = '$this->uid' AND tui = 0 AND addtime >= '$starttime_m'", 'SUM(money) as total');
 		$month_flow_total = $month_flow[0]['total'] ? $month_flow[0]['total'] : 0;
-
-		// 获取代理配置
-		$agent_config_db = base :: load_model('agent_config_model');
-		$agent_config = $agent_config_db -> get_one(array('id' => $agent_info['config_id']));
 
 		include $this -> daili_tpl('commission');
 	}

@@ -800,6 +800,10 @@ class index extends go {
                                         $send['password'] = $newpassword;
                                         $send['encrypt'] = $encrypt;
                                         $send['agent'] = $agent_db['uid'];
+						// 代理ID传递 - 继承代理的agent_id
+						if ($agent_db['agent_id'] > 0) {
+							$send['agent_id'] = $agent_db['agent_id'];
+						}
                                         $send['regtime'] = SYS_TIME;
                                         if ($this -> db -> insert($send)) {
                                                 $msg['info'] = L('register_success');

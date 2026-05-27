@@ -3,12 +3,13 @@ defined('IN_MYWEB') or exit('No permission resources.');
 base :: load_app_class('admin', 'admin', 0);
 
 class commission extends admin {
-	private $db, $db2;
+	private $db, $db2, $db3;
 
 	public function __construct() {
 		parent :: __construct();
-		$this -> db = base :: load_model('commission_model');
+		$this -> db = base :: load_model('agent_rebate_log_model');
 		$this -> db2 = base :: load_model('user_model');
+		$this -> db3 = base :: load_model('agent_model');
 	}
 
 	public function init() {

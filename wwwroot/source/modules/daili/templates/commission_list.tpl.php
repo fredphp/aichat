@@ -49,7 +49,7 @@ include $this->daili_tpl('header');
 				<td><?php echo $v['order_id'];?></td>
 				<td><?php echo $v['order_money'];?></td>
 				<td><?php echo $v['rebate'];?>%</td>
-				<td><span style="color:#FF0000;font-weight:bold;"><?php echo $v['commission'];?></span></td>
+				<td><span style="color:#FF0000;font-weight:bold;"><?php echo $v['rebate_money'];?></span></td>
 				<td><?php echo date('Y-m-d H:i:s', $v['addtime']);?></td>
 			</tr>
 			<?php

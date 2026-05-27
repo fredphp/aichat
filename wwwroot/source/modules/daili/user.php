@@ -88,11 +88,16 @@ class user extends daili {
 			if (strlen($pwd) > 20 || strlen($pwd) < 6) {
 				showmessage('密码限制为6-20个字符！', HTTP_REFERER);
 			}
-			$aid = intval($_POST['aid']);
+			$aid = 0; // 只做一级代理，代理只能添加普通用户
 			if (($aid == 2 || $aid == 3) && $this -> aid == 2) {
 				$aid = 0;
 			}
 			$insert['agent'] = $this -> uid;
+			// 代理ID传递 - 继承当前代理的agent_id
+			$my_info = $this -> db -> get_one(array('uid' => $this -> uid));
+			if ($my_info && $my_info['agent_id'] > 0) {
+				$insert['agent_id'] = $my_info['agent_id'];
+			}
 			list($password, $encrypt) = creat_password($pwd);
 			$insert['username'] = $username;
 			$insert['password'] = $password;
