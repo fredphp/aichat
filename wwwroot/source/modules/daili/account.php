@@ -14,7 +14,8 @@ class account extends daili{
 			2 => '<span style="color: #00B520;">投注</span>',
 			3 => '<span style="color: #FF0000;">盈利</span>',
 			4 => '<span style="color: #FF00DE;">退单</span>',
-			5 => '<span style="color: #F60;">红包</span>'
+			5 => '<span style="color: #F60;">红包</span>',
+			6 => '<span style="color: #00CC00;">代理分成</span>'
 		);
 		$this -> uid = intval($this -> get_userid());
 		$this -> username = trim($this -> get_username());

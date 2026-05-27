@@ -33,6 +33,8 @@
 			<li class="menuli" onclick="menu_show(this);"><a hidefocus="true" style="outline:none" href="<?php echo DAILI_PATH?>&c=user" target="right_iframe"><i class="icon-3"></i>账户管理</a></li>
 			<div class="line-x"></div>
 			<li class="menuli" onclick="menu_show(this);"><a hidefocus="true" style="outline:none" href="<?php echo DAILI_PATH?>&c=order" target="right_iframe"><i class="icon-2"></i>注单管理</a></li>
+			<div class="line-x"></div>
+			<li class="menuli" onclick="menu_show(this);"><a hidefocus="true" style="outline:none" href="<?php echo DAILI_PATH?>&c=commission" target="right_iframe"><i class="icon-2"></i>分成管理</a></li>
 			<?php if($this -> aid < 3){ ?>
 			<div class="line-x"></div>
 			<li class="menuli" onclick="menu_show(this);"><a hidefocus="true" style="outline:none" href="<?php echo DAILI_PATH?>&c=pay" target="right_iframe"><i class="icon-2"></i>充值管理</a></li>

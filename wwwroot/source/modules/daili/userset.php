@@ -1,104 +1,106 @@
 <?php
 defined('IN_MYWEB') or exit('No permission resources.');
 base :: load_app_class('daili', 'daili', 0);
+
 class userset extends daili {
 
-	private $db, $a_arr, $aid;
+	private $db, $aid, $uid, $username;
 
 	public function __construct() {
 		parent :: __construct();
 		$this -> db = base :: load_model('user_model');
 		$this -> aid = $this -> get_userinfo('aid');
-		$this -> a_arr[ROUTE_A] = 'class="on"';
-		$this -> agent = array(1 => '一级代理', 2 => '二级代理', 3 => '二级代理(阅)');
+		$this -> uid = intval($this -> get_userid());
+		$this -> username = trim($this -> get_username());
 	}
 
 	public function init() {
-		$user = $this -> get_userinfo();
-		base::load_sys_class('format', '', 0);
+		$user = $this -> db -> get_one(array('uid' => $this -> uid));
+		// 获取代理配置
+		$agent_config_db = base :: load_model('agent_config_model');
+		$agent_config = $user['config_id'] ? $agent_config_db -> get_one(array('id' => $user['config_id'])) : array();
 		include $this -> daili_tpl('userset');
 	}
 
 	public function pwset() {
 		if (isset($_POST['dosubmit'])) {
-			$password = isset($_POST['password']) && trim($_POST['password']) ? safe_replace(trim($_POST['password'])) : showmessage('请输入原密码！', HTTP_REFERER);
-			$newpassword = isset($_POST['newpassword']) && trim($_POST['newpassword']) ? safe_replace(trim($_POST['newpassword'])) : showmessage('请输入新密码！', HTTP_REFERER);
-			$newpassword2 = isset($_POST['newpassword2']) && trim($_POST['newpassword2']) ? safe_replace(trim($_POST['newpassword2'])) : '';
-			if (strlen($newpassword) > 20 || strlen($newpassword) < 6) {
-				showmessage('密码长度为6-20字符！', HTTP_REFERER);
-			} elseif ($newpassword != $newpassword2) {
-				showmessage('两次输入的新密码不一致！', HTTP_REFERER);
+			$oldpassword = trim($_POST['oldpassword']);
+			$password = trim($_POST['password']);
+			$repassword = trim($_POST['repassword']);
+			if (empty($oldpassword) || empty($password) || empty($repassword)) {
+				showmessage('请填写完整信息！', HTTP_REFERER);
 			}
-			$info = $this -> get_userinfo();
-			if (md5(md5($password) . $info['encrypt']) != $info['password']) {
-				showmessage('旧密码验证错误！', HTTP_REFERER);
+			if ($password != $repassword) {
+				showmessage('两次输入密码不一致！', HTTP_REFERER);
 			}
-			list($password, $encrypt) = creat_password($newpassword);
-			if ($this -> db -> update(array('password' => $password, 'encrypt' => $encrypt), array('uid' => $info['uid']))) {
-				$this -> log_out(); //退出当前登录
-				showmessage('修改成功，请重新登录！', HTTP_REFERER);
+			if (strlen($password) > 20 || strlen($password) < 6) {
+				showmessage('密码限制为6-20个字符！', HTTP_REFERER);
+			}
+			$user = $this -> db -> get_one(array('uid' => $this -> uid));
+			if ($user['password'] != md5(md5($oldpassword).$user['encrypt'])) {
+				showmessage('旧密码错误！', HTTP_REFERER);
+			}
+			list($newpassword, $encrypt) = creat_password($password);
+			$update = array('password' => $newpassword, 'encrypt' => $encrypt);
+			if ($this -> db -> update($update, array('uid' => $this -> uid))) {
+				showmessage('密码修改成功，请重新登录！', DAILI_PATH.'&c=login&a=logout');
 			} else {
-				showmessage('修改失败！', HTTP_REFERER);
+				showmessage('密码修改失败！', HTTP_REFERER);
 			}
 		}
 		include $this -> daili_tpl('userset');
 	}
 
 	public function agent() {
-		$this -> check_aid(2);
-		$user = $this -> get_userinfo();
-		$config = unserialize($user['agentconfig']);
-		if (isset($_POST['dosubmit'])) {
-			if (is_array($_POST['config'])) {
-			$wx = isset($_POST['config']['wx']) ? $_POST['config']['wx'] : '';
-			$ali = isset($_POST['config']['ali']) ? $_POST['config']['ali'] : '';
-			$min = isset($_POST['config']['min']) ? $_POST['config']['min'] : '';
-			$max = isset($_POST['config']['max']) ? $_POST['config']['max'] : '';
-			$rebate = isset($_POST['config']['rebate']) ? $_POST['config']['rebate'] : '';
-			$remark = isset($_POST['config']['remark']) ? $_POST['config']['remark'] : '';
-			$ann = isset($_POST['config']['ann']) ? $_POST['config']['ann'] : '';
-			$card = isset($_POST['config']['card']) ? $_POST['config']['card'] : '';
-			$gameid = isset($_POST['config']['gameid']) ? $_POST['config']['gameid'] : '';
+		if ($this -> aid > 1) {
+			showmessage('无权限访问！', HTTP_REFERER);
 		}
-			if ($_FILES['wxfile']['size'] || $_FILES['alifile']['size']) {//如果选择了上传图片
+		$user = $this -> db -> get_one(array('uid' => $this -> uid));
+		if (isset($_POST['dosubmit'])) {
+			$config = array();
+			$config['wxewm'] = safe_replace(trim($_POST['config']['wxewm']));
+			$config['aliewm'] = safe_replace(trim($_POST['config']['aliewm']));
+			$config['card'] = safe_replace(trim($_POST['config']['card']));
+			$config['remark'] = safe_replace(trim($_POST['config']['remark']));
+			$config['ann'] = trim($_POST['config']['ann']);
+			$gamearr = $this -> gamelist();
+			foreach ($gamearr as $v) {
+				$config['game'.$v['id']] = intval($_POST['config']['game'.$v['id']]);
+			}
+			if ($_FILES['wxfile']['size']) {
 				$up = base::load_sys_class('upimg');
-				$up->datedir = false;//不要添加日期目录
+				$up->datedir = false;
 				$up->dir = 'ewm';
 				$up->thumb = 0;
-				if ($_FILES['wxfile']['size']) {//微信
-					$up->filename = 'wxfile';
-					$wxreturn = $up->up();
-					if ($wxreturn['state'] == 'success') {
-						@unlink('./uppic/ewm/'.$config['wxewm']);//删除原来的图像
-						$config['wxewm'] = $wxreturn['info'];
-					}
-				}
-				if ($_FILES['alifile']['size']) {//支付宝
-					$up->filename = 'alifile';
-					$alireturn = $up->up();
-					if ($alireturn['state'] == 'success') {
-						@unlink('./uppic/ewm/'.$config['aliewm']);//删除原来的图像
-						$config['aliewm'] = $alireturn['info'];
-					}
+				$up->filename = 'wxfile';
+				$wxreturn = $up->up();
+				if ($wxreturn['state'] == 'success') {
+					@unlink('./uppic/ewm/'.$config['wxewm']);
+					$config['wxewm'] = $wxreturn['info'];
 				}
 			}
-			$config['remark'] = safe_replace($remark);
-			$config['ann'] = safe_replace($ann);
-			$config['card'] = safe_replace($card);
-			//$config['cash'] = safe_replace($cash);
-			$config['gameid'] = $gameid;//implode(',', $gameid);
-			$agentconfig = new_addslashes(serialize($config));
-			if ($this -> db -> update(array('agentconfig' => $agentconfig), array('uid' => $user['uid']))) {
-				showmessage('修改成功！', HTTP_REFERER);
+			if ($_FILES['alifile']['size']) {
+				$up = base::load_sys_class('upimg');
+				$up->datedir = false;
+				$up->dir = 'ewm';
+				$up->thumb = 0;
+				$up->filename = 'alifile';
+				$alireturn = $up->up();
+				if ($alireturn['state'] == 'success') {
+					@unlink('./uppic/ewm/'.$config['aliewm']);
+					$config['aliewm'] = $alireturn['info'];
+				}
+			}
+			$update = array('agentconfig' => serialize($config));
+			if ($this -> db -> update($update, array('uid' => $this -> uid))) {
+				showmessage('设置保存成功！', HTTP_REFERER);
 			} else {
-				showmessage('修改失败！', HTTP_REFERER);
+				showmessage('设置保存失败！', HTTP_REFERER);
 			}
 		}
-		base :: load_sys_class('form');
-		//查询游戏列表
+		$agentconfig = $user['agentconfig'] ? unserialize($user['agentconfig']) : array();
 		$gamearr = $this -> gamelist();
 		include $this -> daili_tpl('userset');
 	}
-
 }
 ?>
