@@ -16,6 +16,7 @@ use app\common\lib\Storage;
 use app\common\lib\storage\StorageException;
 use app\extra\push\Pusher;
 use think\Db;
+use think\Lang;
 use think\Exception;
 use think\Log;
 use app\admin\iplocation\Ip;
@@ -27,6 +28,47 @@ use app\admin\iplocation\BaiDuIp;
  */
 class Set extends Base
 {
+    protected $lang_array = [];
+
+    private function loadVisitorLang($visiter_id, $business_id) {
+        $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
+        if ($visiter_lang) {
+            $lang = $visiter_lang;
+        } else {
+            $business = Db::table('wolive_business')->where('id', $business_id)->find();
+            $lang = $business ? $business['lang'] : 'cn';
+            if (session('user_lang')) $lang = session('user_lang');
+        }
+        $lang_file = APP_PATH . 'lang/' . $lang . '.php';
+        if (!is_file($lang_file)) {
+            $lang_file = APP_PATH . 'lang/cn.php';
+        }
+        $this->lang_array = Lang::load($lang_file);
+        return $lang;
+    }
+
+    private function translateNickName($nick_name) {
+        if (empty($nick_name)) return $nick_name;
+        $lang = $this->lang_array;
+        if (empty($lang)) return $nick_name;
+        $prefix_map = [
+            '\u5ba2\u670d' => isset($lang['service_name_cs']) ? $lang['service_name_cs'] : 'Service',
+        ];
+        foreach ($prefix_map as $cn_prefix => $translated_prefix) {
+            if (mb_strpos($nick_name, $cn_prefix) === 0) {
+                return $translated_prefix;
+            }
+        }
+        $full_name_map = [
+            '\u7cfb\u7edf' => isset($lang['system_name']) ? $lang['system_name'] : 'System',
+            '\u7ba1\u7406\u5458' => isset($lang['nick_admin']) ? $lang['nick_admin'] : 'Admin',
+        ];
+        if (isset($full_name_map[$nick_name])) {
+            return $full_name_map[$nick_name];
+        }
+        return $nick_name;
+    }
+
     /**
      * 对话pusher类.
      *
@@ -123,7 +165,9 @@ class Set extends Base
             $arr['cid'] = $cid;
 			//防诈提示
 			$arr['tip'] = "";
-            if ($this->safeCheck($arr['content'], $visiter['lang'])) $arr['tip'] = "涉及钱财交易请务必谨慎操作，防范网络诈骗，人人有责。";
+            if ($this->safeCheck($arr['content'], $visiter['lang'])) $arr['tip'] = isset($this->lang_array['fraud_warning']) ? $this->lang_array['fraud_warning'] : "涉及钱财交易请务必谨慎操作，防范网络诈骗，人人有责。";
+            $this->loadVisitorLang($arr['visiter_id'], $login['business_id']);
+            $arr['nick_name'] = $this->translateNickName($login['nick_name']);
             $pusher->trigger("cu" . $channel, 'my-event', array('message' => $arr));
             $key = "callback_".$_SESSION['Msg']['business_id']."_".$_SESSION['Msg']['service_id'];
 
@@ -299,6 +343,12 @@ class Set extends Base
 
         $admin = Admins::table('wolive_service')->where('service_id', $post['id'])->find();
 
+        $visiter_id_gs = isset($post['visiter_id']) ? $post['visiter_id'] : '';
+        if ($visiter_id_gs) {
+            $this->loadVisitorLang($visiter_id_gs, $login['business_id']);
+        }
+        $admin['nick_name'] = $this->translateNickName($admin['nick_name']);
+
         $sarr = parse_url(ahost);
         if ($sarr['scheme'] == 'https') {
             $state = true;
@@ -400,17 +450,20 @@ class Set extends Base
             // 获取默认的常用语
             $words = Admins::table('wolive_sentence')->where('service_id', $login['service_id'])->where('state', 'using')->find();
             if ($words['content'] == "") {
-                $words['content'] = "你好!";
+                $words['content'] = isset($this->lang_array['hello_greeting']) ? $this->lang_array['hello_greeting'] : "你好!";
             }
             $chats = array(
                 'avatar' => $login['avatar'],
                 'content' => $words['content']
             );
 
-            $arr = ['msg' => '访客被认领', 'groupid' => $login['groupid']];
+            $arr = ['msg' => isset($this->lang_array['visitor_claimed']) ? $this->lang_array['visitor_claimed'] : '访客被认领', 'groupid' => $login['groupid']];
             $pusher->trigger("all" . $login['business_id'], 'on_notice', array('message' => $arr));
             $pusher->trigger("cu" . $channel, 'first_word', array('message' => $chats));
-            $pusher->trigger("cu" . $channel, 'cu_notice', array('message' => $login));
+                    $this->loadVisitorLang($post['visiter_id'], $login['business_id']);
+$login_copy = $login;
+        $login_copy['nick_name'] = $this->translateNickName($login['nick_name']);
+        $pusher->trigger("cu" . $channel, 'cu_notice', array('message' => $login_copy));
 
             $data = ['code' => 0, 'msg' => 'success'];
             return $data;
@@ -419,7 +472,7 @@ class Set extends Base
 
             $res = Admins::table('wolive_queue')->where(['visiter_id' => $post['visiter_id'], 'business_id' => $login['business_id'], 'service_id' => 0, 'state' => "normal"])->delete();
 
-            $arr = ['msg' => '该客服已经被认领', 'groupid' => $login['groupid']];
+            $arr = ['msg' => isset($this->lang_array['service_already_claimed']) ? $this->lang_array['service_already_claimed'] : '该客服已经被认领', 'groupid' => $login['groupid']];
             $pusher->trigger("all" . $login['business_id'], 'on_notice', array('message' => $arr));
         }
     }

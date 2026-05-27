@@ -93,8 +93,15 @@ class Event extends Controller
         ];
         foreach ($prefix_map as $cn_prefix => $translated_prefix) {
             if (mb_strpos($nick_name, $cn_prefix) === 0) {
-                return $translated_prefix . mb_substr($nick_name, mb_strlen($cn_prefix));
+                return $translated_prefix;
             }
+        }
+        $full_name_map = [
+            'ç³»ç»' => isset($lang['system_name']) ? $lang['system_name'] : 'System',
+            'ç®¡çå' => isset($lang['nick_admin']) ? $lang['nick_admin'] : 'Admin',
+        ];
+        if (isset($full_name_map[$nick_name])) {
+            return $full_name_map[$nick_name];
         }
         return $nick_name;
     }
@@ -273,7 +280,7 @@ class Event extends Controller
         if ($token == $post['token']) {
 
             if (!$post['nick_name']) {
-                $post['nick_name'] = "管理员" . $post['user_name'];
+                $post['nick_name'] = (isset($this->lang_array['nick_admin']) ? $this->lang_array['nick_admin'] : "管理员") . $post['user_name'];
             }
 
             if (!$post['business_id']) {
@@ -561,7 +568,7 @@ class Event extends Controller
                 $chid = $chatModel->getLastInsID();
                 $push_result = $pusher->trigger('kefu' . $service_id, 'cu-event', array('message' => $arr));
             // Also trigger on 'all' channel so all service agents receive real-time notifications
-            $pusher->trigger('all' . $arr['business_id'], 'on_notice', array('message' => array('msg' => '新消息', 'groupid' => 0)));
+            $pusher->trigger('all' . $arr['business_id'], 'on_notice', array('message' => array('msg' => isset($this->lang_array['new_message']) ? $this->lang_array['new_message'] : '新消息', 'groupid' => 0)));
 
             }
 
@@ -1449,6 +1456,14 @@ class Event extends Controller
 
 
         $result = array_reverse($data);
+
+        // Translate nick_name in chat history
+        $sdata_nick = $sdata ? $this->translateNickName($sdata['nick_name']) : '';
+        foreach ($result as $item) {
+            if (isset($item['direction']) && $item['direction'] == 'to_visiter' && $sdata_nick) {
+                $item['nick_name'] = $sdata_nick;
+            }
+        }
 
         $data = ['code' => 0, 'data' => $result];
         return json($data);

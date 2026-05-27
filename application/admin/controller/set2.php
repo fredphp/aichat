@@ -16,6 +16,7 @@ use app\common\lib\Storage;
 use app\common\lib\storage\StorageException;
 use app\extra\push\Pusher;
 use think\Db;
+use think\Lang;
 use think\Exception;
 use think\Log;
 use app\admin\iplocation\Ip;
@@ -106,6 +107,8 @@ class Set extends Base
 			//防诈提示
 			$arr['tip'] = "";
             if ($this->safeCheck($arr['content'], $visiter['lang'])) $arr['tip'] = "涉及钱财交易请务必谨慎操作，防范网络诈骗，人人有责。";
+            $this->loadVisitorLang($arr['visiter_id'], $login['business_id']);
+            $arr['nick_name'] = $this->translateNickName($login['nick_name']);
             $pusher->trigger("cu" . $channel, 'my-event', array('message' => $arr));
             $key = "callback_".$_SESSION['Msg']['business_id']."_".$_SESSION['Msg']['service_id'];
 
@@ -278,6 +281,11 @@ class Set extends Base
         $post = $this->request->post();
 
         $admin = Admins::table('wolive_service')->where('service_id', $post['id'])->find();
+        $visiter_id_gs = isset($post['visiter_id']) ? $post['visiter_id'] : '';
+        if ($visiter_id_gs) {
+            $this->loadVisitorLang($visiter_id_gs, $login['business_id']);
+        }
+        $admin['nick_name'] = $this->translateNickName($admin['nick_name']);
 
         $sarr = parse_url(ahost);
         if ($sarr['scheme'] == 'https') {
@@ -390,7 +398,10 @@ class Set extends Base
             $arr = ['msg' => '访客被认领', 'groupid' => $login['groupid']];
             $pusher->trigger("all" . $login['business_id'], 'on_notice', array('message' => $arr));
             $pusher->trigger("cu" . $channel, 'first_word', array('message' => $chats));
-            $pusher->trigger("cu" . $channel, 'cu_notice', array('message' => $login));
+                    $this->loadVisitorLang($post['visiter_id'], $login['business_id']);
+$login_copy = $login;
+        $login_copy['nick_name'] = $this->translateNickName($login['nick_name']);
+        $pusher->trigger("cu" . $channel, 'cu_notice', array('message' => $login_copy));
 
             $data = ['code' => 0, 'msg' => 'success'];
             return $data;

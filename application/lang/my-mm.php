@@ -174,4 +174,22 @@ return [
 
     // Consultation suffix
     'need_consultation_suffix' => '1',
+
+    // Fraud warning
+    'fraud_warning' => 'ငွေကြေးဆိုင်ရာငွေလွဲရာတွင်သတိထားပါ၊ ကွန်ရက်လိမ်လည်မှုကိုကာကွယ်ပါ',
+    // Transfer messages
+    'transfer_success' => 'အောင်မြင်စွာလွှဲပြောင်းပြီးပါပြီ!',
+    'transfer_fail' => 'လွှဲပြောင်းမှုမအောင်မြင်ပါ!',
+    'transfer_visitor_to_you' => 'ဧည့်သည်တစ်ဦးကိုသင့်ထံသို့လွှဲပြောင်းပြီးပါပြီ',
+    'visitor_claimed' => 'ဧည့်သည်ကိုယူပြီးပါပြီ',
+    'service_already_claimed' => 'ဤဝန်ဆောင်မှုကိုယူပြီးဖြစ်ပါသည်',
+    'new_message' => 'မက်ဆေ့ချ်အသစ်',
+    'admin_prefix' => 'စီမံခန့်ခွဲသူ',
+    'nick_kefu' => 'ဝန်ဆောင်မှု',
+    'nick_system' => 'စနစ်',
+    'nick_admin' => 'စီမံခန့်ခွဲသူ',
+    'wechat_new_message' => 'မက်ဆေ့ချ်အသစ်ရှိသည်!',
+    'wechat_service_msg' => 'ဝန်ဆောင်မှုမှမက်ဆေ့ချ်ရှိသည်၊ ကြည့်ရှုပါ',
+    'hello_greeting' => 'မင်္ဂလာပါ!',
+
 ];
