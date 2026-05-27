@@ -60,28 +60,57 @@ class commission extends daili {
 		include $this -> daili_tpl('commission');
 	}
 
+	// ★ 统一明细入口：默认显示所有分成记录，支持搜索筛选和分页
 	public function search() {
 		$where = "agent_uid = '$this->uid'";
-		if (is_array($_GET['search'])) {
-			$uid = isset($_GET['search']['uid']) ? $_GET['search']['uid'] : '';
-			$start_time = isset($_GET['search']['start_time']) ? $_GET['search']['start_time'] : '';
-			$end_time = isset($_GET['search']['end_time']) ? $_GET['search']['end_time'] : '';
-		}
-		$search_uid = intval($uid);
+		$search_uid = isset($_GET['search']['uid']) ? intval($_GET['search']['uid']) : '';
+		$start_time = isset($_GET['search']['start_time']) ? trim($_GET['search']['start_time']) : '';
+		$end_time = isset($_GET['search']['end_time']) ? trim($_GET['search']['end_time']) : '';
+
 		if ($search_uid) {
 			$where .= " AND uid = '$search_uid'";
 		}
 		if ($start_time) {
 			$time_start = strtotime($start_time);
-			$where .= " AND addtime >= '$time_start'";
+			if ($time_start) $where .= " AND addtime >= '$time_start'";
 		}
 		if ($end_time) {
 			$time_end = strtotime($end_time);
-			$where .= " AND addtime <= '$time_end'";
+			if ($time_end) $where .= " AND addtime <= '$time_end'";
 		}
 		$page = isset($_GET['page']) && intval($_GET['page']) ? intval($_GET['page']) : 1;
 		$list = $this -> db -> listinfo($where, 'id DESC', $page, 20);
 		$pages = $this -> db -> pages;
+		$total = $this -> db -> number;
+
+		// 统计
+		$total_order = 0;
+		$total_rebate = 0;
+		if ($list && is_array($list)) {
+			foreach ($list as $v) {
+				$total_order += $v['order_money'];
+				$total_rebate += $v['rebate_money'];
+			}
+		}
+
+		// 批量获取用户名
+		$user_names = array();
+		if ($list && is_array($list)) {
+			$need_uids = array();
+			foreach ($list as $v) {
+				$need_uids[$v['uid']] = 1;
+			}
+			if (!empty($need_uids)) {
+				$uid_str = implode(',', array_keys($need_uids));
+				$user_rows = $this -> db2 -> select("uid IN ($uid_str)", 'uid,username', '', 'uid ASC');
+				if ($user_rows) {
+					foreach ($user_rows as $ur) {
+						$user_names[$ur['uid']] = $ur['username'];
+					}
+				}
+			}
+		}
+
 		base :: load_sys_class('format', '', 0);
 		include $this -> daili_tpl('commission_list');
 	}

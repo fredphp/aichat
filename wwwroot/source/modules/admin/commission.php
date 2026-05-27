@@ -9,13 +9,12 @@ class commission extends admin {
 	}
 
 	public function init() {
-		// 重定向到更完整的代理分成记录页面
 		header('Location: ' . ADMIN_PATH . '&c=agent_rebate&a=init');
 		exit;
 	}
 
 	public function search() {
-		header('Location: ' . ADMIN_PATH . '&c=agent_rebate&a=search');
+		header('Location: ' . ADMIN_PATH . '&c=agent_rebate&a=init');
 		exit;
 	}
 }
