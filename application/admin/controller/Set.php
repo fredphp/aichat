@@ -154,8 +154,9 @@ class Set extends Base
         }
 
         try {
-            //fields not exists:[avatar]
+            //fields not exists:[avatar,record]
             unset($arr['avatar']);
+            unset($arr['record']);
                
             //自动翻译
             $arr['content'] = $this->isTrans($arr['content'],$visiter['lang'],$login['business_id']);
