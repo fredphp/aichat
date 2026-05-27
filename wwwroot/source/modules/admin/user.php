@@ -94,18 +94,21 @@ class user extends admin {
 			$aid = intval($_POST['aid']);
 			$agent_id = intval($_POST['agent_id']);
 			// ★ 如果选择了代理
-			if ($aid == 1 && $agent_id > 0) {
+			if ($aid == 1) {
+				if ($agent_id <= 0) {
+					showmessage('选择代理时必须指定代理类型！', HTTP_REFERER);
+				}
 				$insert['agent_id'] = $agent_id;
 				// 查找该代理配置对应的用户UID（agent表的id不是uid，需要查找关联用户）
-				// 代理用户关联：agent_id存在user表的agent_id字段，需要找到第一个作为该代理的用户
 				$agent_db = base :: load_model('agent_model');
-				$agent_info = $agent_db -> get_one(array('id' => $agent_id));
-				if ($agent_info) {
-					// 找到关联该agent_id的代理用户作为上级
-					$agent_user = $this -> db -> get_one("agent_id = '$agent_id' AND aid = 1 AND uid != 0", 'uid', 'uid ASC');
-					if ($agent_user) {
-						$insert['agent'] = $agent_user['uid'];
-					}
+				$agent_info = $agent_db -> get_one(array('id' => $agent_id, 'state' => 1));
+				if (!$agent_info) {
+					showmessage('所选代理不存在或已停用！', HTTP_REFERER);
+				}
+				// 找到关联该agent_id的代理用户作为上级
+				$agent_user = $this -> db -> get_one("agent_id = '$agent_id' AND aid = 1 AND uid != 0", 'uid', 'uid ASC');
+				if ($agent_user) {
+					$insert['agent'] = $agent_user['uid'];
 				}
 			} elseif ($aid == 0) {
 				$insert['agent_id'] = 0;
@@ -146,17 +149,21 @@ class user extends admin {
 				$aid = intval($_POST['aid']);
 				$agent_id = intval($_POST['agent_id']);
 				// ★ 处理代理关系
-				if ($aid == 1 && $agent_id > 0) {
+				if ($aid == 1) {
+					if ($agent_id <= 0) {
+						showmessage('选择代理时必须指定代理类型！', HTTP_REFERER);
+					}
 					$update['agent_id'] = $agent_id;
 					$update['aid'] = 1;
 					// 查找该代理配置对应的代理用户UID
 					$agent_db = base :: load_model('agent_model');
-					$agent_info = $agent_db -> get_one(array('id' => $agent_id));
-					if ($agent_info) {
-						$agent_user = $this -> db -> get_one("agent_id = '$agent_id' AND aid = 1 AND uid != '$uid'", 'uid', 'uid ASC');
-						if ($agent_user) {
-							$update['agent'] = $agent_user['uid'];
-						}
+					$agent_info = $agent_db -> get_one(array('id' => $agent_id, 'state' => 1));
+					if (!$agent_info) {
+						showmessage('所选代理不存在或已停用！', HTTP_REFERER);
+					}
+					$agent_user = $this -> db -> get_one("agent_id = '$agent_id' AND aid = 1 AND uid != '$uid'", 'uid', 'uid ASC');
+					if ($agent_user) {
+						$update['agent'] = $agent_user['uid'];
 					}
 				} else {
 					$update['agent_id'] = 0;
@@ -314,9 +321,13 @@ class user extends admin {
 				$db3 -> delete(array('uid' => $uid));
 				$db4 -> delete(array('uid' => $uid));
 				$db5 -> delete(array('uid' => $uid));
-				// ★ 删除代理分成记录
+				// ★ 删除代理分成记录（玩家作为下注者 + 代理作为分成接收者）
 				$db6 = base :: load_model('agent_rebate_log_model');
 				$db6 -> delete(array('uid' => $uid));
+				$db6 -> delete(array('agent_uid' => $uid));
+				// ★ 删除代理分成对应的流水记录(type=6)
+				$db7 = base :: load_model('account_model');
+				$db7 -> delete("uid = '$uid' AND type = 6");
 				echo json_encode(array('run' => 'yes', 'msg' => '删除成功！', 'id' => 'list_' . $uid));
 				exit();
 			} else {

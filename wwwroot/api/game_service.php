@@ -304,7 +304,7 @@ function account($gameid, $game, $template) {
 													'uid' => $agent_uid,
 													'money' => $rebate_money,
 													'countmoney' => $agent_oldmoney['money'] + $rebate_money,
-													'type' => 0,
+													'type' => 6,
 													'addtime' => $time,
 													'comment' => '代理分成(UID:'.$order['uid'].' 下注 '.$order['money'].')'
 												));

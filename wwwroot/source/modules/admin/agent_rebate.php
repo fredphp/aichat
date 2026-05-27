@@ -74,6 +74,9 @@ class agent_rebate extends admin {
 		if ($log && $log['rebate_money'] > 0 && $log['agent_uid'] > 0) {
 			$user_db = base :: load_model('user_model');
 			$user_db -> update(array('money' => '-='.$log['rebate_money'], 'commission' => '-='.$log['rebate_money']), array('uid' => $log['agent_uid']));
+			// ★ 同时删除对应的流水记录(type=6 代理分成)
+			$account_db = base :: load_model('account_model');
+			$account_db -> delete("uid = '".$log['agent_uid']."' AND type = 6 AND money = '".$log['rebate_money']."' AND addtime = '".$log['addtime']."'");
 		}
 		if ($this -> db -> delete(array('id' => $id))) {
 			echo json_encode(array('run' => 'yes', 'msg' => '删除成功！', 'id' => 'list_' . $id));
