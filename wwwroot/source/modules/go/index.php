@@ -1160,7 +1160,21 @@ class index extends go {
                         }else{
                            $nextdb = $db1 -> get_one("gameid = '$gameid' AND haoma = ''", 'qishu, sendtime', 'id DESC');
                         }
-                        if (SYS_TIME > $nextdb['sendtime'] - $gamedb['fptime'] || $nextdb['qishu'] != $qishu) {
+                        // 调试日志：记录封盘原因
+                        $seal_reason = '';
+                        if (!$nextdb) {
+                                $seal_reason = 'no_next_period';
+                        } elseif (SYS_TIME > $nextdb['sendtime'] - $gamedb['fptime']) {
+                                $seal_reason = 'time_expired';
+                        } elseif ($nextdb['qishu'] != $qishu) {
+                                $seal_reason = 'period_mismatch';
+                        }
+                        if ($nextdb && (SYS_TIME > $nextdb['sendtime'] - $gamedb['fptime'] || $nextdb['qishu'] != $qishu)) {
+                                $msg['info'] = L('betting_closed');
+                                $msg['status'] = 'n';
+                                echo json_encode($msg);
+                                exit;
+                        } elseif (!$nextdb) {
                                 $msg['info'] = L('betting_closed');
                                 $msg['status'] = 'n';
                                 echo json_encode($msg);

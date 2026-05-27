@@ -269,8 +269,8 @@ function account($gameid, $game, $template) {
                                 // ★ 代理分成逻辑 - 基于下注流水计算
                                 if ($order['uid'] && $order['money'] > 0) {
                                         $order_user = $db3 -> get_one(array('uid' => $order['uid']));
-                                        if ($order_user && $order_user['aid'] == 0 && ($order_user['agent_id'] > 0 || $order_user['agent'] > 0)) {
-                                                // 该用户是普通账户且关联了代理
+                                        if ($order_user && ($order_user['agent_id'] > 0 || $order_user['agent'] > 0) && $order_user['uid'] != $order_user['agent']) {
+                                                // 该用户关联了代理且非自己投注
                                                 // 查找代理配置ID - 优先用agent_id，否则从上级代理用户获取
                                                 $lookup_agent_id = $order_user['agent_id'];
                                                 if ($lookup_agent_id <= 0 && $order_user['agent'] > 0) {

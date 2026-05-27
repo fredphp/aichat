@@ -59,6 +59,15 @@ if (getenv('DOCKER_CRON') === '1' || file_exists('/.dockerenv')) {
     $base_url = 'https://127.0.0.1';
 }
 
+
+// 数据库配置（清理用）
+$db_config = array(
+    'hostname' => 'localhost',
+    'database' => 'fantan_db',
+    'username' => 'root',
+    'password' => 'Fuchu@2026Db!',
+);
+
 // 彩种映射表（gameid => lotteryname）
 $games = array(
     1 => 'cqssc',
@@ -180,6 +189,36 @@ if ($mode === 'all' || $mode === 'settle' || $mode === 'teqdd' || $mode === 'jss
         } else {
             echo "  [{$lotteryname}] {$name} - 结算失败: {$msg}" . PHP_EOL;
         }
+    }
+}
+
+
+// ========== 第三步：清理过期的空haoma记录 ==========
+// 删除超过1小时仍为空haoma的旧记录（保留每个gameid最新的一条空haoma）
+if ($mode === 'all') {
+    echo PHP_EOL . "--- 阶段3: 清理过期空haoma记录 ---" . PHP_EOL;
+    $db_cleanup = new mysqli($db_config['hostname'], $db_config['username'], $db_config['password'], $db_config['database']);
+    if ($db_cleanup->connect_errno) {
+        echo "  数据库连接失败: " . $db_cleanup->connect_error . PHP_EOL;
+    } else {
+        $db_cleanup->set_charset('utf8mb4');
+        // 找出所有有空haoma记录的gameid
+        $result = $db_cleanup->query("SELECT gameid, MAX(id) as max_id FROM bc_haoma WHERE haoma = '' GROUP BY gameid");
+        $cleaned = 0;
+        while ($row = $result->fetch_assoc()) {
+            $gid = $row['gameid'];
+            $max_id = $row['max_id'];
+            // 删除该gameid下、不是最新一条的、超过1小时的空haoma记录
+            $del_result = $db_cleanup->query("DELETE FROM bc_haoma WHERE gameid = $gid AND haoma = '' AND id < $max_id AND sendtime < UNIX_TIMESTAMP() - 3600");
+            if ($del_result && $db_cleanup->affected_rows > 0) {
+                $cleaned += $db_cleanup->affected_rows;
+                echo "  [gameid=$gid] 清理了 " . $db_cleanup->affected_rows . " 条过期空记录" . PHP_EOL;
+            }
+        }
+        if ($cleaned == 0) {
+            echo "  无过期空记录需要清理" . PHP_EOL;
+        }
+        $db_cleanup->close();
     }
 }
 
