@@ -530,10 +530,12 @@ $login_copy = $login;
 
         $login = $_SESSION['Msg'];
 //  business_id一个客服后台就是一个商户
-           $visiters = Admins::table('wolive_queue')->alias('queue')->distinct(true)->field('visiter_id')
+           $visiters = Admins::table('wolive_queue')->alias('queue')->field('visiter_id, MAX(timestamp) as max_timestamp')
             ->where(['service_id' => $login['service_id'], 'business_id' => $login['business_id']])
-            ->where('state', 'normal')->order('timestamp desc')
+            ->where('state', 'normal')
             ->where("EXISTS(SELECT chats.visiter_id FROM wolive_chats chats WHERE chats.visiter_id = queue.visiter_id and chats.service_id = {$login['service_id']} and chats.business_id = {$login['business_id']})")
+            ->group('visiter_id')
+            ->order('max_timestamp desc')
             ->select();
         $visiters = array_column(collection($visiters)->toArray(),'visiter_id');
 
@@ -559,12 +561,12 @@ $login_copy = $login;
 //wolive_visiter 访客表
         $data = Visiter::all(['business_id'=>$login['business_id'],'visiter_id'=>['in',$visiters]]);
 //wolive_chats 消息表
-        $chatids = Chats::field('max(cid) as cid')
+        $chatids = Chats::field('max(cid) as cid, max(timestamp) as max_timestamp')
             ->where('business_id',$login['business_id'])
             ->where('visiter_id','in',$visiters)
             ->where('service_id',$login['service_id'])
             ->group('visiter_id')
-            ->order('timestamp desc')
+            ->order('max_timestamp desc')
             ->select();
 
         $cids = array_column(collection($chatids)->toArray(),'cid');
@@ -1217,7 +1219,7 @@ $login_copy = $login;
 
         $sdata = Admins::table('wolive_visiter')->where('visiter_id', $visiter_id)->where('business_id', $login['business_id'])->find();
 
-        $chats = Admins::table('wolive_chats')->where(['visiter_id' => $visiter_id, 'service_id' => $login['service_id'], 'direction' => 'to_service'])->group('cid desc')->find();
+        $chats = Admins::table('wolive_chats')->where(['visiter_id' => $visiter_id, 'service_id' => $login['service_id'], 'direction' => 'to_service'])->order('cid desc')->find();
 
         if ($res && isset($res['state']) && $res['state'] == 'complete') {
 

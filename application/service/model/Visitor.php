@@ -26,7 +26,7 @@ class Visitor extends Model
             $item['ip'] = $item['ip']."【{$ip_area[0]}{$ip_area[1]}{$ip_area[2]}】";
             $group = self::table('wolive_vgroup')->where(['id'=>$item['groupid']])->find();
             $item['group_name'] = $group['group_name']?:'暂未分组';
-            $item['lang'] = $lang[$item['lang']];
+            $item['lang'] = isset($lang[$item['lang']]) ? $lang[$item['lang']] : $item['lang'];
             $item['extends'] = json_decode($item['extends']);
             return $item;
         });

@@ -15,12 +15,13 @@
             "email": "liu21st@gmail.com"
         }
     ],
-     "repositories": {
-    	"packagist": {
-        	"type": "composer",
-        	"url": "https://packagist.phpcomposer.com"
-    	}
-	},
+    "repositories": [
+        {
+            "name": "packagist",
+            "type": "composer",
+            "url": "https://repo.packagist.org"
+        }
+    ],
     "require": {
         "php": ">=5.4.0",
         "topthink/framework": "5.0.24",
@@ -52,6 +53,12 @@
         "think-path": "thinkphp"
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "audit": {
+            "block-insecure": false
+        },
+        "allow-plugins": {
+            "topthink/think-installer": true
+        }
     }
 }

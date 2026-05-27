@@ -160,6 +160,8 @@ trait Jump
      */
     protected function getResponseType()
     {
-        return Request::instance()->isAjax() ? Config::get('default_ajax_return') : Config::get('default_return_type');
+        return Request::instance()->isAjax()
+            ? Config::get('default_ajax_return')
+            : Config::get('default_return_type');
     }
 }

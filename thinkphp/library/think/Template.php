@@ -1071,8 +1071,7 @@ class Template
             $this->includeFile[$template] = filemtime($template);
             return $template;
         } else {
-            header("Location: /service/index/index");
-//            throw new TemplateNotFoundException('template not exists:' . $template, $template);
+            throw new TemplateNotFoundException('template not exists:' . $template, $template);
         }
     }
 

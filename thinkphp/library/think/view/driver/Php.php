@@ -70,8 +70,7 @@ class Php
         }
         // 模板不存在 抛出异常
         if (!is_file($template)) {
-            header("Location: /service/index/index");
-//            throw new TemplateNotFoundException('template not exists:' . $template, $template);
+            throw new TemplateNotFoundException('template not exists:' . $template, $template);
         }
         $this->template = $template;
         // 记录视图信息

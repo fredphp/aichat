@@ -208,7 +208,8 @@ class Event extends Controller
                         $data = explode("/", $newstr);
                         $res = Admins::table("wolive_queue")->where(['visiter_id' => $data[0], 'business_id' => $data[1]])->find();
                         Admins::table("wolive_queue")->where(['visiter_id' => $data[0], 'business_id' => $data[1]])->update(['remind_tpl' => 0, 'remind_comment' => 0]);
-                        $id = $res['service_id'];
+                        $id = $res ? $res['service_id'] : null;
+                        if ($id === null) continue;
 
                         $arr = array(
                             'chas' => $channel
@@ -240,7 +241,8 @@ class Event extends Controller
 
                         $res = Admins::table("wolive_queue")->where(['visiter_id' => $data[0], 'business_id' => $data[1]])->find();
 
-                        $id = $res['service_id'];
+                        $id = $res ? $res['service_id'] : null;
+                        if ($id === null) continue;
                         $arr = array(
                             'chas' => $channel
                         );

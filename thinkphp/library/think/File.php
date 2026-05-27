@@ -257,6 +257,7 @@ class File extends SplFileObject
         }
 
         $extension = strtolower(pathinfo($this->getInfo('name'), PATHINFO_EXTENSION));
+
         return in_array($extension, $ext);
     }
 
