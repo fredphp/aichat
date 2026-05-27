@@ -111,7 +111,7 @@ return [
     'read' => 'ဖတ်ပြီး',
     'tourist' => 'ဧည့်သည်',
 
-    // === New keys for previously hardcoded Chinese text ===
+    // Voice and status translations
     'voice_send_fail' => 'အသံပို့၍မရပါ',
     'please_speak' => 'ကျေးဇူးပြု၍ပြောပါ...',
     'voice_send_btn' => 'ပို့ရန်',
@@ -131,11 +131,47 @@ return [
     'recording_started' => 'အသံသွင်းနေပါသည်...',
     'get_location_fail' => 'တည်နေရာရရှိမှုမအောင်မြင်ပါ',
     'visitor_prefix' => 'ဧည့်သည်',
-
-    'get_location_fail' => 'တည်နေရာရရှိမှုမအောင်မြင်ပါ',
     'service_offline_reply' => 'မင်္ဂလာပါ! လက်ရှိဝန်ဆောင်မှုသည်အောဖလိုင်းဖြစ်နေပါသည်၊ သင့်အနေဖြင့်မှတ်ချက်ချနိုင်ပါသည်၊ ဝန်ဆောင်မှုအွန်လိုင်းပြန်လာလျှင်အမြန်ဆုံးဖြေကြားပေးပါမည်',
     'transfer_human_success' => 'လူဝန်ဆောင်မှုသို့အောင်မြင်စွာချိတ်ဆက်ပြီးပါပြီ',
     'select_service' => 'ကျေးဇူးပြု၍ဝန်ဆောင်မှုရွေးချယ်ပါ',
     'no_recommend_question' => 'အကြံပြုမေးခွန်းမရှိပါ',
 
+    // New keys for gettishi translations
+    'serving_you' => 'သင့်အတွက်ဝန်ဆောင်မှုပေးနေဆဲ...',
+    'not_online' => 'အွန်လိုင်းမဟုတ်ပါ...',
+    'waiting_claim' => 'အတည်ပြုမှုစောင့်ဆိုင်းနေဆဲ!',
+    'announcement' => 'ကြေညာချက်:',
+    'need_consultation' => '၏စုံစမ်းမှုလိုအပ်သည်',
+    'area_unknown_short' => 'မသိဒေသ',
+    'transfer_human_prompt' => 'မင်္ဂလာပါ! လူဝန်ဆောင်မှုသို့အောင်မြင်စွာချိတ်ဆက်ပြီးပါပြီ၊ ဝန်ဆောင်မှုရွေးချယ်ပါ:',
+
+    // Service name translations
+    'service_name_cs' => 'ဖောက်သည်ဝန်ဆောင်မှု',
+
+    // Link text translations (for DB-stored link_text)
+    'link_text_baidu' => 'Baidu',
+    'link_text_tencent' => 'Tencent',
+    'link_text_custom' => 'စိတ်ကြိုက်လင့်ခ်',
+
+    // Score labels
+    'score_1' => 'အလွန်မကျေနပ်',
+    'score_2' => 'မကျေနပ်',
+    'score_3' => 'ပုံမှန်',
+    'score_4' => 'ကျေနပ်',
+    'score_5' => 'အလွန်ကျေနပ်',
+
+    // Minute/second labels for voice duration
+    'minute' => 'မိနစ်',
+    'second' => 'စက္ကန့်',
+
+    // No evaluation needed
+    'no_evaluation_needed' => 'အကဲဖြတ်မလိုပါ',
+    'evaluation_pushed' => 'ပို့ပြီးပါပြီ',
+
+    // Greeting translations (for wolive_sentence table fallback)
+    'greeting_online' => 'မင်္ဂလာပါ! လက်ရှိဝန်ဆောင်မှုအွန်လိုင်းဖြစ်နေပါသည်၊ မေးခွန်းရှိလျှင်အချိန်မရွေးတိုင်ပင်နိုင်ပါသည်',
+    'greeting_welcome' => 'မင်္ဂလာပါ၊ ကြိုဆိုပါသည်',
+
+    // Consultation suffix
+    'need_consultation_suffix' => '1',
 ];

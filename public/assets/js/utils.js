@@ -17,7 +17,7 @@ function getOuterLeft(v,tab = 3) {
     
   }
   var systemName = (typeof langSystemName !== 'undefined') ? langSystemName : '系统';
-  if(v.nick_name=='系统' || v.nick_name==systemName){
+  if(v.nick_name=='系统' || v.nick_name==systemName || v.nick_name==='စနစ်'){
 
       str += `<div class='outer-left' ><span style="color: #aca7a7; margin-bottom: 2px;">${v.nick_name}${nbs};${v.time}</span><div class='service2'">`;
   }else{

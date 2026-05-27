@@ -376,7 +376,24 @@ class Index extends Controller
             $lang_file = APP_PATH.'lang/cn.php';
         }
         $this->assign('lang', Lang::load($lang_file));
-        $this->assign('buttonSwitch', ButtonSwitch::get(['business_id'=>$business_id]));
+        // Translate button_switch text fields for non-Chinese languages
+        $btnSwitch = ButtonSwitch::get(['business_id'=>$business_id]);
+        if ($btnSwitch && isset($business['lang']) && $business['lang'] != 'cn' && $business['lang'] != 'tc') {
+            $lang_data = Lang::load(APP_PATH.'lang/'.$business['lang'].'.php');
+            // Translate link_text
+            if (!empty($btnSwitch['link_text'])) {
+                $link_translations = [
+                    '百度' => isset($lang_data['link_text_baidu']) ? $lang_data['link_text_baidu'] : 'Baidu',
+                    '腾讯网' => isset($lang_data['link_text_tencent']) ? $lang_data['link_text_tencent'] : 'Tencent',
+                    '腾讯' => isset($lang_data['link_text_tencent']) ? $lang_data['link_text_tencent'] : 'Tencent',
+                    '自定义链接' => isset($lang_data['link_text_custom']) ? $lang_data['link_text_custom'] : 'Custom Link',
+                ];
+                if (isset($link_translations[$btnSwitch['link_text']])) {
+                    $btnSwitch['link_text'] = $link_translations[$btnSwitch['link_text']];
+                }
+            }
+        }
+        $this->assign('buttonSwitch', $btnSwitch);
         $this->assign('reststate', $state);
         // ★ Translate restsetting reply to current language if it's the default Chinese or empty
         if (is_array($rest)) {

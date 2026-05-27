@@ -553,7 +553,7 @@ function gettishi(business_id){
                  var str = "<i class='layui-icon "+v[0]+"' style='font-size: 0px;cursor: pointer;'></i>&nbsp;" ;
                 num =num+1;
                 str +="<font color='#666'>"+v[1] + "<font>";
-                     str= getOuterLeft({content:str,type:1,avatar:'/assets/images/index/ai_service.png',time: formattingTime(d),nick_name:'系统'});
+                     str= getOuterLeft({content:str,type:1,avatar:'/assets/images/index/ai_service.png',time: formattingTime(d),nick_name:(typeof langSystemName !== 'undefined') ? langSystemName : '系统'});
                 $(".conversation").append(str);
                 });
 
@@ -594,7 +594,7 @@ function zhuanrengong(business_id){
                     });
 
                 str += "</ul>"
-                str = getOuterLeft({content:str,nick_name:'系统',time: formattingTime(new Date()),type:2});
+                str = getOuterLeft({content:str,nick_name:(typeof langSystemName !== 'undefined') ? langSystemName : '系统',time: formattingTime(new Date()),type:2});
 
                 $(".conversation").append(str);
 

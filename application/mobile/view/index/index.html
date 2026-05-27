@@ -76,6 +76,13 @@
         var langSelectService = '{$lang["select_service"]}';
         var langNoRecommendQuestion = '{$lang["no_recommend_question"]}';
         var langHello = '{$lang["hello"]}';
+        var langTransferHumanPrompt = '{$lang["transfer_human_prompt"]}';
+        var langServingYou = '{$lang["serving_you"]}';
+        var langNotOnline = '{$lang["not_online"]}';
+        var langAreaUnknownShort = '{$lang["area_unknown_short"]}';
+        var langGreetingOnline = '{$lang["greeting_online"]}';
+        var langGreetingWelcome = '{$lang["greeting_welcome"]}';
+        var langMinute = '{$lang["minute"]}';
         let imageSrc = '__image__';
      var sound = new Howl({
           src: ['/upload/voice/warning.mp3']
@@ -2030,7 +2037,7 @@ if (layerElement) {
             if (h>0) {
                 return h+":"+m+":"+s+'"';
             } else if(m>0) {
-                return m+"分:"+s+'"';
+                return m+langMinute+":"+s+'"';
             }else{
 
                 return s+'"';

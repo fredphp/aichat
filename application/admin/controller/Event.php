@@ -68,6 +68,57 @@ class Event extends Controller
             $this->lang_array = Lang::load(APP_PATH . 'lang/' . $this->serverLang . '.php');
         }
     }
+
+    /**
+     * Translate service nickname based on current language
+     */
+    private function translateNickName($nick_name) {
+        if (empty($nick_name)) return $nick_name;
+        $lang = isset($this->lang_array) ? $this->lang_array : [];
+        $lang_code = '';
+        // Detect current language from business settings
+        if (isset($this->request) && $this->request->param('business_id') && $this->request->param('visiter_id')) {
+            $business_id = $this->request->param('business_id');
+            $visiter_id = $this->request->param('visiter_id');
+            $business = Db::table('wolive_business')->where('id', $business_id)->find();
+            $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
+            $lang_code = $visiter_lang ? $visiter_lang : ($business ? $business['lang'] : 'cn');
+        }
+        // Only translate for non-Chinese languages
+        if ($lang_code == 'cn' || $lang_code == 'tc') return $nick_name;
+        
+        // Translate common Chinese prefixes
+        $prefix_map = [
+            '客服' => isset($lang['service_name_cs']) ? $lang['service_name_cs'] : 'Service',
+        ];
+        foreach ($prefix_map as $cn_prefix => $translated_prefix) {
+            if (mb_strpos($nick_name, $cn_prefix) === 0) {
+                return $translated_prefix . mb_substr($nick_name, mb_strlen($cn_prefix));
+            }
+        }
+        return $nick_name;
+    }
+
+    /**
+     * Translate link_text from DB based on current language
+     */
+    private function translateLinkText($link_text) {
+        if (empty($link_text)) return $link_text;
+        $lang = isset($this->lang_array) ? $this->lang_array : [];
+        
+        $translations = [
+            '百度' => isset($lang['link_text_baidu']) ? $lang['link_text_baidu'] : 'Baidu',
+            '腾讯网' => isset($lang['link_text_tencent']) ? $lang['link_text_tencent'] : 'Tencent',
+            '腾讯' => isset($lang['link_text_tencent']) ? $lang['link_text_tencent'] : 'Tencent',
+            '自定义链接' => isset($lang['link_text_custom']) ? $lang['link_text_custom'] : 'Custom Link',
+        ];
+        
+        if (isset($translations[$link_text])) {
+            return $translations[$link_text];
+        }
+        return $link_text;
+    }
+
     public function getComment()
     {
 
@@ -79,13 +130,13 @@ class Event extends Controller
         } else {
             return json([
                 'code' => 1,
-                'msg' => '暂不需要评价'
+                'msg' => isset($this->lang_array['no_evaluation_needed']) ? $this->lang_array['no_evaluation_needed'] : '暂不需要评价'
             ]);
         }
         // $queue->save(['remind_comment'=>1]);
         return json([
             'code' => 0,
-            'msg' => '已推送',
+            'msg' => isset($this->lang_array['evaluation_pushed']) ? $this->lang_array['evaluation_pushed'] : '已推送',
             'data' => $data
         ]);
 
@@ -730,7 +781,7 @@ class Event extends Controller
             $arr['location'] = $province . (($city !== $province) ? $city : '');
         }
         if (empty($arr['location'])) {
-            $arr['location'] = '未知地区';
+            $arr['location'] = isset($this->lang_array['area_unknown_short']) ? $this->lang_array['area_unknown_short'] : '未知地区';
         }
 
         $arr["channel"] = bin2hex($arr['visiter_id'] . '/' . $arr['business_id']);
@@ -796,12 +847,12 @@ class Event extends Controller
 
                     $class = Admins::table('wolive_group')->where('id', $arr['groupid'])->find();
 
-                    $allnotice = ['msg' => "公告:" . $arr['visiter_name'] . "需要" . $class['groupname'] . "的咨询", 'groupid' => $arr['groupid']];
+                    $allnotice = ['msg' => (isset($this->lang_array['announcement']) ? $this->lang_array['announcement'] : '公告:') . $arr['visiter_name'] . (isset($this->lang_array['need_consultation']) ? $this->lang_array['need_consultation'] : '需要') . $class['groupname'] . (isset($this->lang_array['need_consultation_suffix']) ? '' : '的咨询'), 'groupid' => $arr['groupid']];
 
                     $pusher->trigger("all" . $arr['business_id'], 'on_notice', array('message' => $allnotice));
 
 
-                    $returndata = ['code' => 2, 'msg' => '等待认领！', 'data' => $num];
+                    $returndata = ['code' => 2, 'msg' => isset($this->lang_array['waiting_claim']) ? $this->lang_array['waiting_claim'] : '等待认领！', 'data' => $num];
                     return json($returndata);
                 }
 
@@ -840,7 +891,8 @@ class Event extends Controller
 
                         }
 
-                        $returndata = ['code' => 0, 'msg' => 'success', 'data' => $service_data];
+                        $service_data['nick_name'] = $this->translateNickName($service_data['nick_name']);
+                    $returndata = ['code' => 0, 'msg' => 'success', 'data' => $service_data];
 
                         return json($returndata);
 
@@ -861,11 +913,11 @@ class Event extends Controller
 
                     $class = Admins::table('wolive_group')->where('id', $arr['groupid'])->find();
 
-                    $allnotice = ['msg' => "公告:" . $arr['visiter_name'] . "需要" . $class['groupname'] . "的咨询", 'groupid' => $arr['groupid']];
+                    $allnotice = ['msg' => (isset($this->lang_array['announcement']) ? $this->lang_array['announcement'] : '公告:') . $arr['visiter_name'] . (isset($this->lang_array['need_consultation']) ? $this->lang_array['need_consultation'] : '需要') . $class['groupname'] . (isset($this->lang_array['need_consultation_suffix']) ? '' : '的咨询'), 'groupid' => $arr['groupid']];
 
                     $pusher->trigger("all" . $arr['business_id'], 'on_notice', array('message' => $allnotice));
 
-                    $returndata = ['code' => 2, 'msg' => '等待认领！', 'data' => $num];
+                    $returndata = ['code' => 2, 'msg' => isset($this->lang_array['waiting_claim']) ? $this->lang_array['waiting_claim'] : '等待认领！', 'data' => $num];
                     return json($returndata);
                 }
 
@@ -889,11 +941,11 @@ class Event extends Controller
                 unset($arr['groupid']);
                 unset($arr['special']);
                 $newvisiter = Admins::table('wolive_visiter')->insert($arr);
-                $allnotice = ['msg' => "公告:" . $arr['visiter_name'] . "需要" . $class['groupname'] . "的咨询", 'groupid' => $groupid];
+                $allnotice = ['msg' => (isset($this->lang_array['announcement']) ? $this->lang_array['announcement'] : '公告:') . $arr['visiter_name'] . (isset($this->lang_array['need_consultation']) ? $this->lang_array['need_consultation'] : '需要') . $class['groupname'] . (isset($this->lang_array['need_consultation_suffix']) ? '' : '的咨询'), 'groupid' => $groupid];
 
                 $pusher->trigger("all" . $arr['business_id'], 'on_notice', array('message' => $allnotice));
 
-                $returndata = ['code' => 2, 'msg' => '等待认领！', 'data' => $num];
+                $returndata = ['code' => 2, 'msg' => isset($this->lang_array['waiting_claim']) ? $this->lang_array['waiting_claim'] : '等待认领！', 'data' => $num];
                 return json($returndata);
             }
         } else {
@@ -916,6 +968,7 @@ class Event extends Controller
                     $service_data = Admins::table("wolive_service")->field('avatar,business_id,email,open_id,groupid,nick_name,service_id,state')->where('service_id', $service_id)->find();
                     $service_data['content'] = $this->lang_array['hello'];
                     unset($service_data['open_id']);
+                    $service_data['nick_name'] = $this->translateNickName($service_data['nick_name']);
                     $returndata = ['code' => 0, 'msg' => 'success', 'data' => $service_data];
                     return json($returndata);
                 }
@@ -949,6 +1002,7 @@ class Event extends Controller
 
                     }
                     unset($service_data['open_id']);
+                    $service_data['nick_name'] = $this->translateNickName($service_data['nick_name']);
                     $returndata = ['code' => 0, 'msg' => 'success', 'data' => $service_data];
                     return json($returndata);
 
@@ -1006,6 +1060,7 @@ class Event extends Controller
                     }
 
                     unset($service_data['open_id']);
+                    $service_data['nick_name'] = $this->translateNickName($service_data['nick_name']);
                     $returndata = ['code' => 0, 'msg' => 'success', 'data' => $service_data];
                     return json($returndata);
 
@@ -1065,7 +1120,8 @@ class Event extends Controller
 
                 Admins::table('wolive_chats')->where(['visiter_id' => $visiter_id, 'service_id' => 0])->where('business_id', $business_id)->update(['service_id' => $service_data['service_id']]);
 
-                $returndata = ['code' => 0, 'msg' => 'success', 'data' => $service_data];
+                $service_data['nick_name'] = $this->translateNickName($service_data['nick_name']);
+                    $returndata = ['code' => 0, 'msg' => 'success', 'data' => $service_data];
 
                 $wechat = WechatPlatform::get(['business_id' => $business_id]);
                 if ($business['template_state'] == 'open') {
@@ -1553,16 +1609,35 @@ class Event extends Controller
         $result_state = Db::name('wolive_service')->where('service_id', $business_id)->find();
         $result = Db::name('wolive_business')->where('id', $result_state['business_id'])->find();
         $ts = array();
+        
+        // Translate Chinese ts values for non-Chinese languages
+        $lang = isset($this->lang_array) ? $this->lang_array : [];
+        $greeting_online = isset($lang['greeting_online']) ? $lang['greeting_online'] : '';
+        $greeting_welcome = isset($lang['greeting_welcome']) ? $lang['greeting_welcome'] : '';
+        $service_offline_reply = isset($lang['service_offline_reply']) ? $lang['service_offline_reply'] : '';
+        
         if (!empty($result['ts1']) && $result_state['state'] == 'online') {
             $ts1 = $result['ts1'];
-            $ts[] = array('layui-icon', $ts1, '为您服务...');
+            // Translate common Chinese greetings for non-Chinese languages
+            if ($greeting_online && (mb_strpos($ts1, '在线') !== false || mb_strpos($ts1, '咨询') !== false)) {
+                $ts1 = $greeting_online;
+            }
+            $ts[] = array('layui-icon', $ts1, isset($lang['serving_you']) ? $lang['serving_you'] : '为您服务...');
         }
         if (!empty($result['ts2']) && $result_state['state'] == 'offline') {
             $ts2 = $result['ts2'];
-            $ts[] = array('layui-icon', $ts2, '不在线...');
+            // Translate common Chinese offline greetings for non-Chinese languages
+            if ($service_offline_reply && (mb_strpos($ts2, '离线') !== false || mb_strpos($ts2, '留言') !== false)) {
+                $ts2 = $service_offline_reply;
+            }
+            $ts[] = array('layui-icon', $ts2, isset($lang['not_online']) ? $lang['not_online'] : '不在线...');
         }
         if (!empty($result['ts3'])) {
             $ts3 = $result['ts3'];
+            // Translate common Chinese welcome messages for non-Chinese languages
+            if ($greeting_welcome && (mb_strpos($ts3, '欢迎') !== false || mb_strpos($ts3, '访问') !== false)) {
+                $ts3 = $greeting_welcome;
+            }
             $ts[] = array('layui-icon', $ts3);
         }
 
@@ -1579,7 +1654,7 @@ class Event extends Controller
         $result = Db::name('wolive_service')->where('business_id', $business_id)->select();
         $kf = array();
         foreach ($result as $result_rengong) {
-            $kf[] = array($result_rengong['service_id'], $result_rengong['nick_name'], $result_rengong['groupid']);
+            $kf[] = array($result_rengong['service_id'], $this->translateNickName($result_rengong['nick_name']), $result_rengong['groupid']);
         }
         if ($result) {
             $arr = ['code' => 0, 'msg' => 'success', 'data' => $kf];

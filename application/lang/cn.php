@@ -115,7 +115,7 @@ return [
     'read' => '已读',
     'tourist' => '游客',
 
-    // === New keys for previously hardcoded Chinese text ===
+    // Voice and status translations
     'voice_send_fail' => '语音发送失败',
     'please_speak' => '请说话...',
     'voice_send_btn' => '发送',
@@ -135,11 +135,47 @@ return [
     'recording_started' => '已开始录音...',
     'get_location_fail' => '获取定位地址失败',
     'visitor_prefix' => '游客',
-
-    'get_location_fail' => '获取定位地址失败',
     'service_offline_reply' => '您好！当前客服目前离线，您可以留言，我们将在客服上线后尽快回复您',
     'transfer_human_success' => '已成功为您连线人工',
     'select_service' => '请选择您的客服专员',
     'no_recommend_question' => '没有推荐问题',
 
+    // New keys for gettishi translations
+    'serving_you' => '为您服务...',
+    'not_online' => '不在线...',
+    'waiting_claim' => '等待认领！',
+    'announcement' => '公告:',
+    'need_consultation' => '的咨询',
+    'area_unknown_short' => '未知地区',
+    'transfer_human_prompt' => '你好！已成功为您连线人工，请选择您的客服专员：',
+
+    // Service name prefix
+    'service_name_cs' => '客服',
+
+    // Link text translations
+    'link_text_baidu' => '百度',
+    'link_text_tencent' => '腾讯网',
+    'link_text_custom' => '自定义链接',
+
+    // Score labels
+    'score_1' => '非常不满',
+    'score_2' => '不满',
+    'score_3' => '一般',
+    'score_4' => '满意',
+    'score_5' => '非常满意',
+
+    // Minute/second
+    'minute' => '分',
+    'second' => '秒',
+
+    // No evaluation
+    'no_evaluation_needed' => '暂不需要评价',
+    'evaluation_pushed' => '已推送',
+
+    // Greeting
+    'greeting_online' => '您好！当前客服在线，有什么问题可以随时咨询',
+    'greeting_welcome' => '欢迎访问',
+
+    // Consultation suffix
+    'need_consultation_suffix' => '',
 ];

@@ -333,7 +333,7 @@ function mp4Put() {
 
             if (res.code == 0) {
                 var str = getOuterRight({
-                    pic: '我',
+                    pic: langMe,
                     content: res.data,
                     time: formattingTime(new Date())
                 })
@@ -954,13 +954,13 @@ function getdata(is_init = true) {
                     if (v.direction == 'to_service') {
 
                        v.time = time;
-                       v.pic = '我';
+                       v.pic = langMe;
                         str += getOuterRight(v);
                     } else {
                 
                         // **判断是否是机器人消息**
                         if (v.type == 2) {
-                            v.nick_name = "系统"; // 机器人消息
+                            v.nick_name = langSystemName; // robot msg
                         } else {
                             v.nick_name = nick_name; // 普通消息
                         }    
@@ -1107,9 +1107,9 @@ var init = function () {
 
                 $("#services").text(data.nick_name);
                 if(data.state == 'online'){
-                $("#onstaut").text('(在线)');    
+                $("#onstaut").text(langOnlineStatus);    
                 }else{
-                $("#onstaut").text('(离线)');    
+                $("#onstaut").text(langOfflineStatus);    
                 }
                 
                 data.visiter_id=visiter_id;
@@ -1358,7 +1358,7 @@ function getquestion(business_id) {
 
                 // 拼接成系统消息结构
                 str = getOuterLeft({
-                    nick_name: '系统',
+                    nick_name: langSystemName,
                     time: time,
                     type: 1,
                     avatar: logo,
@@ -1482,7 +1482,7 @@ function zhuanrengong(business_id){
             if(res.code == 0){
 
 
-                var str="<p style='font-weight:blod;'>你好！已成功为您连线人工，请选择您的客服专员：</p>";
+                var str="<p style='font-weight:blod;'>"+langTransferHumanPrompt+"</p>";
 
                 str += "<pre><ul>" ;
 
