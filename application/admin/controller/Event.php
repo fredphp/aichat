@@ -54,12 +54,16 @@ class Event extends Controller
             $business_id = $this->request->param('business_id');
             $visiter_id = $this->request->param('visiter_id');
             $business = Db::table('wolive_business')->where('id', $business_id)->find();
-            $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
-            if ($visiter_lang) {
-                $business['lang'] = $visiter_lang;
+            // Priority: session(user_lang) > URL param(lang) > visitor DB lang > business default lang
+            if (session('user_lang')) {
+                $business['lang'] = session('user_lang');
+            } elseif ($this->request->param('lang') && preg_match('/^[a-zA-Z0-9\-]+$/', $this->request->param('lang'))) {
+                $business['lang'] = $this->request->param('lang');
             } else {
-                if (session('user_lang'))
-                    $business['lang'] = session('user_lang');
+                $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
+                if ($visiter_lang) {
+                    $business['lang'] = $visiter_lang;
+                }
             }
             $this->lang_array = Lang::load(APP_PATH . 'lang/' . $business['lang'] . '.php');
         } else {
@@ -75,19 +79,22 @@ class Event extends Controller
     private function translateNickName($nick_name) {
         if (empty($nick_name)) return $nick_name;
         $lang = isset($this->lang_array) ? $this->lang_array : [];
-        $lang_code = '';
-        // Detect current language from business settings
-        if (isset($this->request) && $this->request->param('business_id') && $this->request->param('visiter_id')) {
-            $business_id = $this->request->param('business_id');
-            $visiter_id = $this->request->param('visiter_id');
-            $business = Db::table('wolive_business')->where('id', $business_id)->find();
-            $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
-            $lang_code = $visiter_lang ? $visiter_lang : ($business ? $business['lang'] : 'cn');
+        if (empty($lang)) return $nick_name;
+        
+        // Detect current language - same priority as _initialize
+        $lang_code = 'cn';
+        if (session('user_lang')) {
+            $lang_code = session('user_lang');
+        } elseif ($this->request->param('lang') && preg_match('/^[a-zA-Z0-9\-]+$/', $this->request->param('lang'))) {
+            $lang_code = $this->request->param('lang');
+        } elseif ($this->request->param('business_id') && $this->request->param('visiter_id')) {
+            $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $this->request->param('visiter_id'))->value('lang');
+            $lang_code = $visiter_lang ? $visiter_lang : 'cn';
         }
         // Only translate for non-Chinese languages
         if ($lang_code == 'cn' || $lang_code == 'tc') return $nick_name;
         
-        // Translate common Chinese prefixes
+        // Translate common Chinese prefixes (e.g. "客服小美" -> "Customer Service")
         $prefix_map = [
             '客服' => isset($lang['service_name_cs']) ? $lang['service_name_cs'] : 'Service',
         ];
@@ -97,8 +104,8 @@ class Event extends Controller
             }
         }
         $full_name_map = [
-            'ç³»ç»' => isset($lang['system_name']) ? $lang['system_name'] : 'System',
-            'ç®¡çå' => isset($lang['nick_admin']) ? $lang['nick_admin'] : 'Admin',
+            '系统' => isset($lang['system_name']) ? $lang['system_name'] : 'System',
+            '管理员' => isset($lang['nick_admin']) ? $lang['nick_admin'] : 'Admin',
         ];
         if (isset($full_name_map[$nick_name])) {
             return $full_name_map[$nick_name];
