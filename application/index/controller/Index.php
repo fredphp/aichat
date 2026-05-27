@@ -413,6 +413,9 @@ class Index extends Controller
         $business = User::table('wolive_business')->where('id', $business_id)->find();
         // URL参数lang优先级最高 - 支持外部系统传入语言设置
         $url_lang = $this->request->param('lang', '');
+        // ★ 语言代码映射：主站使用zh-cn，KF系统使用cn
+        $lang_map = ['zh-cn'=>'cn', 'zh-tw'=>'tc', 'en-us'=>'en', 'en-gb'=>'en', 'my-mm'=>'my-mm'];
+        if($url_lang && isset($lang_map[$url_lang])) $url_lang = $lang_map[$url_lang];
         $visiter_lang = User::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
         if($url_lang && preg_match('/^[a-zA-Z0-9\-]+$/', $url_lang)){
             // URL传入的语言参数优先级最高

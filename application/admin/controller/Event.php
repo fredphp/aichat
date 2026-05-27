@@ -42,6 +42,8 @@ class Event extends Controller
 
     protected $lang_array = [];
 
+    protected $serverLang = 'cn';
+
     public function _initialize()
     {
         parent::_initialize();
@@ -50,25 +52,45 @@ class Event extends Controller
             $basename = dirname($basename);
         }
         $this->base_root = $basename;
-        if ($this->request->param('business_id') && $this->request->param('visiter_id')) {
+        // ★ 兼容chatdata的vid参数名
+        $visiter_id_param = $this->request->param('visiter_id') ?: $this->request->param('vid');
+        if ($this->request->param('business_id') && $visiter_id_param) {
             $business_id = $this->request->param('business_id');
-            $visiter_id = $this->request->param('visiter_id');
+            $visiter_id = $visiter_id_param;
             $business = Db::table('wolive_business')->where('id', $business_id)->find();
             // Priority: session(user_lang) > URL param(lang) > visitor DB lang > business default lang
+            // ★ 语言代码映射
+            $lang_map = ['zh-cn'=>'cn', 'zh-tw'=>'tc', 'en-us'=>'en', 'en-gb'=>'en', 'my-mm'=>'my-mm'];
             if (session('user_lang')) {
                 $business['lang'] = session('user_lang');
             } elseif ($this->request->param('lang') && preg_match('/^[a-zA-Z0-9\-]+$/', $this->request->param('lang'))) {
-                $business['lang'] = $this->request->param('lang');
+                $url_lang_init = $this->request->param('lang');
+                $business['lang'] = isset($lang_map[$url_lang_init]) ? $lang_map[$url_lang_init] : $url_lang_init;
             } else {
                 $visiter_lang = Db::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
                 if ($visiter_lang) {
                     $business['lang'] = $visiter_lang;
                 }
             }
+            // ★ 语言代码映射：确保lang代码对应存在的语言文件
+            $lang_map = ['zh-cn'=>'cn', 'zh-tw'=>'tc', 'en-us'=>'en', 'en-gb'=>'en', 'my-mm'=>'my-mm'];
+            if(isset($lang_map[$business['lang']])) $business['lang'] = $lang_map[$business['lang']];
+            // ★ 如果语言文件不存在，回退到中文
+            $lang_file = APP_PATH . 'lang/' . $business['lang'] . '.php';
+            if (!is_file($lang_file)) {
+                $business['lang'] = 'cn';
+            }
             $this->lang_array = Lang::load(APP_PATH . 'lang/' . $business['lang'] . '.php');
         } else {
             if (session('user_lang'))
                 $this->serverLang = session('user_lang');
+            // ★ 语言代码映射+回退
+            $lang_map = ['zh-cn'=>'cn', 'zh-tw'=>'tc', 'en-us'=>'en', 'en-gb'=>'en', 'my-mm'=>'my-mm'];
+            if(isset($lang_map[$this->serverLang])) $this->serverLang = $lang_map[$this->serverLang];
+            $lang_file = APP_PATH . 'lang/' . $this->serverLang . '.php';
+            if (!is_file($lang_file)) {
+                $this->serverLang = 'cn';
+            }
             $this->lang_array = Lang::load(APP_PATH . 'lang/' . $this->serverLang . '.php');
         }
     }
@@ -820,6 +842,9 @@ class Event extends Controller
 
         // ★ 语言优先级：URL参数 > session > 数据库访客记录 > IP自动检测 > 商户默认
         $url_lang_param = $this->request->post('lang', '');
+        // ★ 语言代码映射：主站使用zh-cn，KF系统使用cn
+        $lang_map = ['zh-cn'=>'cn', 'zh-tw'=>'tc', 'en-us'=>'en', 'en-gb'=>'en', 'my-mm'=>'my-mm'];
+        if($url_lang_param && isset($lang_map[$url_lang_param])) $url_lang_param = $lang_map[$url_lang_param];
         if ($url_lang_param && preg_match('/^[a-zA-Z0-9\-]+$/', $url_lang_param)) {
             $lang = $url_lang_param;
             session('user_lang', $lang);
