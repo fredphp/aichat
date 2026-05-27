@@ -334,7 +334,7 @@ class Index extends Controller
         $groupid = htmlspecialchars($arr2['groupid']);
 
          if ($visiter_name == '') {
-            $visiter_name = '游客' . $visiter_id;
+            $visiter_name = 'Visitor' . $visiter_id;
         }
         $app_key = app_key;
         $whost = whost;
@@ -348,8 +348,14 @@ class Index extends Controller
         }
 
         $business = User::table('wolive_business')->where('id', $business_id)->find();
+        // ★ URL参数lang优先级最高 - 支持外部系统传入语言设置
+        $url_lang = $this->request->param('lang', '');
         $visiter_lang = User::name('wolive_visiter')->where('visiter_id', $visiter_id)->value('lang');
-        if($visiter_lang){
+        if($url_lang && preg_match('/^[a-zA-Z0-9\\-]+$/', $url_lang)){
+            // URL传入的语言参数优先级最高（如 &lang=my-mm）
+            $business['lang'] = $url_lang;
+            session('user_lang', $url_lang);
+        }elseif($visiter_lang){
             $business['lang'] = $visiter_lang;
         }else{
             if($business['auto_ip']) $business['lang'] = Ip::check_country($this->request->ip())?:$business['lang'];
@@ -364,7 +370,12 @@ class Index extends Controller
            $theme = $business_info['theme'];
           
         
-        $this->assign('lang', Lang::load(APP_PATH.'lang/'.$business['lang'].'.php'));
+        // ★ 加载语言文件 - 如果指定语言文件不存在则回退到中文
+        $lang_file = APP_PATH.'lang/'.$business['lang'].'.php';
+        if (!is_file($lang_file)) {
+            $lang_file = APP_PATH.'lang/cn.php';
+        }
+        $this->assign('lang', Lang::load($lang_file));
         $this->assign('buttonSwitch', ButtonSwitch::get(['business_id'=>$business_id]));
         $this->assign('reststate', $state);
         $this->assign('restsetting',$rest);

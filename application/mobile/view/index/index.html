@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <title>在线客服</title>
+    <title>{$lang["service_title"]}</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <script> ROOT_URL = '{$basename}'; </script>
     <link href="__libs__/layer/admin/layui.css?v=__lkversion__" rel="stylesheet">
@@ -227,7 +227,7 @@
         });
         channels.bind('check-event', function (data) {
             $.each(data.message, function (index, value) {
-                $("#cid" + value).html("已读")
+                $("#cid" + value).html('{$lang["read"]}')
             });
         });
         //接收消息
@@ -979,9 +979,9 @@
             <div class="dialog">
                 <div class="title">{$lang["evaluate_service"]}</div>
                 <div class="dialog-body">
-                    <div style="margin-bottom: 20px;">请对我的服务进行评价，满意请打5星哦~</div>
+                    <div style="margin-bottom: 20px;">{$lang["evaluate_tip"]}</div>
                     <div class='evaluate-item evaluate-score' data-score="0">
-                        <span class="evaluate-title">服务态度态度</span>
+                        <span class="evaluate-title">{$lang["service_attitude"]}</span>
                         <img class="star" data-id="1" src="__image__/index/star.png" alt="">
                         <img class="star" data-id="2" src="__image__/index/star.png" alt="">
                         <img class="star" data-id="3" src="__image__/index/star.png" alt="">
@@ -990,12 +990,12 @@
                     </div>
                     <div class='evaluate-item'
                         style="height: 80px;line-height: 1;margin-top: 10px;align-items: flex-start">
-                        <span style="display: inline-block;margin-right: 12px;white-space: nowrap">意见意见建议</span>
+                        <span style="display: inline-block;margin-right: 12px;white-space: nowrap">{$lang["suggestions"]}</span>
                         <textarea class="about-text" name="" id="" cols="30" rows="4"></textarea>
                     </div>
                     <div class="evaluate-btn">
-                        <button class="reset">取消</button>
-                        <button class="submit">提交</button>
+                        <button class="reset">{$lang["cancel"]}</button>
+                        <button class="submit">{$lang["submit"]}</button>
                     </div>
                 </div>
             </div>
@@ -1027,6 +1027,7 @@
                     <span data-lang="nl"><img src="__image__/flag/nl.png" class="lang-flag" />Nederlands</span>
                     <span data-lang="pl"><img src="__image__/flag/pl.png" class="lang-flag" />Polskie</span>
                     <span data-lang="fin"><img src="__image__/flag/fin.png" class="lang-flag" />Suomi</span>
+                    <span data-lang="my-mm"><img src="__image__/flag/my.png" class="lang-flag" />မြန်မာ</span>
                 </div>
             </div>
         </div>
@@ -1037,23 +1038,23 @@
                 <div class="title">{$lang['leave_a_message']}</div>
                 <img src="__image__/index/close.png" class="msg-close" style="    width: 25px;">
                 <div class="dialog-body lang-choose">
-                    <div style="     margin-bottom: 20px; padding: 5px 15px;color: #ff9a00;font-size: 16px;">您好，如果您有什么疑问请在此处留言，我们会尽快与您联系。</div>
+                    <div style="     margin-bottom: 20px; padding: 5px 15px;color: #ff9a00;font-size: 16px;">{$lang["leave_message_tip"]}</div>
                     <div class="layui-form-item layui-inline" style="margin-left: -42px;">
-                        <label class="layui-form-label">联系人</label>
+                        <label class="layui-form-label">{$lang["contact_person"]}</label>
                         <div class="layui-input-inline">
-                            <input type="text" id="name" placeholder="请输入您的称呼" class="layui-input"
+                            <input type="text" id="name" placeholder='{$lang["enter_your_name"]}' class="layui-input"
                                 style=" width: 223px;">
                         </div>
                     </div>
                     <div class="layui-form-item layui-inline" style="margin-left: -31px;">
-                        <label class="layui-form-label">联系方式</label>
+                        <label class="layui-form-label">{$lang["contact_method"]}</label>
                         <div class="layui-input-inline">
-                            <input type="text" id="contact" placeholder="请输入手机号/微信/QQ" class="layui-input"
+                            <input type="text" id="contact" placeholder='{$lang["enter_phone_wechat_qq"]}' class="layui-input"
                                 style=" width: 211px;">
                         </div>
                     </div>
                     <div class="layui-form-item layui-inline" style="margin-left: -29px;">
-                        <label class="layui-form-label">留言内容</label>
+                        <label class="layui-form-label">{$lang["message_content"]}</label>
                         <div class="layui-input-inline">
                             <textarea id="content" name="code" class="layui-input"
                                 style="height: 140px;width: 208px;"></textarea>
@@ -1062,11 +1063,11 @@
                     <div class="layui-form-item layui-inline" style="text-align: center;margin-left: 82px;">
                         <button class="pear-btn pear-btn-md pear-btn-primary" id="config">
                             <i class="layui-icon layui-icon-ok"></i>
-                            立即提交
+                            {$lang["submit_now"]}
                         </button>
                         <button id="reset" class="pear-btn pear-btn-md">
                             <i class="layui-icon layui-icon-refresh"></i>
-                            重置
+                            {$lang["reset_btn"]}
                         </button>
                     </div>
                 </div>
@@ -1076,22 +1077,22 @@
        <!--广告功能-->
         <div class="msg-bg" id="msg-bg-4">
             <div class="dialog1" style="padding-bottom: 20px">
-                <div class="title">提示:</div>
+                <div class="title">{$lang["prompt"]}</div>
                 <img src="__image__/index/close.png" class="msg-close" style="    width: 25px;">
                 <fieldset class="layui-elem-field">
-                    <legend>广告位：</legend>
+                    <legend>{$lang["ad_space"]}</legend>
                     <div class="layui-field-box">
                         <!-- <img id="lunbo_img" src="{//$business_info['img1']}" style="width: 100%"> -->
                     </div>
                 </fieldset>
                 <fieldset class="layui-elem-field">
-                    <legend>LOGO展示:</legend>
+                    <legend>{$lang["logo_display"]}</legend>
                     <div class="layui-field-box">
                         <!-- <img src="{//$business_info['img1']}" style="width: 100%" /> -->
                     </div>
                 </fieldset>
                 <fieldset class="layui-elem-field">
-                    <legend>关于我们：</legend>
+                    <legend>{$lang["about_us"]}</legend>
                     <div class="layui-field-box">
                         <!-- <p> {//$business_info['aboutus']}</p> -->
                     </div>
@@ -1154,15 +1155,15 @@
                 var contact = $('#contact').val();
                 var services = $('#contact').val();
                 if (name == '') {
-                    layer.msg("请输入您的称呼", { icon: 2 });
+                    layer.msg('{$lang["enter_your_name"]}', { icon: 2 });
                     return false;
                 }
                 if (contact == '') {
-                    layer.msg("请输入手机号/微信/QQ", { icon: 2 });
+                    layer.msg('{$lang["enter_phone_wechat_qq"]}', { icon: 2 });
                     return false;
                 }
                 if (content == '') {
-                    layer.msg("请填写留言内容", { icon: 2 });
+                    layer.msg('{$lang["message_content"]}', { icon: 2 });
                     return false;
                 }
                 $.ajax({
@@ -1229,7 +1230,7 @@
     top: 22px;
     color: rgb(224, 224, 224);
      display: none;
-    font-size: 12px;">正在输入……</span>
+    font-size: 12px;">{$lang["entering"]}</span>
     
     {if $buttonSwitch.tel_state =='open'}
              <a onclick="location.href='tel:{$buttonSwitch.tel_text}'" style="top: 3.5px;margin-top: 8px;cursor: pointer; position: absolute; right:92px; cursor: pointer;font-size: 14px;color: #fff;">
@@ -1296,14 +1297,14 @@
                 </div>
 
             {if $buttonSwitch.phone_state =='open'}
-              <input type="text"  placeholder="留下电话来电回访" class="el-input__inner"  id= "phone1" style="width: 150px;height:29px !important; margin-left: 16px; margin-right: 3px;  margin-top: 5px;">
+              <input type="text"  placeholder='{$lang["leave_phone_callback"]}' class="el-input__inner"  id= "phone1" style="width: 150px;height:29px !important; margin-left: 16px; margin-right: 3px;  margin-top: 5px;">
     <button type="button" class="el-button el-button--success is-circle border-radius: 50%;
     padding: 12px;" style="transform: scale(0.7);  background-color: #{$theme}; border-color: #{$theme};" onclick="config_one()">
     <i class="el-icon-position" style="transform: scale(1);"></i></button>
        {/if}
 
         </div>
-        <div class="visitorEditor" id="msg-input"><div class="visitorEditorArea el-textarea"><textarea autocomplete="off" placeholder="# 请输入内容..." id="text_in" maxlength="1000" rows="6" class="el-textarea__inner" style="resize: none; min-height: 100px; height: 73px;"></textarea></div> <button  type="button" class="el-button visitorEditorBtn el-button--primary el-button--mini " style="background-color: #{$theme}; border-color: #{$theme};" onclick="send()"><span>{$lang['send']} (s)</span></button></div>
+        <div class="visitorEditor" id="msg-input"><div class="visitorEditorArea el-textarea"><textarea autocomplete="off" placeholder='{$lang["please_enter"]}...' id="text_in" maxlength="1000" rows="6" class="el-textarea__inner" style="resize: none; min-height: 100px; height: 73px;"></textarea></div> <button  type="button" class="el-button visitorEditorBtn el-button--primary el-button--mini " style="background-color: #{$theme}; border-color: #{$theme};" onclick="send()"><span>{$lang['send']} (s)</span></button></div>
     </div>
     
         <!-- 工具栏 -->
@@ -1315,7 +1316,7 @@
           	    <div  href="javascript:" style="padding: 6px 0;">
             <img class="layui-img-icon" alt="" src="/assets/images/icon/yy.png">
         </form>
-		</div><div>语音</div>
+		</div><div>{$lang["voice"]}</div>
 	</div>
           {/if}
           
@@ -1331,7 +1332,7 @@
             </div>
         </form>
     </div>
-    <div>图片</div>
+    <div>{$lang["image"]}</div>
 </div>
 {/if}
              {if $buttonSwitch.mp4_state == 'open'}
@@ -1344,7 +1345,7 @@
                    </div>
                  </form>
                </div>
-               <div>视频</div>
+               <div>{$lang["video"]}</div>
              </div>
              {/if}
 {if $buttonSwitch.file_state == 'open'}
@@ -1357,7 +1358,7 @@
             </div>
         </form>
     </a>
-    <div>文件</div>
+    <div>{$lang["file"]}</div>
 </div>
 {/if}
 	   
@@ -1369,50 +1370,50 @@
                         <img class="layui-img-icon" alt="" src="/assets/images/icon/wz.png">
 
                     </div></form>
-                    <div class="tool-txt" style="margin-bottom: -6px; margin-top: 5px;">位置</div>
+                    <div class="tool-txt" style="margin-bottom: -6px; margin-top: 5px;">{$lang["location"]}</div>
 	</div></div>
  {/if}
  
    {if $buttonSwitch.labour_state == 'open'}
 	<div class="iconExtendBtn" onclick="zhuanrengong({$business_id})">
     <img class="layui-img-icon" alt="" src="/assets/images/icon/zrg.png">
-		<div style="margin-bottom: -6px; margin-top: 5px;">转人工</div>
+		<div style="margin-bottom: -6px; margin-top: 5px;">{$lang["transfer_human"]}</div>
 	</div>
    {/if}
    
  {if $buttonSwitch.leave_message_state == 'open'}
 	<div class="iconExtendBtn" onclick="msg()">
 	     <img class="layui-img-icon" alt="" src="/assets/images/icon/ly.png">
-		<div style="margin-bottom: -6px; margin-top: 5px;">留言</div>
+		<div style="margin-bottom: -6px; margin-top: 5px;">{$lang["leave_msg"]}</div>
 	</div>
              {/if}
              
  {if $buttonSwitch.message_log_state == 'open'}
     <div class="iconExtendBtn" >
-<a style="padding: 6px 10;color:#9fa19f;" target="_blank" href="" id="exportchat" alt="下载聊天记录">
+<a style="padding: 6px 10;color:#9fa19f;" target="_blank" href="" id="exportchat" alt='{$lang["msg_record"]}'>
 		<img class="layui-img-icon" alt="" src="/assets/images/icon/xx.png">
-		<div style="margin-bottom: -6px; margin-top: 5px;">消息记录</div></a>
+		<div style="margin-bottom: -6px; margin-top: 5px;">{$lang["msg_record"]}</div></a>
 	</div>
  {/if}
  
 {if $buttonSwitch.translators_state == 'open'}
 	<div class="iconExtendBtn" id="lang">
 		<div class="elIcon iconfont icon-duoyuyan"></div>
-		<div style="margin-bottom: -6px; margin-top: 5px;">翻译</div>
+		<div style="margin-bottom: -6px; margin-top: 5px;">{$lang["translate"]}</div>
 	</div>
 {/if}
 
 {if $buttonSwitch.wx_state == 'open'}
 <div class="iconExtendBtn" onclick="tc('{$buttonSwitch.wx_url}')">
 		    <img class="layui-img-icon" alt="" src="/assets/images/icon/wx2.png">
-		<div style="margin-bottom: -6px;margin-top: 5px;">微信</div>
+		<div style="margin-bottom: -6px;margin-top: 5px;">{$lang["wechat"]}</div>
 	</div>
 {/if}
 
 {if $buttonSwitch.qq_state == 'open'}
 	<div class="iconExtendBtn" onclick="tc('{$buttonSwitch.qq_url}')">
 		    <img class="layui-img-icon" alt="" src="/assets/images/icon/qq2.png">
-		<div style="margin-bottom: -6px;margin-top: 5px;">企鹅</div>
+		<div style="margin-bottom: -6px;margin-top: 5px;">{$lang["qq"]}</div>
 	</div>
 {/if}
 
@@ -1424,7 +1425,7 @@
 {/if}
 	<div class="iconExtendBtn" onclick="openComment()">
 		    <img class="layui-img-icon" alt="" src="/assets/images/icon/pj.png">
-		<div style="margin-bottom: -6px;margin-top: 5px;">评价</div>
+		<div style="margin-bottom: -6px;margin-top: 5px;">{$lang["evaluate"]}</div>
 	</div>
 	<div class="clear"></div>
 	<div class="footContact">
@@ -1438,7 +1439,7 @@
         <div style="text-align: center;display: none;margin-top: 5px;" class="tel-box">
 
             <div class="input-with-select el-input el-input--mini el-input-group el-input-group--append " style="width: 150px; float: center;">
-            <input type="text"  placeholder="请留下电话，我们客服联系您" class="el-input__inner"  id= "phone1" style="width: 220px;">
+            <input type="text"  placeholder='{$lang["leave_phone_contact"]}' class="el-input__inner"  id= "phone1" style="width: 220px;">
             <!----><div class="el-input-group__append" >
                 &nbsp;
                 <button type="button" class="el-button el-button--default el-button--mini"  onclick="config_one()" style="background-color: #5fb878; color: rgb(239, 235, 235);">
@@ -1454,12 +1455,12 @@
 		<div class="musk"></div>
 		<div class="map_box" style="">
 			<div style="display:flex">
-				<input id="where" name="where" type="text" class="layui-input" style="width: 60%;border: 1px solid #ccc;line-height: 32px;height:32px;margin-left: 5%;margin-top:1.5rem" placeholder="请输入地址">
-				<input type="button" value="搜索位置" id="sear" class="layui-btn layui-btn-normal send-btn" style="line-height:32px;height:32px;margin-left:5%;margin-top:1.5rem;background-color: #1E9FFF;font-size: 14px; width: 90px;" />
+				<input id="where" name="where" type="text" class="layui-input" style="width: 60%;border: 1px solid #ccc;line-height: 32px;height:32px;margin-left: 5%;margin-top:1.5rem" placeholder='{$lang["enter_address"]}'>
+				<input type="button" value="{$lang["search_location"]}" id="sear" class="layui-btn layui-btn-normal send-btn" style="line-height:32px;height:32px;margin-left:5%;margin-top:1.5rem;background-color: #1E9FFF;font-size: 14px; width: 90px;" />
 			</div>
 			<div id="allmap" style="width:90%;height:70%;margin-left:5%;margin-top:1rem"></div>
-			<input type="button" value="确认发送" id="showPosition" class="layui-btn layui-btn-normal send-btn" style="line-height:32px;height:32px;margin-top:1rem;background-color: #1E9FFF;font-size: 14px; width: 90px;" />
-			<input type="button" value="取消发送" onClick="$('.musk').hide();$('.map_box').hide()" class="layui-btn layui-btn-normal layui-btn-danger" style="line-height:32px;height:32px;margin-top:1rem" />
+			<input type="button" value="{$lang["confirm_send"]}" id="showPosition" class="layui-btn layui-btn-normal send-btn" style="line-height:32px;height:32px;margin-top:1rem;background-color: #1E9FFF;font-size: 14px; width: 90px;" />
+			<input type="button" value="{$lang["cancel_send"]}" onClick="$('.musk').hide();$('.map_box').hide()" class="layui-btn layui-btn-normal layui-btn-danger" style="line-height:32px;height:32px;margin-top:1rem" />
 		</div>
 		<input type="hidden" id="lat" value="" />
 		<input type="hidden" id="lng" value="" />
@@ -1530,14 +1531,14 @@
 
         function config_one() {
             if ($('#phone1').val() == '' || DataLength($('#phone1').val()) < 11 || DataLength($('#phone1').val()) > 11) {
-                layer.msg("请输入11位手机号", { icon: 2 });
+                layer.msg('{$lang["mobile_error"]}', { icon: 2 });
                 return false;
             }
 
             $.ajax({
                 url: "/index/index/set_phone",
                 type: "post",
-                data: { content: '客户留言', name: $('#phone1').val(), contact: '暂无留言', services: business_id },
+                data: { content: '{$lang["leave_msg"]}', name: $('#phone1').val(), contact: '', services: business_id },
                 dataType: 'json',
                 success: function (res) {
                     if (res.code != 0) {
@@ -1826,7 +1827,7 @@ if (layerElement) {
 		// }
 
 		function showPosition(lat,lag){
-            layer.msg('定位中..');
+            layer.msg('{$lang["location"]}...');
             var myGeo = new BMapGL.Geocoder();
                             var myAddress="";
                             // 根据坐标得到地址描述
@@ -1875,7 +1876,7 @@ if (layerElement) {
 		}
 
 		function showError(error){
-		    layer.msg("定位失败");
+		    layer.msg('{$lang["location"]} fail');
 		}
 
 		//定位结束
