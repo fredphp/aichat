@@ -78,7 +78,13 @@ class settings extends admin {
                         $this -> save_agents();
                         // 写入本地文件
                         $iscache = base :: load_config('system', 'iscache'); //是否开启设置缓存
-                        if ($iscache) write_config($setting, 'setting.php');
+                        if ($iscache) {
+				write_config($setting, 'setting.php');
+				// Invalidate OPcache so PHP-FPM picks up the new setting immediately
+				if (function_exists('opcache_invalidate')) {
+					opcache_invalidate(CONFIG_PATH . 'setting.php', true);
+				}
+			}
                         // ★ 清除Nginx FastCGI缓存，确保设置立即生效
                         @system('rm -rf /var/cache/nginx/fastcgi/* 2>/dev/null');
                         showmessage('更新成功！', HTTP_REFERER);
