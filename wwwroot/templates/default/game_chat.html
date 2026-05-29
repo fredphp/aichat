@@ -147,12 +147,13 @@
                                 <h4><?php echo L('quick_bet')?></h4>
                                 <h5><?php echo L('select_bet_hint')?></h5>
                                 <div class="fast_li">
-						<a href="javascript:;">500</a>
-						<a href="javascript:;">1000</a>
-						<a href="javascript:;">5000</a>
-						<a href="javascript:;">10000</a>
-						<a href="javascript:;">50000</a>
-						<a href="javascript:;">100000</a>
+						<?php
+							$qm_arr = explode(',', $quick_money);
+							foreach($qm_arr as $qm) {
+								$qm = trim($qm);
+								if($qm) echo '<a href="javascript:;">'.$qm.'</a>';
+							}
+						?>
 					</div>
                                 <div class="btn_li">
                                         <span><?php echo L('bet_amount')?></span>

@@ -103,6 +103,8 @@ class index extends go {
                 $wanfadata = json_encode($datalist, JSON_HEX_TAG | JSON_HEX_APOS);
                 //投注限制
                 $send_money = empty($user['send_money']) ? $this -> setting['send_money'] : $user['send_money'];
+                $quick_money = isset($this -> setting['quick_money']) && $this -> setting['quick_money'] ? $this -> setting['quick_money'] : '500,1000,5000,10000,50000,100000';
+                $chip_money = isset($this -> setting['chip_money']) && $this -> setting['chip_money'] ? $this -> setting['chip_money'] : '5,10,50,100,500,1000';
                 $title = $gamename.' - '.$title;
                 $template = 'game_'.$gametemplate;
                 $template_file = template($template);

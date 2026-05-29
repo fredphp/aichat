@@ -109,12 +109,21 @@
                         <div class="cm_box">
                                 <div class="cm_bg"></div>
                                 <div class="cm_line">
-                                        <a class="cm_1 a" data="cm_1" money="5" href="javascript:;">5</a>
-                                        <a class="cm_2" data="cm_2" money="10" href="javascript:;">10</a>
-                                        <a class="cm_3" data="cm_3" money="50" href="javascript:;">50</a>
-                                        <a class="cm_4" data="cm_4" money="100" href="javascript:;">100</a>
-                                        <a class="cm_5" data="cm_5" money="500" href="javascript:;">500</a>
-                                        <a class="cm_6" data="cm_6" money="1000" href="javascript:;">1K</a>
+                                        <?php
+                                        	$cm_arr = explode(',', $chip_money);
+                                        	$cm_classes = array('cm_1','cm_2','cm_3','cm_4','cm_5','cm_6');
+                                        	$cm_index = 0;
+                                        	foreach($cm_arr as $cm_val) {
+                                        		$cm_val = trim($cm_val);
+                                        		if($cm_val && $cm_index < 6) {
+                                        			$cls = $cm_classes[$cm_index];
+                                        			$active = ($cm_index == 0) ? ' a' : '';
+                                        			$display = ($cm_val >= 1000 && $cm_val % 1000 == 0) ? ($cm_val/1000).'K' : $cm_val;
+                                        			echo '<a class="'.$cls.$active.'" data="'.$cls.'" money="'.$cm_val.'" href="javascript:;">'.$display.'</a>';
+                                        			$cm_index++;
+                                        		}
+                                        	}
+                                        ?>
                                 </div>
                         </div>
                         <i class="cm_3d cm_1"></i>

@@ -161,6 +161,20 @@ include $this->admin_tpl('header');
                                                         <input class="input-text" type="text" name="setting[stamp]" value="<?php echo $stamp;?>">
                                                 </td>
                                         </tr>
+									<tr>
+										<th>快捷下单金额：</th>
+										<td>
+											<input class="input-text" type="text" name="setting[quick_money]" style="width: 500px;" value="<?php echo isset($quick_money) ? $quick_money : '500,1000,5000,10000,50000,100000';?>">
+											<span>全局生效，游戏页面快捷下单按钮金额，用英文逗号分隔，如：500,1000,5000,10000,50000,100000</span>
+										</td>
+									</tr>
+									<tr>
+										<th>筹码金额(牌九)：</th>
+										<td>
+											<input class="input-text" type="text" name="setting[chip_money]" style="width: 500px;" value="<?php echo isset($chip_money) ? $chip_money : '5,10,50,100,500,1000';?>">
+											<span>全局生效，牌九游戏筹码面值，用英文逗号分隔，最多6个，如：5,10,50,100,500,1000</span>
+										</td>
+									</tr>
                                         <tr>
                                                 <th>用户名验证：</th>
                                                 <td>
